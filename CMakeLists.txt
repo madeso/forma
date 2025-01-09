@@ -1,0 +1,41 @@
+cmake_minimum_required(VERSION 3.14...3.22)
+
+project(
+  forma
+  VERSION 1.0
+  LANGUAGES CXX
+)
+
+if(PROJECT_SOURCE_DIR STREQUAL PROJECT_BINARY_DIR)
+  message(
+    FATAL_ERROR
+      "In-source builds not allowed. Please make a new directory (called a build directory) and run CMake from there."
+  )
+endif()
+
+add_subdirectory(external)
+
+set(em_src
+    src/forma/template.cc
+    src/forma/template.hh
+)
+set(test_src
+    src/forma/template.test.cc
+)
+source_group("" FILES ${em_src} ${main_src} ${test_src})
+
+add_library(forma STATIC ${em_src})
+add_library(g::forma ALIAS forma)
+add_executable(test ${test_src})
+
+target_include_directories(forma PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
+)
+
+target_link_libraries(test PRIVATE
+    g::forma
+    external::catch
+)
+
+
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 20)
