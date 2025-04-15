@@ -7,6 +7,91 @@
 #include <string>
 #include <unordered_map>
 
+
+// ====================================================================================================================
+// Test structures
+
+struct Song
+{
+	std::string Artist;
+	std::string Title;
+	std::string Album;
+	int Track;
+};
+
+struct SongWithoutAlbum
+{
+	std::string Artist;
+	std::string Title;
+	bool HasStar;
+};
+
+
+struct MixTape
+{
+	std::vector<SongWithoutAlbum> Songs;
+};
+
+// ====================================================================================================================
+// test data
+
+Song AbbaSong()
+{
+	return { "ABBA", "dancing queen", "Arrival", 2 };
+}
+
+MixTape AwesomeMix() {
+	return {
+		{
+			SongWithoutAlbum{"Gloria Gaynor", "I Will Survive", true},
+			SongWithoutAlbum{"Nirvana", "Smells Like Teen Spirit", false}
+		}
+	};
+}
+
+// ====================================================================================================================
+// test bindings
+
+forma::Definition<Song> MakeSongDef()
+{
+	return forma::Definition<Song>()
+		.AddVar("artist", [](const Song& s) { return s.Artist; })
+		.AddVar("title", [](const Song& s) { return s.Title; })
+		.AddVar("album", [](const Song& s) { return s.Album; })
+		.AddVar("track", [](const Song& s) { return std::to_string(s.Track); })
+		;
+}
+
+forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef() {
+	return forma::Definition<SongWithoutAlbum>()
+		.AddVar("artist", [](const SongWithoutAlbum& s) { return s.Artist; })
+		.AddVar("title", [](const SongWithoutAlbum& s) { return s.Title; })
+		.AddVar("album", [](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }) // this shouldn't be called
+		.AddBool("star", [](const SongWithoutAlbum& s) { return s.HasStar; })
+		;
+}
+
+forma::Definition<Song> MakeSongDefWithSpaces() {
+	return forma::Definition<Song>()
+		.AddVar("the artist", [](const Song& s) { return s.Artist; })
+		.AddVar("the title", [](const Song& s) { return s.Title; })
+		.AddVar("the album", [](const Song& s) { return s.Album; })
+		;
+}
+
+forma::Definition<MixTape> MakeMixTapeDef()
+{
+	return forma::Definition<MixTape>()
+		.AddList<SongWithoutAlbum>("songs", [](const MixTape& mt) { std::vector<const SongWithoutAlbum* > r;
+	for (const auto& s : mt.Songs) r.emplace_back(&s);
+	return r; }, MakeSongWithoutAlbumDef())
+		;
+}
+
+// ====================================================================================================================
+// forma integration with file system
+
+
 struct VfsReadTest : forma::VfsRead
 {
 	std::unordered_map<std::string, std::string> contents;
@@ -51,77 +136,8 @@ struct DirectoryInfoTest : forma::DirectoryInfo
 	}
 };
 
-struct Song
-{
-	std::string Artist;
-	std::string Title;
-	std::string Album;
-	int Track;
-};
-
-struct SongWithoutAlbum
-{
-	std::string Artist;
-	std::string Title;
-	bool HasStar;
-};
-
-
-struct MixTape
-{
-	std::vector<SongWithoutAlbum> Songs;
-};
-
-Song AbbaSong()
-{
-	return { "ABBA", "dancing queen", "Arrival", 2 };
-}
-
-MixTape AwesomeMix() {
-	return {
-		{
-			SongWithoutAlbum{"Gloria Gaynor", "I Will Survive", true},
-			SongWithoutAlbum{"Nirvana", "Smells Like Teen Spirit", false}
-		}
-	};
-}
-
-forma::Definition<Song> MakeSongDef()
-{
-	return forma::Definition<Song>()
-		.AddVar("artist", [](const Song& s) { return s.Artist; })
-		.AddVar("title", [](const Song& s) { return s.Title; })
-		.AddVar("album", [](const Song& s) { return s.Album; })
-		.AddVar("track", [](const Song& s) { return std::to_string(s.Track); })
-		;
-}
-
-forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef() {
-	return forma::Definition<SongWithoutAlbum>()
-		.AddVar("artist", [](const SongWithoutAlbum& s) { return s.Artist; })
-		.AddVar("title", [](const SongWithoutAlbum& s) { return s.Title; })
-		.AddVar("album", [](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }) // this shouldn't be called
-		.AddBool("star", [](const SongWithoutAlbum& s) { return s.HasStar; })
-		;
-}
-
-forma::Definition<Song> MakeSongDefWithSpaces() {
-	return forma::Definition<Song>()
-		.AddVar("the artist", [](const Song& s) { return s.Artist; })
-		.AddVar("the title", [](const Song& s) { return s.Title; })
-		.AddVar("the album", [](const Song& s) { return s.Album; })
-		;
-}
-
-
-forma::Definition<MixTape> MakeMixTapeDef()
-{
-	return forma::Definition<MixTape>()
-		.AddList<SongWithoutAlbum>("songs", [](const MixTape& mt) { std::vector<const SongWithoutAlbum* > r;
-	for (const auto& s : mt.Songs) r.emplace_back(&s);
-	return r; }, MakeSongWithoutAlbumDef())
-		;
-}
+// ====================================================================================================================
+// actual tests
 
 
 TEST_CASE("all")
@@ -131,7 +147,7 @@ TEST_CASE("all")
 
 #define NO_ERRORS(errors) CHECK_THAT(errors, Catch::Matchers::Equals(std::vector<forma::Error>{}))
 
-	SECTION("Test1")
+	SECTION("Test one")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title}} ({{album}})");
@@ -143,7 +159,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test1Alt")
+	SECTION("Test one - alternative")
 	{
 		auto file = cwd.GetFile("test.txt");
 		// quoting attributes like strings should also work
@@ -156,7 +172,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test1WithSpaces")
+	SECTION("Test one - with spaces")
 	{
 		auto file = cwd.GetFile("test.txt");
 		// quoting attributes like strings should also work
@@ -169,7 +185,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test2")
+	SECTION("Test two")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title | title}} ( {{- album -}} )");
@@ -181,7 +197,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test3")
+	SECTION("Test three")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{track | zfill(3)}} {{- /** a comment **/ -}}  . {{title | title}}");
@@ -193,7 +209,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test4")
+	SECTION("Test four")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{#songs}}[{{title}}]{{/songs}}");
@@ -205,7 +221,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test4Readable")
+	SECTION("Test four - readable")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}}[{{title}}]{{end}}");
@@ -217,7 +233,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test5")
+	SECTION("Test five")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}} {{- include \"include.txt\" -}} {{end}}");
@@ -230,7 +246,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test5Alt")
+	SECTION("Test five - alternative")
 	{
 		auto file = cwd.GetFile("test.txt");
 		// use quotes to escape include keyword
@@ -244,7 +260,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test6")
+	SECTION("Test six")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}} {{- include file -}} {{end}}");
@@ -257,7 +273,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test7If")
+	SECTION("Test seven - if")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs -}} [ {{- if star -}} {{- title -}} {{- end -}} ] {{- end}}");
