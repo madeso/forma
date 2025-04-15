@@ -55,6 +55,12 @@ namespace forma
         auto operator<=>(const Location& rhs) const = default;
     };
 
+    template<typename S>
+    S& operator<<(S& s, const Location& loc)
+    {
+        return s << loc.File << ':' << loc.Line << ':' << loc.Offset;
+    }
+
     struct Error
     {
         Location Location;
@@ -62,6 +68,13 @@ namespace forma
 
         auto operator<=>(const Error& rhs) const = default;
     };
+
+    template<typename S>
+    S& operator<<(S& s, const Error& err)
+    {
+        return s << err.Location << ": " << err.Message;
+    }
+
 
     struct FuncArgument
     {

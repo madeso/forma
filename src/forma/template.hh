@@ -105,7 +105,7 @@ namespace forma
             else if(auto* attribute = node->AsAttribute())
             {
                 const auto getter = attributes.find(attribute->Name);
-                if (getter != attributes.end())
+                if (getter == attributes.end())
                 {
                     return { SyntaxError, { Error {
                         attribute->Location,
