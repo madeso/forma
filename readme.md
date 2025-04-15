@@ -7,7 +7,26 @@ Work in progress
 
 ## API:
 ```cpp
-const auto [generator, error] = forma::Parse(...);
+struct MyClass;
+
+const auto [generator, error] = forma::Parse(
+        // integrate with your own file system
+        file, &vfs, &cwd,
+        // custom functions to transform the data
+        forma::DefaultFunctions(),
+        // define what and how your class is exposed
+        forma::Definition<MyClass>()
+            .AddVar("foo", [](const MyClass& s) { return s.foo_bar; })
+            // .AddBool(...)
+            // .AddList(...)
+    );
+// either you get
+//  - a default dummy generator with errors or
+//  - the parsed generator with no errors
+// either way, there is no more parsing you have a generator:
+//  std::function<std::string(const MyClass&)>
+
+MyClass myClass = ...;
 std::string ret = generator(myClass);
 ```
 

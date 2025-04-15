@@ -152,7 +152,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title}} ({{album}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeSongDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -165,7 +165,7 @@ TEST_CASE("all")
 		// quoting attributes like strings should also work
 		read.AddContent(file, "{{\"artist\"}} - {{\"title\"}} ({{\"album\"}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeSongDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -178,7 +178,7 @@ TEST_CASE("all")
 		// quoting attributes like strings should also work
 		read.AddContent(file, "{{\"the artist\"}} - {{\"the title\"}} ({{\"the album\"}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeSongDefWithSpaces());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDefWithSpaces());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -190,7 +190,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title | title}} ( {{- album -}} )");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeSongDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - Dancing Queen (Arrival)");
 		NO_ERRORS(errors);
@@ -202,7 +202,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{track | zfill(3)}} {{- /** a comment **/ -}}  . {{title | title}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeSongDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "002. Dancing Queen");
 		NO_ERRORS(errors);
@@ -214,7 +214,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{#songs}}[{{title}}]{{/songs}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -226,7 +226,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}}[{{title}}]{{end}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -239,7 +239,7 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include \"include.txt\" -}} {{end}}");
 		read.AddContent(cwd.GetFile("include.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -253,7 +253,7 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include \"include\" -}} {{end}}");
 		read.AddContent(cwd.GetFile("include.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -266,7 +266,7 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include file -}} {{end}}");
 		read.AddContent(cwd.GetFile("file.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -278,7 +278,7 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs -}} [ {{- if star -}} {{- title -}} {{- end -}} ] {{- end}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, forma::DefaultFunctions(), &cwd, MakeMixTapeDef());
+		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][]");
 		NO_ERRORS(errors);

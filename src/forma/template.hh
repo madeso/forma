@@ -193,7 +193,7 @@ namespace forma
     using BuildResult = std::pair<std::function<std::string(const T&)>, std::vector<Error>>;
 
     template<typename T>
-    BuildResult<T> Build(std::string path, VfsRead* vfs, std::unordered_map<std::string, FuncGenerator> functions, DirectoryInfo* includeDir, Definition<T> definition)
+    BuildResult<T> Build(std::string path, VfsRead* vfs, DirectoryInfo* includeDir, std::unordered_map<std::string, FuncGenerator> functions, Definition<T> definition)
     {
         auto source = vfs->ReadAllText(path);
         auto [tokens, lexerErrors] = Scan(path, source);
