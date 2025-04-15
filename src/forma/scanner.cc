@@ -51,10 +51,10 @@ namespace forma
 			while (false == IsAtEnd())
 			{
 				start = current;
-				auto tok = ScanToken();
-				if(tok.has_value())
+				auto tokens = ScanToken();
+				for(const auto& tok: tokens)
 				{
-					ret.emplace_back(std::move(*tok));
+					ret.emplace_back(tok);
 				}
 			}
 			ret.emplace_back(Token{ TokenType::Eof, "", Location{file, current.Line, current.Offset}, ""});
@@ -71,12 +71,12 @@ namespace forma
 			errors.push_back(Error{ loc, message });
 		}
 
-		std::optional<Token> ScanToken()
+		std::vector<Token> ScanToken()
 		{
 			if (insideCodeBlock)
 			{
 				const auto tok = ScanCodeToken();
-				if (tok.has_value()) return *tok;
+				if (tok.has_value()) return { *tok };
 			}
 			else
 			{
@@ -94,13 +94,16 @@ namespace forma
 						}
 						auto afterStart = current;
 						auto text = CreateToken(TokenType::Text, std::nullopt, start, beforeStart);
+
+						std::vector<Token> ret;
 						if (text.Value.length() > 0)
 						{
-							return text;
+							ret.emplace_back(text);
 						}
 						insideCodeBlock = true;
 
-						return { CreateToken(beginType, std::nullopt, beforeStart, current) };
+						ret.emplace_back(CreateToken(beginType, std::nullopt, beforeStart, current));
+						return ret;
 					}
 				}
 
@@ -109,12 +112,12 @@ namespace forma
 					auto text = CreateToken(TokenType::Text);
 					if (text.Value.length() > 0)
 					{
-						return text;
+						return { text };
 					}
 				}
 			}
 
-			return std::nullopt;
+			return {};
 		}
 
 		std::optional<Token> ScanCodeToken()

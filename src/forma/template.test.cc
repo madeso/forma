@@ -121,7 +121,7 @@ struct VfsReadTest : forma::VfsRead
 	{
 		auto pos = file_path.find_last_of('.');
 		if (pos == std::string::npos) return ""; // No extension found
-		return file_path.substr(pos + 1);
+		return file_path.substr(pos);
 	}
 };
 

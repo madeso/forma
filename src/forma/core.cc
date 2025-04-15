@@ -30,7 +30,7 @@ namespace forma
         }
 #else
         std::ostringstream ss;
-        ss << "Missing " << name << ", could be: ";
+        ss << "could be: ";
         bool first = true;
         for (const auto& c : candidates)
         {
