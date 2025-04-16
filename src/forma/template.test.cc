@@ -139,7 +139,6 @@ struct DirectoryInfoTest : forma::DirectoryInfo
 // ====================================================================================================================
 // actual tests
 
-
 TEST_CASE("all")
 {
 	DirectoryInfoTest cwd("C:\\");
@@ -233,7 +232,7 @@ TEST_CASE("all")
 	}
 
 
-	SECTION("Test five")
+	SECTION("Test five - include")
 	{
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}} {{- include \"include.txt\" -}} {{end}}");
@@ -284,4 +283,16 @@ TEST_CASE("all")
 		NO_ERRORS(errors);
 	}
 
+}
+
+TEST_CASE("basics")
+{
+	SECTION("string trim")
+	{
+		CHECK(forma::strings::TrimStart(" test ") == "test ");
+		CHECK(forma::strings::TrimEnd(" test ") == " test");
+
+		CHECK(forma::strings::TrimStart(" ") == "");
+		CHECK(forma::strings::TrimEnd(" ") == "");
+	}
 }

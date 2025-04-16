@@ -47,13 +47,13 @@ namespace forma
         std::string TrimStart(const std::string& s)
         {
             size_t start = s.find_first_not_of(" \t\n\r");
-            return (start == std::string::npos) ? s : s.substr(start);
+            return (start == std::string::npos) ? "" : s.substr(start);
         }
 
         std::string TrimEnd(const std::string& s)
         {
             size_t end = s.find_last_not_of(" \t\n\r");
-            return (end == std::string::npos) ? s : s.substr(0, end + 1);
+            return (end == std::string::npos) ? "" : s.substr(0, end + 1);
         }
     }
 }
