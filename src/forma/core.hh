@@ -63,7 +63,7 @@ namespace forma
 
     struct Error
     {
-        Location Location;
+        forma::Location Location;
         std::string Message;
 
         auto operator<=>(const Error& rhs) const = default;
@@ -78,7 +78,7 @@ namespace forma
 
     struct FuncArgument
     {
-        Location Location;
+        forma::Location Location;
         std::string Argument;
     };
 

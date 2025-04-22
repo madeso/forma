@@ -62,7 +62,7 @@ namespace forma
 	{
 	    TokenType Type;
 	    std::string Lexeme;
-	    Location Location;
+	    forma::Location Location;
 	    std::string Value;
 
 		Token(TokenType t, std::string l, forma::Location lo, std::string v);
