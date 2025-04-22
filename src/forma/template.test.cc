@@ -290,9 +290,48 @@ TEST_CASE("basics")
 	SECTION("string trim")
 	{
 		CHECK(forma::strings::TrimStart(" test ") == "test ");
-		CHECK(forma::strings::TrimEnd(" test ") == " test");
-
 		CHECK(forma::strings::TrimStart(" ") == "");
+
+		CHECK(forma::strings::TrimEnd(" test ") == " test");
 		CHECK(forma::strings::TrimEnd(" ") == "");
+
+		CHECK(forma::strings::Trim(" test ") == "test");
+		CHECK(forma::strings::Trim(" ") == "");
+	}
+
+	SECTION("cap and title")
+	{
+		CHECK(forma::strings::Capitalize("whatever works", true) == "Whatever Works");
+		CHECK(forma::strings::Capitalize("awesome sauce", false) == "awesome Sauce");
+		CHECK(forma::strings::ToTitleCase("hello world") == "Hello World");
+	}
+
+	SECTION("upper and lower")
+	{
+		CHECK(forma::strings::ToLower("") == "");
+		CHECK(forma::strings::ToUpper("") == "");
+
+		CHECK(forma::strings::ToLower("HELLO!") == "hello!");
+		CHECK(forma::strings::ToUpper("hello!") == "HELLO!");
+	}
+
+	SECTION("padding")
+	{
+		CHECK(forma::strings::PadLeft("", 3, 'x') == "xxx");
+		CHECK(forma::strings::PadLeft("33", 3, 'x') == "x33");
+	}
+
+	SECTION("replacing")
+	{
+		CHECK(forma::strings::Replace("test", "this", "that") == "test");
+		CHECK(forma::strings::Replace("test this", "this", "that") == "test that");
+		CHECK(forma::strings::Replace("this test this", "this", "that") == "that test that");
+	}
+
+	SECTION("substring")
+	{
+		CHECK(forma::strings::Substring("cat", 3, 2) == "");
+		CHECK(forma::strings::Substring("cat", 0, 2) == "ca");
+		CHECK(forma::strings::Substring("cat", 1, 10) == "at");
 	}
 }

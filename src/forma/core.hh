@@ -107,7 +107,19 @@ namespace forma
 
     namespace strings
     {
-        std::string TrimStart(const std::string& s);
-        std::string TrimEnd(const std::string& s);
+        std::string default_space();
+        std::string TrimStart(const std::string& s, const std::string& = default_space());
+        std::string TrimEnd(const std::string& s, const std::string& = default_space());
+        std::string Trim(const std::string& s, const std::string & = default_space());
+
+        std::string Capitalize(const std::string& p, bool alsoFirstChar);
+
+        std::string ToLower(const std::string& args);
+        std::string ToUpper(const std::string& args);
+        std::string ToTitleCase(const std::string& args);
+
+        std::string PadLeft(const std::string& s, int count, char c);
+        std::string Replace(const std::string& arg, const std::string& lhs, const std::string& rhs);
+        std::string Substring(const std::string& arg, int lhs, int rhs);
     }
 }
