@@ -51,7 +51,7 @@ namespace forma
 			C(KeywordInclude);
 #undef C
 		default:
-			s << "<???>";
+			s << "<?>";
 			break;
 		}
 
