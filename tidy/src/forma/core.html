@@ -1,0 +1,210 @@
+﻿<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+<title>src/forma/core.cc</title>
+</head>
+<body>
+<h1>src/forma/core.cc</h1>
+<span id='misc-unused-parameters'>&nbsp;</span>
+<hr>
+<h3>warning: parameter &#39;name&#39; is unused</h3>
+<code>[misc-unused-parameters]</code>
+<p><i>src/forma/core.cc 17 : 43</i></p>
+<pre>
+   17 |     std::string MatchStrings(std::string&amp; name, const std::vector&lt;std::string&gt;&amp; candidates)
+      |                                           ^~~~
+      |                                            /*name*/
+</pre>
+<span id='readability-avoid-unconditional-preprocessor-if'>&nbsp;</span>
+<hr>
+<h3>warning: preprocessor condition is always &#39;false&#39;, consider removing both the condition and its contents</h3>
+<code>[readability-avoid-unconditional-preprocessor-if]</code>
+<p><i>src/forma/core.cc 19 : 2</i></p>
+<pre>
+   19 | #if 0
+      |  ^
+</pre>
+<span id='google-readability-braces-around-statements'>&nbsp;</span>
+<span id='readability-braces-around-statements'>&nbsp;</span>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[google-readability-braces-around-statements,readability-braces-around-statements]</code>
+<p><i>src/forma/core.cc 39 : 23</i></p>
+<pre>
+   39 |             if (first) first = false;
+      |                       ^
+      |                        {
+   40 |             else ss &lt;&lt; &#39; &#39;;
+      |             } 
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[google-readability-braces-around-statements,readability-braces-around-statements]</code>
+<p><i>src/forma/core.cc 40 : 17</i></p>
+<pre>
+   40 |             else ss &lt;&lt; &#39; &#39;;
+      |                 ^          
+      |                  {
+</pre>
+<span id='misc-const-correctness'>&nbsp;</span>
+<hr>
+<h3>warning: variable &#39;start&#39; of type &#39;size_t&#39; (aka &#39;unsigned long&#39;) can be declared &#39;const&#39;</h3>
+<code>[misc-const-correctness]</code>
+<p><i>src/forma/core.cc 175 : 13</i></p>
+<pre>
+  175 |             size_t start = s.find_first_not_of(spaces);
+      |             ^
+      |                    const 
+</pre>
+<hr>
+<h3>warning: variable &#39;end&#39; of type &#39;size_t&#39; (aka &#39;unsigned long&#39;) can be declared &#39;const&#39;</h3>
+<code>[misc-const-correctness]</code>
+<p><i>src/forma/core.cc 181 : 13</i></p>
+<pre>
+  181 |             size_t end = s.find_last_not_of(spaces);
+      |             ^
+      |                    const 
+</pre>
+<span id='readability-identifier-naming'>&nbsp;</span>
+<hr>
+<h3>warning: invalid case style for parameter &#39;alsoFirstChar&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/core.cc 185 : 59</i></p>
+<pre>
+  185 |         std::string Capitalize(const std::string&amp; p, bool alsoFirstChar)
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           also_first_char
+  186 |         {
+  187 |             auto cap = alsoFirstChar;
+      |                        ~~~~~~~~~~~~~
+      |                        also_first_char
+</pre>
+<hr>
+<h3>warning: variable &#39;h&#39; of type &#39;char&#39; can be declared &#39;const&#39;</h3>
+<code>[misc-const-correctness]</code>
+<p><i>src/forma/core.cc 189 : 18</i></p>
+<pre>
+  189 |             for (char h : p)
+      |                  ^
+      |                       const 
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/core.cc 197 : 38</i></p>
+<pre>
+  197 |                 if (is_whitespace(c)) cap = true;
+      |                                      ^           
+      |                                       {
+</pre>
+<hr>
+<h3>warning: variable &#39;c&#39; of type &#39;char&#39; can be declared &#39;const&#39;</h3>
+<code>[misc-const-correctness]</code>
+<p><i>src/forma/core.cc 206 : 18</i></p>
+<pre>
+  206 |             for (char c : args)
+      |                  ^
+      |                       const 
+</pre>
+<hr>
+<h3>warning: variable &#39;c&#39; of type &#39;char&#39; can be declared &#39;const&#39;</h3>
+<code>[misc-const-correctness]</code>
+<p><i>src/forma/core.cc 215 : 18</i></p>
+<pre>
+  215 |             for (char c : args)
+      |                  ^
+      |                       const 
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/core.cc 233 : 29</i></p>
+<pre>
+  233 |             if (si &gt;= count) return s;
+      |                             ^         
+      |                              {
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/core.cc 245 : 48</i></p>
+<pre>
+  245 |                 if (found == std::string::npos) return r;
+      |                                                ^         
+      |                                                 {
+</pre>
+<span id='bugprone-narrowing-conversions'>&nbsp;</span>
+<span id='cppcoreguidelines-narrowing-conversions'>&nbsp;</span>
+<hr>
+<h3>warning: narrowing conversion from &#39;size_type&#39; (aka &#39;unsigned long&#39;) to signed type &#39;int&#39; is implementation-defined</h3>
+<code>[bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]</code>
+<p><i>src/forma/core.cc 247 : 25</i></p>
+<pre>
+  247 |                 start = found + rhs.length();
+      |                         ^
+</pre>
+<!--
+/home/runner/work/forma/forma/src/forma/core.cc:17:43: warning: parameter 'name' is unused [misc-unused-parameters]
+   17 |     std::string MatchStrings(std::string& name, const std::vector<std::string>& candidates)
+      |                                           ^~~~
+      |                                            /*name*/
+/home/runner/work/forma/forma/src/forma/core.cc:19:2: warning: preprocessor condition is always 'false', consider removing both the condition and its contents [readability-avoid-unconditional-preprocessor-if]
+   19 | #if 0
+      |  ^
+/home/runner/work/forma/forma/src/forma/core.cc:39:23: warning: statement should be inside braces [google-readability-braces-around-statements,readability-braces-around-statements]
+   39 |             if (first) first = false;
+      |                       ^
+      |                        {
+   40 |             else ss << ' ';
+      |             } 
+/home/runner/work/forma/forma/src/forma/core.cc:40:17: warning: statement should be inside braces [google-readability-braces-around-statements,readability-braces-around-statements]
+   40 |             else ss << ' ';
+      |                 ^          
+      |                  {
+/home/runner/work/forma/forma/src/forma/core.cc:175:13: warning: variable 'start' of type 'size_t' (aka 'unsigned long') can be declared 'const' [misc-const-correctness]
+  175 |             size_t start = s.find_first_not_of(spaces);
+      |             ^
+      |                    const 
+/home/runner/work/forma/forma/src/forma/core.cc:181:13: warning: variable 'end' of type 'size_t' (aka 'unsigned long') can be declared 'const' [misc-const-correctness]
+  181 |             size_t end = s.find_last_not_of(spaces);
+      |             ^
+      |                    const 
+/home/runner/work/forma/forma/src/forma/core.cc:185:59: warning: invalid case style for parameter 'alsoFirstChar' [readability-identifier-naming]
+  185 |         std::string Capitalize(const std::string& p, bool alsoFirstChar)
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           also_first_char
+  186 |         {
+  187 |             auto cap = alsoFirstChar;
+      |                        ~~~~~~~~~~~~~
+      |                        also_first_char
+/home/runner/work/forma/forma/src/forma/core.cc:189:18: warning: variable 'h' of type 'char' can be declared 'const' [misc-const-correctness]
+  189 |             for (char h : p)
+      |                  ^
+      |                       const 
+/home/runner/work/forma/forma/src/forma/core.cc:197:38: warning: statement should be inside braces [readability-braces-around-statements]
+  197 |                 if (is_whitespace(c)) cap = true;
+      |                                      ^           
+      |                                       {
+/home/runner/work/forma/forma/src/forma/core.cc:206:18: warning: variable 'c' of type 'char' can be declared 'const' [misc-const-correctness]
+  206 |             for (char c : args)
+      |                  ^
+      |                       const 
+/home/runner/work/forma/forma/src/forma/core.cc:215:18: warning: variable 'c' of type 'char' can be declared 'const' [misc-const-correctness]
+  215 |             for (char c : args)
+      |                  ^
+      |                       const 
+/home/runner/work/forma/forma/src/forma/core.cc:233:29: warning: statement should be inside braces [readability-braces-around-statements]
+  233 |             if (si >= count) return s;
+      |                             ^         
+      |                              {
+/home/runner/work/forma/forma/src/forma/core.cc:245:48: warning: statement should be inside braces [readability-braces-around-statements]
+  245 |                 if (found == std::string::npos) return r;
+      |                                                ^         
+      |                                                 {
+/home/runner/work/forma/forma/src/forma/core.cc:247:25: warning: narrowing conversion from 'size_type' (aka 'unsigned long') to signed type 'int' is implementation-defined [bugprone-narrowing-conversions,cppcoreguidelines-narrowing-conversions]
+  247 |                 start = found + rhs.length();
+      |                         ^
+-->
+</body>
+</html>

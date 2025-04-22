@@ -1,0 +1,531 @@
+﻿<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+<title>src/forma/scanner.cc</title>
+</head>
+<body>
+<h1>src/forma/scanner.cc</h1>
+<span id='cppcoreguidelines-use-default-member-init'>&nbsp;</span>
+<span id='modernize-use-default-member-init'>&nbsp;</span>
+<hr>
+<h3>warning: use default member initializer for &#39;insideCodeBlock&#39;</h3>
+<code>[cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]</code>
+<p><i>src/forma/scanner.cc 36 : 8</i></p>
+<pre>
+   36 |                 bool insideCodeBlock;
+      |                      ^              
+      |                                     {false}
+   37 |                 std::vector&lt;Error&gt; errors;
+   38 |                 std::vector&lt;Token&gt; ret;
+   39 | 
+   40 |                 Scanner(const std::string&amp; f, const std::string&amp; s)
+   41 |                         : file(f)
+   42 |                         , source(s)
+   43 |                         , start(ScannerLocation{ 1, 0, 0 })
+   44 |                         , current(start)
+   45 |                         , insideCodeBlock(false)
+      |                           ~~~~~~~~~~~~~~~~~~~~~~
+</pre>
+<span id='readability-identifier-naming'>&nbsp;</span>
+<hr>
+<h3>warning: invalid case style for public member &#39;insideCodeBlock&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 36 : 8</i></p>
+<pre>
+</pre>
+<span id='modernize-use-emplace'>&nbsp;</span>
+<hr>
+<h3>warning: unnecessary temporary object created while calling emplace_back</h3>
+<code>[modernize-use-emplace]</code>
+<p><i>src/forma/scanner.cc 60 : 21</i></p>
+<pre>
+   60 |                         ret.emplace_back(Token{ TokenType::Eof, &quot;&quot;, Location{file, current.Line, current.Offset}, &quot;&quot;});
+      |                                          ^~~~~~                                                                     ~
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;ReportError&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 69 : 8</i></p>
+<pre>
+   69 |                 void ReportError(const Location&amp; loc, const std::string&amp; message)
+      |                      ^~~~~~~~~~~
+      |                      report_error
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;ScanToken&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 74 : 22</i></p>
+<pre>
+   54 |                 std::vector&lt;Token&gt; ScanToken()
+      |                                    ^~~~~~~~~
+      |                                    scan_token
+</pre>
+<span id='readability-braces-around-statements'>&nbsp;</span>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/scanner.cc 79 : 25</i></p>
+<pre>
+   79 |                                 if (tok.has_value()) return { *tok };
+      |                                                     ^                
+      |                                                      {
+</pre>
+<hr>
+<h3>warning: invalid case style for local variable &#39;beforeStart&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 85 : 11</i></p>
+<pre>
+   85 |                                         auto beforeStart = current;
+      |                                              ^~~~~~~~~~~
+      |                                              before_start
+   86 |                                         auto c = Advance();
+   87 |                                         if (c == &#39;{&#39; &amp;&amp; Match(&#39;{&#39;))
+   88 |                                         {
+   89 |                                                 auto beginType = TokenType::BeginCode;
+   90 |                                                 if (Peek() == &#39;-&#39;)
+   91 |                                                 {
+   92 |                                                         Advance();
+   93 |                                                         beginType = TokenType::BeginCodeTrim;
+   94 |                                                 }
+   95 |                                                 auto afterStart = current;
+   96 |                                                 auto text = CreateToken(TokenType::Text, std::nullopt, start, beforeStart);
+      |                                                                                                               ~~~~~~~~~~~
+      |                                                                                                               before_start
+</pre>
+<hr>
+<h3>warning: invalid case style for local variable &#39;beginType&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 89 : 12</i></p>
+<pre>
+   89 |                                                 auto beginType = TokenType::BeginCode;
+      |                                                      ^~~~~~~~~
+      |                                                      begin_type
+   90 |                                                 if (Peek() == &#39;-&#39;)
+   91 |                                                 {
+   92 |                                                         Advance();
+   93 |                                                         beginType = TokenType::BeginCodeTrim;
+      |                                                         ~~~~~~~~~
+      |                                                         begin_type
+</pre>
+<hr>
+<h3>warning: invalid case style for local variable &#39;afterStart&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 95 : 12</i></p>
+<pre>
+   95 |                                                 auto afterStart = current;
+      |                                                      ^~~~~~~~~~
+      |                                                      after_start
+</pre>
+<span id='readability-container-size-empty'>&nbsp;</span>
+<hr>
+<h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;length&#39;</h3>
+<code>[readability-container-size-empty]</code>
+<p><i>src/forma/scanner.cc 99 : 11</i></p>
+<pre>
+   99 |                                                 if (text.Value.length() &gt; 0)
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                                     !text.Value.empty()
+</pre>
+<hr>
+<h3>note: method &#39;basic_string&#39;:: empty() defined here</h3>
+<p><i>../../../../../usr/include/c++/14/bits/basic_string.h 1231 : 7</i></p>
+<pre>
+ 1231 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+</pre>
+<hr>
+<h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;length&#39;</h3>
+<code>[readability-container-size-empty]</code>
+<p><i>src/forma/scanner.cc 113 : 10</i></p>
+<pre>
+  113 |                                         if (text.Value.length() &gt; 0)
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                             !text.Value.empty()
+</pre>
+<hr>
+<h3>note: method &#39;basic_string&#39;:: empty() defined here</h3>
+<p><i>../../../../../usr/include/c++/14/bits/basic_string.h 1231 : 7</i></p>
+<pre>
+ 1231 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;ScanCodeToken&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 123 : 24</i></p>
+<pre>
+   78 |                 std::optional&lt;Token&gt; ScanCodeToken()
+      |                                      ^~~~~~~~~~~~~
+      |                                      scan_code_token
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/scanner.cc 206 : 29</i></p>
+<pre>
+  206 |                                         while (IsDigit(Peek())) Advance();
+      |                                                                ^          
+      |                                                                 {
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/scanner.cc 214 : 30</i></p>
+<pre>
+  214 |                                                 while (IsDigit(Peek())) Advance();
+      |                                                                        ^          
+      |                                                                         {
+</pre>
+<hr>
+<h3>warning: statement should be inside braces</h3>
+<code>[readability-braces-around-statements]</code>
+<p><i>src/forma/scanner.cc 221 : 36</i></p>
+<pre>
+  221 |                                         while (IsAlphaNumeric(Peek())) Advance();
+      |                                                                       ^          
+      |                                                                        {
+</pre>
+<hr>
+<h3>warning: invalid case style for class method &#39;IsDigit&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 239 : 15</i></p>
+<pre>
+  204 |                 static bool IsDigit(char c) { return c &gt;= &#39;0&#39; &amp;&amp; c &lt;= &#39;9&#39;; }
+      |                             ^~~~~~~
+      |                             is_digit
+  205 |                 static bool IsAlpha(char c) { return (&#39;a&#39; &lt;= c &amp;&amp; c &lt;= &#39;z&#39;) || (&#39;A&#39; &lt;= c &amp;&amp; c &lt;= &#39;Z&#39;) || c == &#39;_&#39;; }
+  206 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                                                                           ~~~~~~~
+      |                                                                           is_digit
+</pre>
+<hr>
+<h3>warning: invalid case style for class method &#39;IsAlpha&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 240 : 15</i></p>
+<pre>
+  219 |                 static bool IsAlpha(char c) { return (&#39;a&#39; &lt;= c &amp;&amp; c &lt;= &#39;z&#39;) || (&#39;A&#39; &lt;= c &amp;&amp; c &lt;= &#39;Z&#39;) || c == &#39;_&#39;; }
+      |                             ^~~~~~~
+      |                             is_alpha
+  220 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                                                             ~~~~~~~
+      |                                                             is_alpha
+</pre>
+<hr>
+<h3>warning: invalid case style for class method &#39;IsAlphaNumeric&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 241 : 15</i></p>
+<pre>
+  221 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                             ^~~~~~~~~~~~~~
+      |                             is_alpha_numeric
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;NextChar&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 242 : 19</i></p>
+<pre>
+  242 |                 ScannerLocation NextChar() { return with_index_offset(current, current.Index + 1,current.Offset + 1); }
+      |                                 ^~~~~~~~
+      |                                 next_char
+  243 | 
+  244 |                 bool Match(char expected)
+  245 |                 {
+  246 |                         if (IsAtEnd()) { return false; }
+  247 |                         if (source[current.Index] != expected) { return false; }
+  248 | 
+  249 |                         current = NextChar();
+      |                                   ~~~~~~~~
+      |                                   next_char
+</pre>
+<span id='readability-make-member-function-const'>&nbsp;</span>
+<hr>
+<h3>warning: method &#39;NextChar&#39; can be made const</h3>
+<code>[readability-make-member-function-const]</code>
+<p><i>src/forma/scanner.cc 242 : 19</i></p>
+<pre>
+  242 |                 ScannerLocation NextChar() { return with_index_offset(current, current.Index + 1,current.Offset + 1); }
+      |                                 ^
+      |                                            const
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;Match&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 244 : 8</i></p>
+<pre>
+   87 |                 bool Match(char expected)
+      |                      ^~~~~
+      |                      match
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;Peek&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 253 : 8</i></p>
+<pre>
+   90 |                 char Peek()
+      |                      ^~~~
+      |                      peek
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;PeekNext&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 258 : 8</i></p>
+<pre>
+  162 |                 char PeekNext()
+      |                      ^~~~~~~~
+      |                      peek_next
+</pre>
+<hr>
+<h3>warning: invalid case style for local variable &#39;suggestedIndex&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 260 : 9</i></p>
+<pre>
+  260 |                         auto suggestedIndex = current.Index + 1;
+      |                              ^~~~~~~~~~~~~~
+      |                              suggested_index
+  261 |                         return suggestedIndex &gt;= source.size() ? &#39;\0&#39; : source[suggestedIndex];
+      |                                ~~~~~~~~~~~~~~                                  ~~~~~~~~~~~~~~
+      |                                suggested_index                                 suggested_index
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;Advance&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 264 : 8</i></p>
+<pre>
+   86 |                 char Advance()
+      |                      ^~~~~~~
+      |                      advance
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;GetStartLocation&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 277 : 12</i></p>
+<pre>
+  131 |                 Location GetStartLocation(std::optional&lt;ScannerLocation&gt; stt = std::nullopt)
+      |                          ^~~~~~~~~~~~~~~~
+      |                          get_start_location
+  132 |                 {
+  133 |                         const auto st = stt.value_or(start);
+  134 |                         return Location(file, st.Line, st.Offset);
+  135 |                 }
+  136 | 
+  137 |                 Token CreateToken(TokenType tt, std::optional&lt;std::string&gt; value = std::nullopt, std::optional&lt;ScannerLocation&gt; begin = std::nullopt, std::optional&lt;ScannerLocation&gt; end = std::nullopt)
+  138 |                 {
+  139 |                         const auto st = begin.value_or(start);
+  140 |                         const auto cu = end.value_or(current);
+  141 |                         const auto text = source.substr(st.Index, cu.Index - st.Index);
+  142 |                         return Token{ tt, text, GetStartLocation(st), value.value_or(text) };
+      |                                                 ~~~~~~~~~~~~~~~~
+      |                                                 get_start_location
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;CreateToken&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 283 : 9</i></p>
+<pre>
+   96 |                 Token CreateToken(TokenType tt, std::optional&lt;std::string&gt; value = std::nullopt, std::optional&lt;ScannerLocation&gt; begin = std::nullopt, std::optional&lt;ScannerLocation&gt; end = std::nullopt)
+      |                       ^~~~~~~~~~~
+      |                       create_token
+</pre>
+<hr>
+<h3>warning: invalid case style for public method &#39;IsAtEnd&#39;</h3>
+<code>[readability-identifier-naming]</code>
+<p><i>src/forma/scanner.cc 291 : 8</i></p>
+<pre>
+   51 |                 bool IsAtEnd()
+      |                      ^~~~~~~
+      |                      is_at_end
+</pre>
+<hr>
+<h3>warning: method &#39;IsAtEnd&#39; can be made const</h3>
+<code>[readability-make-member-function-const]</code>
+<p><i>src/forma/scanner.cc 291 : 8</i></p>
+<pre>
+  291 |                 bool IsAtEnd()
+      |                      ^        
+      |                                const
+</pre>
+<!--
+/home/runner/work/forma/forma/src/forma/scanner.cc:36:8: warning: use default member initializer for 'insideCodeBlock' [cppcoreguidelines-use-default-member-init,modernize-use-default-member-init]
+   36 |                 bool insideCodeBlock;
+      |                      ^              
+      |                                     {false}
+   37 |                 std::vector<Error> errors;
+   38 |                 std::vector<Token> ret;
+   39 | 
+   40 |                 Scanner(const std::string& f, const std::string& s)
+   41 |                         : file(f)
+   42 |                         , source(s)
+   43 |                         , start(ScannerLocation{ 1, 0, 0 })
+   44 |                         , current(start)
+   45 |                         , insideCodeBlock(false)
+      |                           ~~~~~~~~~~~~~~~~~~~~~~
+/home/runner/work/forma/forma/src/forma/scanner.cc:36:8: warning: invalid case style for public member 'insideCodeBlock' [readability-identifier-naming]
+note: this fix will not be applied because it overlaps with another fix
+/home/runner/work/forma/forma/src/forma/scanner.cc:60:21: warning: unnecessary temporary object created while calling emplace_back [modernize-use-emplace]
+   60 |                         ret.emplace_back(Token{ TokenType::Eof, "", Location{file, current.Line, current.Offset}, ""});
+      |                                          ^~~~~~                                                                     ~
+/home/runner/work/forma/forma/src/forma/scanner.cc:69:8: warning: invalid case style for public method 'ReportError' [readability-identifier-naming]
+   69 |                 void ReportError(const Location& loc, const std::string& message)
+      |                      ^~~~~~~~~~~
+      |                      report_error
+/home/runner/work/forma/forma/src/forma/scanner.cc:74:22: warning: invalid case style for public method 'ScanToken' [readability-identifier-naming]
+   54 |                 std::vector<Token> ScanToken()
+      |                                    ^~~~~~~~~
+      |                                    scan_token
+/home/runner/work/forma/forma/src/forma/scanner.cc:79:25: warning: statement should be inside braces [readability-braces-around-statements]
+   79 |                                 if (tok.has_value()) return { *tok };
+      |                                                     ^                
+      |                                                      {
+/home/runner/work/forma/forma/src/forma/scanner.cc:85:11: warning: invalid case style for local variable 'beforeStart' [readability-identifier-naming]
+   85 |                                         auto beforeStart = current;
+      |                                              ^~~~~~~~~~~
+      |                                              before_start
+   86 |                                         auto c = Advance();
+   87 |                                         if (c == '{' && Match('{'))
+   88 |                                         {
+   89 |                                                 auto beginType = TokenType::BeginCode;
+   90 |                                                 if (Peek() == '-')
+   91 |                                                 {
+   92 |                                                         Advance();
+   93 |                                                         beginType = TokenType::BeginCodeTrim;
+   94 |                                                 }
+   95 |                                                 auto afterStart = current;
+   96 |                                                 auto text = CreateToken(TokenType::Text, std::nullopt, start, beforeStart);
+      |                                                                                                               ~~~~~~~~~~~
+      |                                                                                                               before_start
+/home/runner/work/forma/forma/src/forma/scanner.cc:89:12: warning: invalid case style for local variable 'beginType' [readability-identifier-naming]
+   89 |                                                 auto beginType = TokenType::BeginCode;
+      |                                                      ^~~~~~~~~
+      |                                                      begin_type
+   90 |                                                 if (Peek() == '-')
+   91 |                                                 {
+   92 |                                                         Advance();
+   93 |                                                         beginType = TokenType::BeginCodeTrim;
+      |                                                         ~~~~~~~~~
+      |                                                         begin_type
+/home/runner/work/forma/forma/src/forma/scanner.cc:95:12: warning: invalid case style for local variable 'afterStart' [readability-identifier-naming]
+   95 |                                                 auto afterStart = current;
+      |                                                      ^~~~~~~~~~
+      |                                                      after_start
+/home/runner/work/forma/forma/src/forma/scanner.cc:99:11: warning: the 'empty' method should be used to check for emptiness instead of 'length' [readability-container-size-empty]
+   99 |                                                 if (text.Value.length() > 0)
+      |                                                     ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                                     !text.Value.empty()
+/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
+ 1231 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+/home/runner/work/forma/forma/src/forma/scanner.cc:113:10: warning: the 'empty' method should be used to check for emptiness instead of 'length' [readability-container-size-empty]
+  113 |                                         if (text.Value.length() > 0)
+      |                                             ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                             !text.Value.empty()
+/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
+ 1231 |       empty() const _GLIBCXX_NOEXCEPT
+      |       ^
+/home/runner/work/forma/forma/src/forma/scanner.cc:123:24: warning: invalid case style for public method 'ScanCodeToken' [readability-identifier-naming]
+   78 |                 std::optional<Token> ScanCodeToken()
+      |                                      ^~~~~~~~~~~~~
+      |                                      scan_code_token
+/home/runner/work/forma/forma/src/forma/scanner.cc:206:29: warning: statement should be inside braces [readability-braces-around-statements]
+  206 |                                         while (IsDigit(Peek())) Advance();
+      |                                                                ^          
+      |                                                                 {
+/home/runner/work/forma/forma/src/forma/scanner.cc:214:30: warning: statement should be inside braces [readability-braces-around-statements]
+  214 |                                                 while (IsDigit(Peek())) Advance();
+      |                                                                        ^          
+      |                                                                         {
+/home/runner/work/forma/forma/src/forma/scanner.cc:221:36: warning: statement should be inside braces [readability-braces-around-statements]
+  221 |                                         while (IsAlphaNumeric(Peek())) Advance();
+      |                                                                       ^          
+      |                                                                        {
+/home/runner/work/forma/forma/src/forma/scanner.cc:239:15: warning: invalid case style for class method 'IsDigit' [readability-identifier-naming]
+  204 |                 static bool IsDigit(char c) { return c >= '0' && c <= '9'; }
+      |                             ^~~~~~~
+      |                             is_digit
+  205 |                 static bool IsAlpha(char c) { return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || c == '_'; }
+  206 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                                                                           ~~~~~~~
+      |                                                                           is_digit
+/home/runner/work/forma/forma/src/forma/scanner.cc:240:15: warning: invalid case style for class method 'IsAlpha' [readability-identifier-naming]
+  219 |                 static bool IsAlpha(char c) { return ('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || c == '_'; }
+      |                             ^~~~~~~
+      |                             is_alpha
+  220 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                                                             ~~~~~~~
+      |                                                             is_alpha
+/home/runner/work/forma/forma/src/forma/scanner.cc:241:15: warning: invalid case style for class method 'IsAlphaNumeric' [readability-identifier-naming]
+  221 |                 static bool IsAlphaNumeric(char c) { return IsAlpha(c) || IsDigit(c); }
+      |                             ^~~~~~~~~~~~~~
+      |                             is_alpha_numeric
+/home/runner/work/forma/forma/src/forma/scanner.cc:242:19: warning: invalid case style for public method 'NextChar' [readability-identifier-naming]
+  242 |                 ScannerLocation NextChar() { return with_index_offset(current, current.Index + 1,current.Offset + 1); }
+      |                                 ^~~~~~~~
+      |                                 next_char
+  243 | 
+  244 |                 bool Match(char expected)
+  245 |                 {
+  246 |                         if (IsAtEnd()) { return false; }
+  247 |                         if (source[current.Index] != expected) { return false; }
+  248 | 
+  249 |                         current = NextChar();
+      |                                   ~~~~~~~~
+      |                                   next_char
+/home/runner/work/forma/forma/src/forma/scanner.cc:242:19: warning: method 'NextChar' can be made const [readability-make-member-function-const]
+  242 |                 ScannerLocation NextChar() { return with_index_offset(current, current.Index + 1,current.Offset + 1); }
+      |                                 ^
+      |                                            const
+/home/runner/work/forma/forma/src/forma/scanner.cc:244:8: warning: invalid case style for public method 'Match' [readability-identifier-naming]
+   87 |                 bool Match(char expected)
+      |                      ^~~~~
+      |                      match
+/home/runner/work/forma/forma/src/forma/scanner.cc:253:8: warning: invalid case style for public method 'Peek' [readability-identifier-naming]
+   90 |                 char Peek()
+      |                      ^~~~
+      |                      peek
+/home/runner/work/forma/forma/src/forma/scanner.cc:258:8: warning: invalid case style for public method 'PeekNext' [readability-identifier-naming]
+  162 |                 char PeekNext()
+      |                      ^~~~~~~~
+      |                      peek_next
+/home/runner/work/forma/forma/src/forma/scanner.cc:260:9: warning: invalid case style for local variable 'suggestedIndex' [readability-identifier-naming]
+  260 |                         auto suggestedIndex = current.Index + 1;
+      |                              ^~~~~~~~~~~~~~
+      |                              suggested_index
+  261 |                         return suggestedIndex >= source.size() ? '\0' : source[suggestedIndex];
+      |                                ~~~~~~~~~~~~~~                                  ~~~~~~~~~~~~~~
+      |                                suggested_index                                 suggested_index
+/home/runner/work/forma/forma/src/forma/scanner.cc:264:8: warning: invalid case style for public method 'Advance' [readability-identifier-naming]
+   86 |                 char Advance()
+      |                      ^~~~~~~
+      |                      advance
+/home/runner/work/forma/forma/src/forma/scanner.cc:277:12: warning: invalid case style for public method 'GetStartLocation' [readability-identifier-naming]
+  131 |                 Location GetStartLocation(std::optional<ScannerLocation> stt = std::nullopt)
+      |                          ^~~~~~~~~~~~~~~~
+      |                          get_start_location
+  132 |                 {
+  133 |                         const auto st = stt.value_or(start);
+  134 |                         return Location(file, st.Line, st.Offset);
+  135 |                 }
+  136 | 
+  137 |                 Token CreateToken(TokenType tt, std::optional<std::string> value = std::nullopt, std::optional<ScannerLocation> begin = std::nullopt, std::optional<ScannerLocation> end = std::nullopt)
+  138 |                 {
+  139 |                         const auto st = begin.value_or(start);
+  140 |                         const auto cu = end.value_or(current);
+  141 |                         const auto text = source.substr(st.Index, cu.Index - st.Index);
+  142 |                         return Token{ tt, text, GetStartLocation(st), value.value_or(text) };
+      |                                                 ~~~~~~~~~~~~~~~~
+      |                                                 get_start_location
+/home/runner/work/forma/forma/src/forma/scanner.cc:283:9: warning: invalid case style for public method 'CreateToken' [readability-identifier-naming]
+   96 |                 Token CreateToken(TokenType tt, std::optional<std::string> value = std::nullopt, std::optional<ScannerLocation> begin = std::nullopt, std::optional<ScannerLocation> end = std::nullopt)
+      |                       ^~~~~~~~~~~
+      |                       create_token
+/home/runner/work/forma/forma/src/forma/scanner.cc:291:8: warning: invalid case style for public method 'IsAtEnd' [readability-identifier-naming]
+   51 |                 bool IsAtEnd()
+      |                      ^~~~~~~
+      |                      is_at_end
+/home/runner/work/forma/forma/src/forma/scanner.cc:291:8: warning: method 'IsAtEnd' can be made const [readability-make-member-function-const]
+  291 |                 bool IsAtEnd()
+      |                      ^        
+      |                                const
+-->
+</body>
+</html>
