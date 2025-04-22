@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CodeCity</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                background-color: #bfe3dd;
+                color: #000;
+                margin: 0;
+            }
+            a {
+                color: #2983ff;
+            }
+            #info {
+                position: absolute;
+                top: 0px;
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                text-align: center;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                pointer-events: none;
+                z-index: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container"></div>
+        <div id="info">
+            Hello world
+        </div>
+        <script type="importmap">
+            {
+                "imports": {
+                  "three": "https://unpkg.com/three@0.157.0/build/three.module.js",
+                  "three/addons/": "https://unpkg.com/three@0.157.0/examples/jsm/"
+                }
+            }
+        </script>
+        <script type="module">
+            import * as THREE from 'three';
+            import Stats from 'three/addons/libs/stats.module.js';
+            import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+            const container = document.getElementById( 'container' );
+            const renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+            const scene = new THREE.Scene();
+            const MakeCube = (name, color, sx, sy, sz, x, y, z) => {
+                const geometry = new THREE.BoxGeometry(sx, sy, sz);
+                const material = new THREE.MeshLambertMaterial( { color: color } );
+                const cube = new THREE.Mesh( geometry, material );
+                cube.position.x = x;
+                cube.position.y = y;
+                cube.position.z = z;
+                cube.name = name;
+                scene.add(cube);
+            };
+            scene.background = new THREE.Color( 0xbfe3dd );
+            const camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000);
+            camera.position.set(33, 2, 20 );
+            const controls = new OrbitControls( camera, renderer.domElement )
+            controls.target.set(16.5, 0, 10 );
+            const dirLight1 = new THREE.DirectionalLight( 0xffffff, 3 );
+            dirLight1.position.set( 1, 1, 1 );
+            scene.add( dirLight1 );
+            const dirLight2 = new THREE.DirectionalLight( 0x002288, 3 );
+            dirLight2.position.set( - 1, - 1, - 1 );
+            scene.add( dirLight2 );
+            const ambientLight = new THREE.AmbientLight( 0x555555 );
+            scene.add( ambientLight );
+            MakeCube("forma", 0x6cfab4, 33, 4, 20, 16.5, 2, 10);
+            MakeCube("forma::node", 0x039154, 17, 4, 13, 9.5, 6, 7.5);
+            MakeCube("forma::node::Attribute", 0x8e98e0, 4, 4, 4, 4, 10, 4);
+            MakeCube("forma::node::FunctionCall", 0x95597d, 6, 4, 6, 9, 10, 5);
+            MakeCube("forma::node::Group", 0x988b92, 4, 4, 4, 14, 10, 4);
+            MakeCube("forma::node::If", 0x80f629, 5, 4, 5, 14.5, 10, 8.5);
+            MakeCube("forma::node::Iterate", 0x477c62, 5, 4, 5, 4.5, 10, 10.5);
+            MakeCube("forma::node::Text", 0xae95a4, 4, 4, 4, 9, 10, 10);
+            MakeCube("forma::strings", 0x1cfd70, 2, 4, 2, 19, 6, 2);
+            MakeCube("forma::Definition", 0x6c848c, 5, 7, 5, 22.5, 7.5, 3.5);
+            MakeCube("forma::DirectoryInfo", 0x70d3aa, 2, 4, 2, 26, 6, 2);
+            MakeCube("forma::Error", 0xc4f8a7, 4, 3, 4, 29, 5.5, 3);
+            MakeCube("forma::Fmt", 0xba46ce, 3, 4, 3, 26.5, 6, 6.5);
+            MakeCube("forma::FuncArgument", 0xccbfce, 4, 2, 4, 30, 5, 7);
+            MakeCube("forma::Location", 0xf11e1e, 5, 3, 5, 20.5, 5.5, 8.5);
+            MakeCube("forma::Node", 0x1374c1, 2, 9, 2, 24, 8.5, 7);
+            MakeCube("forma::ScannerLocation", 0x8e4b2d, 5, 3, 5, 25.5, 5.5, 10.5);
+            MakeCube("forma::Token", 0xe19be8, 6, 5, 6, 21, 6.5, 16);
+            MakeCube("forma::VfsRead", 0x113354, 2, 6, 2, 29, 7, 10);
+            let inter = null;
+            const pointer = new THREE.Vector2();
+            const raycaster = new THREE.Raycaster();
+            function onPointerMove(event) {
+                pointer.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+                pointer.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+            }
+            document.addEventListener('mousemove', onPointerMove);
+            const intersect = () => {
+                raycaster.setFromCamera( pointer, camera );
+                const intersects = raycaster.intersectObjects( scene.children, false );
+                if (intersects.length > 0)
+                {
+                    const newInter = intersects[0].object;
+                    if (inter != newInter)
+                    {
+                        if (inter) inter.material.emissive.setHex( inter.currentHex );
+                        inter = newInter;
+                        inter.currentHex = inter.material.emissive.getHex();
+                        inter.material.emissive.setHex( 0xff0000 );
+                        info.innerHTML = inter.name
+                    }
+                }
+                else
+                {
+                    if (inter)
+                    {
+                        inter.material.emissive.setHex( inter.currentHex );
+                        info.innerHTML = "";
+                    }
+                    inter = null;
+                }
+            };
+            const clock = new THREE.Clock();
+            window.onresize = function () {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize( window.innerWidth, window.innerHeight );
+            };
+            function animate() {
+                requestAnimationFrame( animate );
+                controls.update();
+                intersect();
+                renderer.render( scene, camera );
+            }
+            animate();
+        </script>
+    </body>
+</html>

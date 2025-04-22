@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1Location" kind="struct" language="C++" prot="public">
+    <compoundname>forma::Location</compoundname>
+    <includes refid="core_8hh" local="no">core.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1Location_1a15d2604b1f04989767f094cc2079d7b9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::Location::File</definition>
+        <argsstring></argsstring>
+        <name>File</name>
+        <qualifiedname>forma::Location::File</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="51" column="21" bodyfile="src/forma/core.hh" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Location_1aab2a4a94fde0e3739c9d444b5d1d8bc7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int forma::Location::Line</definition>
+        <argsstring></argsstring>
+        <name>Line</name>
+        <qualifiedname>forma::Location::Line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="52" column="13" bodyfile="src/forma/core.hh" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Location_1a94e13cb39008a19c8e9692b5521ec016" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int forma::Location::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <qualifiedname>forma::Location::Offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="53" column="13" bodyfile="src/forma/core.hh" bodystart="53" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1Location_1a36565640aac8750e93aea6ef407c926b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto forma::Location::operator&lt;=&gt;</definition>
+        <argsstring>(const Location &amp;rhs) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>forma::Location::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structforma_1_1Location" kindref="compound">Location</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="55" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh" line="49" column="5" bodyfile="src/forma/core.hh" bodystart="50" bodyend="56"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Location_1a15d2604b1f04989767f094cc2079d7b9" prot="public" virt="non-virtual"><scope>forma::Location</scope><name>File</name></member>
+      <member refid="structforma_1_1Location_1aab2a4a94fde0e3739c9d444b5d1d8bc7" prot="public" virt="non-virtual"><scope>forma::Location</scope><name>Line</name></member>
+      <member refid="structforma_1_1Location_1a94e13cb39008a19c8e9692b5521ec016" prot="public" virt="non-virtual"><scope>forma::Location</scope><name>Offset</name></member>
+      <member refid="structforma_1_1Location_1a36565640aac8750e93aea6ef407c926b" prot="public" virt="non-virtual"><scope>forma::Location</scope><name>operator&lt;=&gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

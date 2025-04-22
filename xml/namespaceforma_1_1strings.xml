@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceforma_1_1strings" kind="namespace" language="C++">
+    <compoundname>forma::strings</compoundname>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceforma_1_1strings_1ac212e4843b41dbb3564942aa2e6c29af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::default_space</definition>
+        <argsstring>()</argsstring>
+        <name>default_space</name>
+        <qualifiedname>forma::strings::default_space</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="110" column="21" declfile="src/forma/core.hh" declline="110" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a4c5bbf28c7a6cc3495a7ea370c6472c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::TrimStart</definition>
+        <argsstring>(const std::string &amp;s, const std::string &amp;=default_space())</argsstring>
+        <name>TrimStart</name>
+        <qualifiedname>forma::strings::TrimStart</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval><ref refid="namespaceforma_1_1strings_1ac212e4843b41dbb3564942aa2e6c29af" kindref="member">default_space</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="111" column="21" declfile="src/forma/core.hh" declline="111" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a6edef1a9bbc961e2bd75d2e286234ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::TrimEnd</definition>
+        <argsstring>(const std::string &amp;s, const std::string &amp;=default_space())</argsstring>
+        <name>TrimEnd</name>
+        <qualifiedname>forma::strings::TrimEnd</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval><ref refid="namespaceforma_1_1strings_1ac212e4843b41dbb3564942aa2e6c29af" kindref="member">default_space</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="112" column="21" declfile="src/forma/core.hh" declline="112" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1aa653e16aa8638c1ea8b0149b11997194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::Trim</definition>
+        <argsstring>(const std::string &amp;s, const std::string &amp;=default_space())</argsstring>
+        <name>Trim</name>
+        <qualifiedname>forma::strings::Trim</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <defval><ref refid="namespaceforma_1_1strings_1ac212e4843b41dbb3564942aa2e6c29af" kindref="member">default_space</ref>()</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="113" column="21" declfile="src/forma/core.hh" declline="113" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a467ec78c77314438c26bbbaa409fe618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::Capitalize</definition>
+        <argsstring>(const std::string &amp;p, bool alsoFirstChar)</argsstring>
+        <name>Capitalize</name>
+        <qualifiedname>forma::strings::Capitalize</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>alsoFirstChar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="115" column="21" declfile="src/forma/core.hh" declline="115" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a88cf87209e5821fd0dbf789c317739d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::ToLower</definition>
+        <argsstring>(const std::string &amp;args)</argsstring>
+        <name>ToLower</name>
+        <qualifiedname>forma::strings::ToLower</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="117" column="21" declfile="src/forma/core.hh" declline="117" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1ac1e6a100f7974afc540ae8957df9861c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::ToUpper</definition>
+        <argsstring>(const std::string &amp;args)</argsstring>
+        <name>ToUpper</name>
+        <qualifiedname>forma::strings::ToUpper</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="118" column="21" declfile="src/forma/core.hh" declline="118" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1ab53e5fd9bf50f4c2fc92201561823c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::ToTitleCase</definition>
+        <argsstring>(const std::string &amp;args)</argsstring>
+        <name>ToTitleCase</name>
+        <qualifiedname>forma::strings::ToTitleCase</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="119" column="21" declfile="src/forma/core.hh" declline="119" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1ad65b6b81a2ed5870b60ff4774e00e3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::PadLeft</definition>
+        <argsstring>(const std::string &amp;s, int count, char c)</argsstring>
+        <name>PadLeft</name>
+        <qualifiedname>forma::strings::PadLeft</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="121" column="21" declfile="src/forma/core.hh" declline="121" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a10c2e84f3814aa28ac2b168fa05144e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::Replace</definition>
+        <argsstring>(const std::string &amp;arg, const std::string &amp;lhs, const std::string &amp;rhs)</argsstring>
+        <name>Replace</name>
+        <qualifiedname>forma::strings::Replace</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="122" column="21" declfile="src/forma/core.hh" declline="122" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1_1strings_1a12d2a0d0c4948a70cf35cd219928a25e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::strings::Substring</definition>
+        <argsstring>(const std::string &amp;arg, int lhs, int rhs)</argsstring>
+        <name>Substring</name>
+        <qualifiedname>forma::strings::Substring</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>arg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="123" column="21" declfile="src/forma/core.hh" declline="123" declcolumn="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh" line="108" column="5"/>
+  </compounddef>
+</doxygen>

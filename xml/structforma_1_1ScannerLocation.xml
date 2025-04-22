@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1ScannerLocation" kind="struct" language="C++" prot="public">
+    <compoundname>forma::ScannerLocation</compoundname>
+    <includes refid="scanner_8hh" local="no">scanner.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1ScannerLocation_1ab6f4837552d12989ba7c016369ce939a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int forma::ScannerLocation::Line</definition>
+        <argsstring></argsstring>
+        <name>Line</name>
+        <qualifiedname>forma::ScannerLocation::Line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="76" column="9" bodyfile="src/forma/scanner.hh" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1ScannerLocation_1a9acd579fcb8e83b2e6b22bb81e2baf87" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int forma::ScannerLocation::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <qualifiedname>forma::ScannerLocation::Offset</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="77" column="9" bodyfile="src/forma/scanner.hh" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1ScannerLocation_1af45314d071daa33a09fc89b13d390dd6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int forma::ScannerLocation::Index</definition>
+        <argsstring></argsstring>
+        <name>Index</name>
+        <qualifiedname>forma::ScannerLocation::Index</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="78" column="9" bodyfile="src/forma/scanner.hh" bodystart="78" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1ScannerLocation_1a37b7f72ac907f83dec6208f580cf8182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>forma::ScannerLocation::ScannerLocation</definition>
+        <argsstring>(int l, int o, int i)</argsstring>
+        <name>ScannerLocation</name>
+        <qualifiedname>forma::ScannerLocation::ScannerLocation</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="80" column="1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/scanner.hh" line="74" column="1" bodyfile="src/forma/scanner.hh" bodystart="75" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structforma_1_1ScannerLocation_1af45314d071daa33a09fc89b13d390dd6" prot="public" virt="non-virtual"><scope>forma::ScannerLocation</scope><name>Index</name></member>
+      <member refid="structforma_1_1ScannerLocation_1ab6f4837552d12989ba7c016369ce939a" prot="public" virt="non-virtual"><scope>forma::ScannerLocation</scope><name>Line</name></member>
+      <member refid="structforma_1_1ScannerLocation_1a9acd579fcb8e83b2e6b22bb81e2baf87" prot="public" virt="non-virtual"><scope>forma::ScannerLocation</scope><name>Offset</name></member>
+      <member refid="structforma_1_1ScannerLocation_1a37b7f72ac907f83dec6208f580cf8182" prot="public" virt="non-virtual"><scope>forma::ScannerLocation</scope><name>ScannerLocation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

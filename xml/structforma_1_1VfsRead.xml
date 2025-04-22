@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1VfsRead" kind="struct" language="C++" prot="public" abstract="yes">
+    <compoundname>forma::VfsRead</compoundname>
+    <includes refid="core_8hh" local="no">core.hh</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1VfsRead_1a03ba402dee189aba07ff3521d0baa59c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual forma::VfsRead::~VfsRead</definition>
+        <argsstring>()=default</argsstring>
+        <name>~VfsRead</name>
+        <qualifiedname>forma::VfsRead::~VfsRead</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="13" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1VfsRead_1a38b77247f639bcfc335a8f25ffc6f129" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string forma::VfsRead::ReadAllText</definition>
+        <argsstring>(const std::string &amp;path)=0</argsstring>
+        <name>ReadAllText</name>
+        <qualifiedname>forma::VfsRead::ReadAllText</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="14" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1VfsRead_1a2cd9f1e09284d9b9e56ea9e43291754e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool forma::VfsRead::Exists</definition>
+        <argsstring>(const std::string &amp;f)=0</argsstring>
+        <name>Exists</name>
+        <qualifiedname>forma::VfsRead::Exists</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="15" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1VfsRead_1a2d23f64302f72b47b8e4198188949579" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string forma::VfsRead::GetExtension</definition>
+        <argsstring>(const std::string &amp;file_path)=0</argsstring>
+        <name>GetExtension</name>
+        <qualifiedname>forma::VfsRead::GetExtension</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="16" column="29"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh" line="11" column="5" bodyfile="src/forma/core.hh" bodystart="12" bodyend="17"/>
+    <listofallmembers>
+      <member refid="structforma_1_1VfsRead_1a2cd9f1e09284d9b9e56ea9e43291754e" prot="public" virt="pure-virtual"><scope>forma::VfsRead</scope><name>Exists</name></member>
+      <member refid="structforma_1_1VfsRead_1a2d23f64302f72b47b8e4198188949579" prot="public" virt="pure-virtual"><scope>forma::VfsRead</scope><name>GetExtension</name></member>
+      <member refid="structforma_1_1VfsRead_1a38b77247f639bcfc335a8f25ffc6f129" prot="public" virt="pure-virtual"><scope>forma::VfsRead</scope><name>ReadAllText</name></member>
+      <member refid="structforma_1_1VfsRead_1a03ba402dee189aba07ff3521d0baa59c" prot="public" virt="virtual"><scope>forma::VfsRead</scope><name>~VfsRead</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classforma_1_1Definition" kind="class" language="C++" prot="public">
+    <compoundname>forma::Definition</compoundname>
+    <includes refid="template_8hh" local="no">template.hh</includes>
+    <templateparamlist>
+      <param>
+        <type>typename TParent</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" prot="private" static="no">
+        <type>std::pair&lt; std::function&lt; std::string(TParent)&gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::Definition&lt; TParent &gt;::ChildrenRet =  std::pair&lt;std::function&lt;std::string (TParent)&gt;, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ChildrenRet</name>
+        <qualifiedname>forma::Definition::ChildrenRet</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="49" column="9" bodyfile="src/forma/template.hh" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" prot="private" static="no">
+        <type>std::function&lt; ChildrenRet(std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;)&gt;</type>
+        <definition>using forma::Definition&lt; TParent &gt;::ChildMapFunction =  std::function&lt;ChildrenRet(std::shared_ptr&lt;Node&gt;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>ChildMapFunction</name>
+        <qualifiedname>forma::Definition::ChildMapFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="50" column="9" bodyfile="src/forma/template.hh" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" prot="public" static="no">
+        <type>std::function&lt; std::string(const TParent &amp;)&gt;</type>
+        <definition>using forma::Definition&lt; TParent &gt;::GetterFunction =  std::function&lt;std::string(const TParent&amp;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>GetterFunction</name>
+        <qualifiedname>forma::Definition::GetterFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="95" column="9" bodyfile="src/forma/template.hh" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" kindref="member">GetterFunction</ref>, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::Definition&lt; TParent &gt;::ValidationResult =  std::pair&lt;GetterFunction, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ValidationResult</name>
+        <qualifiedname>forma::Definition::ValidationResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="96" column="9" bodyfile="src/forma/template.hh" bodystart="96" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classforma_1_1Definition_1a8e0bef690533ac188f5f18821779120c" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::function&lt; std::string(const TParent &amp;)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::function&lt;std::string(const TParent&amp;)&gt; &gt; forma::Definition&lt; TParent &gt;::attributes</definition>
+        <argsstring></argsstring>
+        <name>attributes</name>
+        <qualifiedname>forma::Definition::attributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="47" column="28" bodyfile="src/forma/template.hh" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classforma_1_1Definition_1aee8467df1c6184b6b117992f01cd6f3f" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::function&lt; bool(const TParent &amp;)&gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::function&lt;bool(const TParent&amp;)&gt; &gt; forma::Definition&lt; TParent &gt;::bools</definition>
+        <argsstring></argsstring>
+        <name>bools</name>
+        <qualifiedname>forma::Definition::bools</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="48" column="28" bodyfile="src/forma/template.hh" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classforma_1_1Definition_1a6ffa8b0da0ef69dfe54e2a0561e791ab" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, ChildMapFunction &gt;</type>
+        <definition>std::unordered_map&lt;std::string, ChildMapFunction&gt; forma::Definition&lt; TParent &gt;::children</definition>
+        <argsstring></argsstring>
+        <name>children</name>
+        <qualifiedname>forma::Definition::children</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="51" column="28" bodyfile="src/forma/template.hh" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classforma_1_1Definition_1a8ec8993746114077947bf9d8978ef240" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string forma::Definition&lt; TParent &gt;::SyntaxError</definition>
+        <argsstring>(const TParent &amp;)</argsstring>
+        <name>SyntaxError</name>
+        <qualifiedname>forma::Definition::SyntaxError</qualifiedname>
+        <param>
+          <type>const TParent &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="53" column="28" bodyfile="src/forma/template.hh" bodystart="53" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classforma_1_1Definition_1a78b6f923ef40d2ee3ce12187f5933dab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; TParent &gt; &amp;</type>
+        <definition>Definition&lt; TParent &gt; &amp; forma::Definition&lt; TParent &gt;::AddVar</definition>
+        <argsstring>(std::string name, std::function&lt; std::string(const TParent &amp;)&gt; getter)</argsstring>
+        <name>AddVar</name>
+        <qualifiedname>forma::Definition::AddVar</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::function&lt; std::string(const TParent &amp;)&gt;</type>
+          <declname>getter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="59" column="20" bodyfile="src/forma/template.hh" bodystart="59" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classforma_1_1Definition_1a99fee94d49103c368b964253021b7fe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; TParent &gt; &amp;</type>
+        <definition>Definition&lt; TParent &gt; &amp; forma::Definition&lt; TParent &gt;::AddBool</definition>
+        <argsstring>(std::string name, std::function&lt; bool(const TParent &amp;)&gt; getter)</argsstring>
+        <name>AddBool</name>
+        <qualifiedname>forma::Definition::AddBool</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::function&lt; bool(const TParent &amp;)&gt;</type>
+          <declname>getter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="65" column="20" bodyfile="src/forma/template.hh" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classforma_1_1Definition_1a5860e1e36254fc3f0aaefde2b109f6d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename TChild</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; TParent &gt; &amp;</type>
+        <definition>Definition&lt; TParent &gt; &amp; forma::Definition&lt; TParent &gt;::AddList</definition>
+        <argsstring>(std::string name, std::function&lt; std::vector&lt; const TChild * &gt;(const TParent &amp;)&gt; childSelector, Definition&lt; TChild &gt; childDef)</argsstring>
+        <name>AddList</name>
+        <qualifiedname>forma::Definition::AddList</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::function&lt; std::vector&lt; const TChild * &gt;(const TParent &amp;)&gt;</type>
+          <declname>childSelector</declname>
+        </param>
+        <param>
+          <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; TChild &gt;</type>
+          <declname>childDef</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="72" column="20" bodyfile="src/forma/template.hh" bodystart="72" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classforma_1_1Definition_1a3abf87925ec5993bfff9ad713b049e63" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" kindref="member">ValidationResult</ref></type>
+        <definition>ValidationResult forma::Definition&lt; TParent &gt;::Validate</definition>
+        <argsstring>(std::shared_ptr&lt; Node &gt; node) const</argsstring>
+        <name>Validate</name>
+        <qualifiedname>forma::Definition::Validate</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="98" column="26" bodyfile="src/forma/template.hh" bodystart="98" bodyend="189"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/template.hh" line="45" column="5" bodyfile="src/forma/template.hh" bodystart="46" bodyend="190"/>
+    <listofallmembers>
+      <member refid="classforma_1_1Definition_1a99fee94d49103c368b964253021b7fe4" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>AddBool</name></member>
+      <member refid="classforma_1_1Definition_1a5860e1e36254fc3f0aaefde2b109f6d4" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>AddList</name></member>
+      <member refid="classforma_1_1Definition_1a78b6f923ef40d2ee3ce12187f5933dab" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>AddVar</name></member>
+      <member refid="classforma_1_1Definition_1a8e0bef690533ac188f5f18821779120c" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>attributes</name></member>
+      <member refid="classforma_1_1Definition_1aee8467df1c6184b6b117992f01cd6f3f" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>bools</name></member>
+      <member refid="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>ChildMapFunction</name></member>
+      <member refid="classforma_1_1Definition_1a6ffa8b0da0ef69dfe54e2a0561e791ab" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>children</name></member>
+      <member refid="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>ChildrenRet</name></member>
+      <member refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>GetterFunction</name></member>
+      <member refid="classforma_1_1Definition_1a8ec8993746114077947bf9d8978ef240" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>SyntaxError</name></member>
+      <member refid="classforma_1_1Definition_1a3abf87925ec5993bfff9ad713b049e63" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>Validate</name></member>
+      <member refid="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>ValidationResult</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

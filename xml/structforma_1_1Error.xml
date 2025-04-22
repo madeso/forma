@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1Error" kind="struct" language="C++" prot="public">
+    <compoundname>forma::Error</compoundname>
+    <includes refid="core_8hh" local="no">core.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1Error_1a6553db23c1571d97fffb5cde7a153976" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::Error::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::Error::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="66" column="25" bodyfile="src/forma/core.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Error_1a55e63a16f7f65bfe88eff4623fa00843" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::Error::Message</definition>
+        <argsstring></argsstring>
+        <name>Message</name>
+        <qualifiedname>forma::Error::Message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="67" column="21" bodyfile="src/forma/core.hh" bodystart="67" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1Error_1a156defd0fccdfd23038072b3f6d849c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>auto</type>
+        <definition>auto forma::Error::operator&lt;=&gt;</definition>
+        <argsstring>(const Error &amp;rhs) const =default</argsstring>
+        <name>operator&lt;=&gt;</name>
+        <qualifiedname>forma::Error::operator&lt;=&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="69" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>forma::Error</label>
+        <link refid="structforma_1_1Error"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/core.hh" line="64" column="5" bodyfile="src/forma/core.hh" bodystart="65" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Error_1a6553db23c1571d97fffb5cde7a153976" prot="public" virt="non-virtual"><scope>forma::Error</scope><name>Location</name></member>
+      <member refid="structforma_1_1Error_1a55e63a16f7f65bfe88eff4623fa00843" prot="public" virt="non-virtual"><scope>forma::Error</scope><name>Message</name></member>
+      <member refid="structforma_1_1Error_1a156defd0fccdfd23038072b3f6d849c4" prot="public" virt="non-virtual"><scope>forma::Error</scope><name>operator&lt;=&gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

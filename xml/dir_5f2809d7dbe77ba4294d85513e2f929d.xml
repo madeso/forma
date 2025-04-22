@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5f2809d7dbe77ba4294d85513e2f929d" kind="dir">
+    <compoundname>src/forma</compoundname>
+    <innerfile refid="core_8hh">core.hh</innerfile>
+    <innerfile refid="parser_8hh">parser.hh</innerfile>
+    <innerfile refid="scanner_8hh">scanner.hh</innerfile>
+    <innerfile refid="template_8hh">template.hh</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespaceforma" kind="namespace" language="C++">
+    <compoundname>forma</compoundname>
+    <innerclass refid="classforma_1_1Definition" prot="public">forma::Definition</innerclass>
+    <innerclass refid="structforma_1_1DirectoryInfo" prot="public">forma::DirectoryInfo</innerclass>
+    <innerclass refid="structforma_1_1Error" prot="public">forma::Error</innerclass>
+    <innerclass refid="structforma_1_1Fmt" prot="public">forma::Fmt</innerclass>
+    <innerclass refid="structforma_1_1FuncArgument" prot="public">forma::FuncArgument</innerclass>
+    <innerclass refid="structforma_1_1Location" prot="public">forma::Location</innerclass>
+    <innerclass refid="structforma_1_1Node" prot="public">forma::Node</innerclass>
+    <innerclass refid="structforma_1_1ScannerLocation" prot="public">forma::ScannerLocation</innerclass>
+    <innerclass refid="structforma_1_1Token" prot="public">forma::Token</innerclass>
+    <innerclass refid="structforma_1_1VfsRead" prot="public">forma::VfsRead</innerclass>
+    <innernamespace refid="namespaceforma_1_1node">forma::node</innernamespace>
+    <innernamespace refid="namespaceforma_1_1strings">forma::strings</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceforma_1ade099699f7f5b414cce81b2879d49156" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>TokenType</name>
+        <qualifiedname>forma::TokenType</qualifiedname>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a9dffbf69ffba8bc38bc4e01abf4b1675" prot="public">
+          <name>Text</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a6c6c34caaf4a7579f6346a99b7fe9854" prot="public">
+          <name>BeginCode</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a3466da7c3bd0572b5f06a602130d7109" prot="public">
+          <name>EndCode</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156aeb7ca87543c176cef3095836535fe3d6" prot="public">
+          <name>BeginCodeTrim</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156ad9a4ae5f4d2b273df1cf1960bf9a4cc6" prot="public">
+          <name>EndCodeTrim</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a35cef9b551d46ecfd244f4694de9e228" prot="public">
+          <name>Ident</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156aaf6c6cf7a454b4ef4a850ac4d960a2cc" prot="public">
+          <name>Dot</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a58be47db9455679e6a44df2eff9c9fa6" prot="public">
+          <name>Comma</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a2ab1f3f893823298751fdf60b4e0365a" prot="public">
+          <name>Pipe</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156af02071a8b56c676adabcad98429fa14e" prot="public">
+          <name>LeftParen</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a2d7e137ea20e2c01ce105573d47ce525" prot="public">
+          <name>RightParen</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156afae8a9257e154175da4193dbf6552ef6" prot="public">
+          <name>Hash</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a358cfe58715d680d9ab09f82e4010cbc" prot="public">
+          <name>Slash</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a9d1c32ceff0c1951ef12e4bcfc1dab5c" prot="public">
+          <name>QuestionMark</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a49650dcc55dc413da4032cbe44b15d37" prot="public">
+          <name>Eof</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a71333e52fb8a68ab011a01e176039c29" prot="public">
+          <name>KeywordIf</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156af3757ce1f763c68314994b6014cf4afc" prot="public">
+          <name>KeywordRange</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156aa7e3ffb481925f61703a2b2c17269c1e" prot="public">
+          <name>KeywordEnd</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceforma_1ade099699f7f5b414cce81b2879d49156a404a67ed069cbf9093a9a56a7b7b8e6e" prot="public">
+          <name>KeywordInclude</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="11" column="1" bodyfile="src/forma/scanner.hh" bodystart="12" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceforma_1acf8b53ff934932ace15d5d4fefd4ea78" prot="public" static="no">
+        <type>std::function&lt; std::string(std::string)&gt;</type>
+        <definition>using forma::Func = typedef std::function&lt;std::string(std::string)&gt;</definition>
+        <argsstring></argsstring>
+        <name>Func</name>
+        <qualifiedname>forma::Func</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="86" column="5" bodyfile="src/forma/core.hh" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceforma_1a69ef46cce0abb8ca722e23a31bd48be2" prot="public" static="no">
+        <type>std::pair&lt; <ref refid="namespaceforma_1acf8b53ff934932ace15d5d4fefd4ea78" kindref="member">Func</ref>, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::FuncGeneratorResult = typedef std::pair&lt;Func, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>FuncGeneratorResult</name>
+        <qualifiedname>forma::FuncGeneratorResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="89" column="5" bodyfile="src/forma/core.hh" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceforma_1ac9cd168417c1217460933c468a20f268" prot="public" static="no">
+        <type>std::function&lt; <ref refid="namespaceforma_1a69ef46cce0abb8ca722e23a31bd48be2" kindref="member">FuncGeneratorResult</ref>(<ref refid="structforma_1_1Location" kindref="compound">Location</ref> call, std::vector&lt; <ref refid="structforma_1_1FuncArgument" kindref="compound">FuncArgument</ref> &gt; arguments)&gt;</type>
+        <definition>using forma::FuncGenerator = typedef std::function&lt;FuncGeneratorResult(Location call, std::vector&lt;FuncArgument&gt; arguments)&gt;</definition>
+        <argsstring></argsstring>
+        <name>FuncGenerator</name>
+        <qualifiedname>forma::FuncGenerator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="90" column="5" bodyfile="src/forma/core.hh" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceforma_1afac0ccc22870bb631526ca3398ce245d" prot="public" static="no">
+        <type>std::pair&lt; std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::ParseResult = typedef std::pair&lt;std::shared_ptr&lt;Node&gt;, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ParseResult</name>
+        <qualifiedname>forma::ParseResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="98" column="5" bodyfile="src/forma/parser.hh" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceforma_1a36b4ec29cf40ab8af4bcb668362fb70a" prot="public" static="no">
+        <type>std::pair&lt; std::vector&lt; <ref refid="structforma_1_1Token" kindref="compound">Token</ref> &gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::ScanResult = typedef std::pair&lt;std::vector&lt;Token&gt;, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>ScanResult</name>
+        <qualifiedname>forma::ScanResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="83" column="1" bodyfile="src/forma/scanner.hh" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceforma_1a0c8b99ec05df40c602985096f8c7336d" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::pair&lt; std::function&lt; std::string(const T &amp;)&gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
+        <definition>using forma::BuildResult = typedef std::pair&lt;std::function&lt;std::string(const T&amp;)&gt;, std::vector&lt;Error&gt; &gt;</definition>
+        <argsstring></argsstring>
+        <name>BuildResult</name>
+        <qualifiedname>forma::BuildResult</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="193" column="5" bodyfile="src/forma/template.hh" bodystart="193" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceforma_1af131e04b207f59a41def4afd0aaddf05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>S &amp;</type>
+        <definition>S &amp; forma::operator&lt;&lt;</definition>
+        <argsstring>(S &amp;s, const Location &amp;loc)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>forma::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>S &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structforma_1_1Location" kindref="compound">Location</ref> &amp;</type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="59" column="5" bodyfile="src/forma/core.hh" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1a7bad90383f90f950f5ec6b3b9c7d366f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>S &amp;</type>
+        <definition>S &amp; forma::operator&lt;&lt;</definition>
+        <argsstring>(S &amp;s, const Error &amp;err)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>forma::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>S &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &amp;</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="73" column="5" bodyfile="src/forma/core.hh" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1aa129cf4b72753271580a0563f71e7d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt;</type>
+        <definition>std::vector&lt; Error &gt; forma::NoErrors</definition>
+        <argsstring>()</argsstring>
+        <name>NoErrors</name>
+        <qualifiedname>forma::NoErrors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="92" column="17" declfile="src/forma/core.hh" declline="92" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1abed9e89b6a5444889efa82d5052ca4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structforma_1_1Location" kindref="compound">Location</ref></type>
+        <definition>Location forma::UnknownLocation</definition>
+        <argsstring>()</argsstring>
+        <name>UnknownLocation</name>
+        <qualifiedname>forma::UnknownLocation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="93" column="14" declfile="src/forma/core.hh" declline="93" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1a482cbd3f6e5974a9e7c799c264af632c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename K</type>
+          </param>
+          <param>
+            <type>typename V</type>
+          </param>
+        </templateparamlist>
+        <type>std::vector&lt; K &gt;</type>
+        <definition>std::vector&lt; K &gt; forma::KeysOf</definition>
+        <argsstring>(const std::unordered_map&lt; K, V &gt; &amp;m)</argsstring>
+        <name>KeysOf</name>
+        <qualifiedname>forma::KeysOf</qualifiedname>
+        <param>
+          <type>const std::unordered_map&lt; K, V &gt; &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="96" column="17" bodyfile="src/forma/core.hh" bodystart="96" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1aec645b5c35a2ec0e877396bc2c9b50dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string forma::MatchStrings</definition>
+        <argsstring>(std::string &amp;name, const std::vector&lt; std::string &gt; &amp;candidates)</argsstring>
+        <name>MatchStrings</name>
+        <qualifiedname>forma::MatchStrings</qualifiedname>
+        <param>
+          <type>std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>candidates</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="106" column="17" declfile="src/forma/core.hh" declline="106" declcolumn="17"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1ad94b3d47eb33c7750590b1ca8610deaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceforma_1afac0ccc22870bb631526ca3398ce245d" kindref="member">ParseResult</ref></type>
+        <definition>ParseResult forma::Parse</definition>
+        <argsstring>(std::vector&lt; Token &gt; itok, std::unordered_map&lt; std::string, FuncGenerator &gt; functions, DirectoryInfo *includeDir, std::string defaultExtension, VfsRead *vfs)</argsstring>
+        <name>Parse</name>
+        <qualifiedname>forma::Parse</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="structforma_1_1Token" kindref="compound">Token</ref> &gt;</type>
+          <declname>itok</declname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, <ref refid="namespaceforma_1ac9cd168417c1217460933c468a20f268" kindref="member">FuncGenerator</ref> &gt;</type>
+          <declname>functions</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1DirectoryInfo" kindref="compound">DirectoryInfo</ref> *</type>
+          <declname>includeDir</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>defaultExtension</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1VfsRead" kindref="compound">VfsRead</ref> *</type>
+          <declname>vfs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="99" column="13" declfile="src/forma/parser.hh" declline="99" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1ab099fd7aa07c8973d148d2edd93ed22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename S</type>
+          </param>
+        </templateparamlist>
+        <type>S &amp;</type>
+        <definition>S &amp; forma::operator&lt;&lt;</definition>
+        <argsstring>(S &amp;s, TokenType tt)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>forma::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>S &amp;</type>
+          <declname>s</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156" kindref="member">TokenType</ref></type>
+          <declname>tt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="28" column="1" bodyfile="src/forma/scanner.hh" bodystart="28" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1aecd9ece3bd135d3fa3b8e8e702e7858e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespaceforma_1a36b4ec29cf40ab8af4bcb668362fb70a" kindref="member">ScanResult</ref></type>
+        <definition>ScanResult forma::Scan</definition>
+        <argsstring>(const std::string &amp;file, const std::string &amp;source)</argsstring>
+        <name>Scan</name>
+        <qualifiedname>forma::Scan</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="84" column="12" declfile="src/forma/scanner.hh" declline="84" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1ad19c46ff501d9fd312af7d0f33c6a55f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="namespaceforma_1a0c8b99ec05df40c602985096f8c7336d" kindref="member">BuildResult</ref>&lt; T &gt;</type>
+        <definition>BuildResult&lt; T &gt; forma::Build</definition>
+        <argsstring>(std::string path, VfsRead *vfs, DirectoryInfo *includeDir, std::unordered_map&lt; std::string, FuncGenerator &gt; functions, Definition&lt; T &gt; definition)</argsstring>
+        <name>Build</name>
+        <qualifiedname>forma::Build</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1VfsRead" kindref="compound">VfsRead</ref> *</type>
+          <declname>vfs</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1DirectoryInfo" kindref="compound">DirectoryInfo</ref> *</type>
+          <declname>includeDir</declname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, <ref refid="namespaceforma_1ac9cd168417c1217460933c468a20f268" kindref="member">FuncGenerator</ref> &gt;</type>
+          <declname>functions</declname>
+        </param>
+        <param>
+          <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; T &gt;</type>
+          <declname>definition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="196" column="17" bodyfile="src/forma/template.hh" bodystart="196" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceforma_1ad64eddef64ce93f74333510896fd7917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unordered_map&lt; std::string, <ref refid="namespaceforma_1ac9cd168417c1217460933c468a20f268" kindref="member">FuncGenerator</ref> &gt;</type>
+        <definition>std::unordered_map&lt; std::string, FuncGenerator &gt; forma::DefaultFunctions</definition>
+        <argsstring>()</argsstring>
+        <name>DefaultFunctions</name>
+        <qualifiedname>forma::DefaultFunctions</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/template.hh" line="214" column="24" declfile="src/forma/template.hh" declline="214" declcolumn="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh" line="7" column="1"/>
+  </compounddef>
+</doxygen>

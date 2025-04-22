@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1FuncArgument" kind="struct" language="C++" prot="public">
+    <compoundname>forma::FuncArgument</compoundname>
+    <includes refid="core_8hh" local="no">core.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1FuncArgument_1a09e3ed1e732231a543078dadf95857c1" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::FuncArgument::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::FuncArgument::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="81" column="25" bodyfile="src/forma/core.hh" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1FuncArgument_1a1c61b6f5f8bb693e3a5be5ad00f4fdfd" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::FuncArgument::Argument</definition>
+        <argsstring></argsstring>
+        <name>Argument</name>
+        <qualifiedname>forma::FuncArgument::Argument</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="82" column="21" bodyfile="src/forma/core.hh" bodystart="82" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>forma::FuncArgument</label>
+        <link refid="structforma_1_1FuncArgument"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/core.hh" line="79" column="5" bodyfile="src/forma/core.hh" bodystart="80" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structforma_1_1FuncArgument_1a1c61b6f5f8bb693e3a5be5ad00f4fdfd" prot="public" virt="non-virtual"><scope>forma::FuncArgument</scope><name>Argument</name></member>
+      <member refid="structforma_1_1FuncArgument_1a09e3ed1e732231a543078dadf95857c1" prot="public" virt="non-virtual"><scope>forma::FuncArgument</scope><name>Location</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

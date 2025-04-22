@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1Token" kind="struct" language="C++" prot="public">
+    <compoundname>forma::Token</compoundname>
+    <includes refid="scanner_8hh" local="no">scanner.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1Token_1a9bd5027584c8251afd5e20ce33998097" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156" kindref="member">TokenType</ref></type>
+        <definition>TokenType forma::Token::Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <qualifiedname>forma::Token::Type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="63" column="15" bodyfile="src/forma/scanner.hh" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Token_1a55f1837b41077c525d6651ba9f48b7a6" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::Token::Lexeme</definition>
+        <argsstring></argsstring>
+        <name>Lexeme</name>
+        <qualifiedname>forma::Token::Lexeme</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="64" column="17" bodyfile="src/forma/scanner.hh" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Token_1a562cf4dbc537468eb2a75d86e72d2c36" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::Token::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::Token::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="65" column="21" bodyfile="src/forma/scanner.hh" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1Token_1ab5e79d2dcff56cac565282d6116c8fde" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::Token::Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <qualifiedname>forma::Token::Value</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="66" column="17" bodyfile="src/forma/scanner.hh" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1Token_1ac71ab8fff14824e626dc27cea06d794b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>forma::Token::Token</definition>
+        <argsstring>(TokenType t, std::string l, forma::Location lo, std::string v)</argsstring>
+        <name>Token</name>
+        <qualifiedname>forma::Token::Token</qualifiedname>
+        <param>
+          <type><ref refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156" kindref="member">TokenType</ref></type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+          <declname>lo</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1Token_1a86300ea0bf6119db037d2d4fa93b1bd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structforma_1_1Token" kindref="compound">Token</ref></type>
+        <definition>Token forma::Token::withType</definition>
+        <argsstring>(TokenType t) const</argsstring>
+        <name>withType</name>
+        <qualifiedname>forma::Token::withType</qualifiedname>
+        <param>
+          <type><ref refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156" kindref="member">TokenType</ref></type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="69" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1Token_1a471c45c67f7cb9afcbd522cf5b220e97" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structforma_1_1Token" kindref="compound">Token</ref></type>
+        <definition>Token forma::Token::withValue</definition>
+        <argsstring>(const std::string &amp;v) const</argsstring>
+        <name>withValue</name>
+        <qualifiedname>forma::Token::withValue</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="70" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+      <node id="1">
+        <label>forma::Token</label>
+        <link refid="structforma_1_1Token"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/scanner.hh" line="61" column="1" bodyfile="src/forma/scanner.hh" bodystart="62" bodyend="71"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Token_1a55f1837b41077c525d6651ba9f48b7a6" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>Lexeme</name></member>
+      <member refid="structforma_1_1Token_1a562cf4dbc537468eb2a75d86e72d2c36" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>Location</name></member>
+      <member refid="structforma_1_1Token_1ac71ab8fff14824e626dc27cea06d794b" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>Token</name></member>
+      <member refid="structforma_1_1Token_1a9bd5027584c8251afd5e20ce33998097" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>Type</name></member>
+      <member refid="structforma_1_1Token_1ab5e79d2dcff56cac565282d6116c8fde" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>Value</name></member>
+      <member refid="structforma_1_1Token_1a86300ea0bf6119db037d2d4fa93b1bd1" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>withType</name></member>
+      <member refid="structforma_1_1Token_1a471c45c67f7cb9afcbd522cf5b220e97" prot="public" virt="non-virtual"><scope>forma::Token</scope><name>withValue</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

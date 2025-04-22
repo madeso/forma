@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1node_1_1If" kind="struct" language="C++" prot="public">
+    <compoundname>forma::node::If</compoundname>
+    <basecompoundref refid="structforma_1_1Node" prot="public" virt="non-virtual">forma::Node</basecompoundref>
+    <includes refid="parser_8hh" local="no">parser.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1node_1_1If_1a314608ffeddd57fc8611b5365338e23c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::node::If::Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>forma::node::If::Name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="68" column="21" bodyfile="src/forma/parser.hh" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1node_1_1If_1ad56e722c6c445b84ac5efb006018f47b" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; forma::node::If::Body</definition>
+        <argsstring></argsstring>
+        <name>Body</name>
+        <qualifiedname>forma::node::If::Body</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="69" column="25" bodyfile="src/forma/parser.hh" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1node_1_1If_1ada2214f9dd57256c9889151c2cc71c0c" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::node::If::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::node::If::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="70" column="17" bodyfile="src/forma/parser.hh" bodystart="70" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1node_1_1If_1a915f5277d73d0e82a8f5ee5cff4b0afc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>forma::node::If::If</definition>
+        <argsstring>(std::string n, std::shared_ptr&lt; Node &gt; b, forma::Location l)</argsstring>
+        <name>If</name>
+        <qualifiedname>forma::node::If::If</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1node_1_1If_1a276915bfea5ee564fcac97593b7a010c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structforma_1_1node_1_1If" kindref="compound">If</ref> *</type>
+        <definition>If * forma::node::If::AsIf</definition>
+        <argsstring>() override</argsstring>
+        <name>AsIf</name>
+        <qualifiedname>forma::node::If::AsIf</qualifiedname>
+        <reimplements refid="structforma_1_1Node_1a280e6b118a7f8c2369fa2be92971021e">AsIf</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="72" column="4"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::If</label>
+        <link refid="structforma_1_1node_1_1If"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::If</label>
+        <link refid="structforma_1_1node_1_1If"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/parser.hh" line="65" column="5" bodyfile="src/forma/parser.hh" bodystart="66" bodyend="73"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsAttribute</name></member>
+      <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsFunctionCall</name></member>
+      <member refid="structforma_1_1Node_1aca8ec8efd8b5beb0514645db695b1569" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsGroup</name></member>
+      <member refid="structforma_1_1node_1_1If_1a276915bfea5ee564fcac97593b7a010c" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsIf</name></member>
+      <member refid="structforma_1_1Node_1a010a432eebf39531b4cc57ea70e32860" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsIterate</name></member>
+      <member refid="structforma_1_1Node_1a26c26a0bf5196860bc4ebf00f0469403" prot="public" virt="virtual"><scope>forma::node::If</scope><name>AsText</name></member>
+      <member refid="structforma_1_1node_1_1If_1ad56e722c6c445b84ac5efb006018f47b" prot="public" virt="non-virtual"><scope>forma::node::If</scope><name>Body</name></member>
+      <member refid="structforma_1_1node_1_1If_1a915f5277d73d0e82a8f5ee5cff4b0afc" prot="public" virt="non-virtual"><scope>forma::node::If</scope><name>If</name></member>
+      <member refid="structforma_1_1node_1_1If_1ada2214f9dd57256c9889151c2cc71c0c" prot="public" virt="non-virtual"><scope>forma::node::If</scope><name>Location</name></member>
+      <member refid="structforma_1_1node_1_1If_1a314608ffeddd57fc8611b5365338e23c" prot="public" virt="non-virtual"><scope>forma::node::If</scope><name>Name</name></member>
+      <member refid="structforma_1_1Node_1ad4faf6d3c8bb7621d95f56d4e963ac85" prot="public" virt="virtual"><scope>forma::node::If</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

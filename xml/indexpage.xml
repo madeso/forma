@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Forma</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_readme"/> Forma, swedish, to shape, to form to template. A simple (typesafe) templating engine ported from my c# template engine.</para>
+<para>Work in progress</para>
+<sect1 id="index_1autotoc_md1">
+<title>API:</title>
+<para><programlisting filename=".cpp"><codeline><highlight class="keyword">struct<sp/></highlight><highlight class="normal">MyClass;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[generator,<sp/>error]<sp/>=<sp/><ref refid="namespaceforma_1ad94b3d47eb33c7750590b1ca8610deaf" kindref="member">forma::Parse</ref>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>integrate<sp/>with<sp/>your<sp/>own<sp/>file<sp/>system</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file,<sp/>&amp;vfs,<sp/>&amp;cwd,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>custom<sp/>functions<sp/>to<sp/>transform<sp/>the<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceforma_1ad64eddef64ce93f74333510896fd7917" kindref="member">forma::DefaultFunctions</ref>(),</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>what<sp/>and<sp/>how<sp/>your<sp/>class<sp/>is<sp/>exposed</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classforma_1_1Definition" kindref="compound">forma::Definition&lt;MyClass&gt;</ref>()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.AddVar(</highlight><highlight class="stringliteral">&quot;foo&quot;</highlight><highlight class="normal">,<sp/>[](</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>MyClass&amp;<sp/>s)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>s.foo_bar;<sp/>})</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>.AddBool(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>.AddList(...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>either<sp/>you<sp/>get</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>-<sp/>a<sp/>default<sp/>dummy<sp/>generator<sp/>with<sp/>errors<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>-<sp/>the<sp/>parsed<sp/>generator<sp/>with<sp/>no<sp/>errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>either<sp/>way,<sp/>there<sp/>is<sp/>no<sp/>more<sp/>parsing<sp/>you<sp/>have<sp/>a<sp/>generator:</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>std::function&lt;std::string(const<sp/>MyClass&amp;)&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">MyClass<sp/>myClass<sp/>=<sp/>...;</highlight></codeline>
+<codeline><highlight class="normal">std::string<sp/>ret<sp/>=<sp/>generator(myClass);</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Template syntax:</title>
+<para><programlisting><codeline><highlight class="normal">{{<sp/>prop<sp/>}}<sp/>{{-<sp/>&quot;also<sp/>prop,<sp/>trim<sp/>printable<sp/>spaces&quot;<sp/>-}}</highlight></codeline>
+<codeline><highlight class="normal">{{prop<sp/>|<sp/>function<sp/>|<sp/>function(with_arguments)}}</highlight></codeline>
+<codeline><highlight class="normal">{{include<sp/>file}}<sp/>{{include<sp/>&quot;file/with.extension&quot;}}</highlight></codeline>
+<codeline><highlight class="normal">{{#list}}repeated{{/list}}<sp/>{{range<sp/>also_list}}repeated{{end}}</highlight></codeline>
+<codeline><highlight class="normal">{{if<sp/>bool_prop}}perhaps{{end}}</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+    <location file="readme.md"/>
+  </compounddef>
+</doxygen>

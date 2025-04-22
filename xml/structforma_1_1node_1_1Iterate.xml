@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1node_1_1Iterate" kind="struct" language="C++" prot="public">
+    <compoundname>forma::node::Iterate</compoundname>
+    <basecompoundref refid="structforma_1_1Node" prot="public" virt="non-virtual">forma::Node</basecompoundref>
+    <includes refid="parser_8hh" local="no">parser.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1node_1_1Iterate_1a6792cb28ba614a28dac388400cc2208d" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string forma::node::Iterate::Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <qualifiedname>forma::node::Iterate::Name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="58" column="21" bodyfile="src/forma/parser.hh" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1node_1_1Iterate_1a228dde06d5bb8c852bbbc589e6bc776c" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;Node&gt; forma::node::Iterate::Body</definition>
+        <argsstring></argsstring>
+        <name>Body</name>
+        <qualifiedname>forma::node::Iterate::Body</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="59" column="25" bodyfile="src/forma/parser.hh" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1node_1_1Iterate_1a2af4b435a978f1b6f64530c4723b8517" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::node::Iterate::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::node::Iterate::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="60" column="17" bodyfile="src/forma/parser.hh" bodystart="60" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1node_1_1Iterate_1aae6a24a6f5103ff54704bba514c64866" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>forma::node::Iterate::Iterate</definition>
+        <argsstring>(std::string n, std::shared_ptr&lt; Node &gt; b, forma::Location l)</argsstring>
+        <name>Iterate</name>
+        <qualifiedname>forma::node::Iterate::Iterate</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1node_1_1Iterate_1a9795c4708fc07df8fbf113ca5e74dd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structforma_1_1node_1_1Iterate" kindref="compound">Iterate</ref> *</type>
+        <definition>Iterate * forma::node::Iterate::AsIterate</definition>
+        <argsstring>() override</argsstring>
+        <name>AsIterate</name>
+        <qualifiedname>forma::node::Iterate::AsIterate</qualifiedname>
+        <reimplements refid="structforma_1_1Node_1a010a432eebf39531b4cc57ea70e32860">AsIterate</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="62" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::Iterate</label>
+        <link refid="structforma_1_1node_1_1Iterate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::Iterate</label>
+        <link refid="structforma_1_1node_1_1Iterate"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/parser.hh" line="54" column="5" bodyfile="src/forma/parser.hh" bodystart="55" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsAttribute</name></member>
+      <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsFunctionCall</name></member>
+      <member refid="structforma_1_1Node_1aca8ec8efd8b5beb0514645db695b1569" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsGroup</name></member>
+      <member refid="structforma_1_1Node_1a280e6b118a7f8c2369fa2be92971021e" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsIf</name></member>
+      <member refid="structforma_1_1node_1_1Iterate_1a9795c4708fc07df8fbf113ca5e74dd4c" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsIterate</name></member>
+      <member refid="structforma_1_1Node_1a26c26a0bf5196860bc4ebf00f0469403" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsText</name></member>
+      <member refid="structforma_1_1node_1_1Iterate_1a228dde06d5bb8c852bbbc589e6bc776c" prot="public" virt="non-virtual"><scope>forma::node::Iterate</scope><name>Body</name></member>
+      <member refid="structforma_1_1node_1_1Iterate_1aae6a24a6f5103ff54704bba514c64866" prot="public" virt="non-virtual"><scope>forma::node::Iterate</scope><name>Iterate</name></member>
+      <member refid="structforma_1_1node_1_1Iterate_1a2af4b435a978f1b6f64530c4723b8517" prot="public" virt="non-virtual"><scope>forma::node::Iterate</scope><name>Location</name></member>
+      <member refid="structforma_1_1node_1_1Iterate_1a6792cb28ba614a28dac388400cc2208d" prot="public" virt="non-virtual"><scope>forma::node::Iterate</scope><name>Name</name></member>
+      <member refid="structforma_1_1Node_1ad4faf6d3c8bb7621d95f56d4e963ac85" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

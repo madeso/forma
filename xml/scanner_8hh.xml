@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="scanner_8hh" kind="file" language="C++">
+    <compoundname>scanner.hh</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="core_8hh" local="yes">forma/core.hh</includes>
+    <includedby refid="parser_8hh" local="yes">src/forma/parser.hh</includedby>
+    <includedby refid="template_8hh" local="yes">src/forma/template.hh</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>forma/core.hh</label>
+        <link refid="core_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/forma/scanner.hh</label>
+        <link refid="scanner_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>functional</label>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/forma/parser.hh</label>
+        <link refid="parser_8hh"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/forma/scanner.hh</label>
+        <link refid="scanner_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/forma/template.hh</label>
+        <link refid="template_8hh"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structforma_1_1Token" prot="public">forma::Token</innerclass>
+    <innerclass refid="structforma_1_1ScannerLocation" prot="public">forma::ScannerLocation</innerclass>
+    <innernamespace refid="namespaceforma">forma</innernamespace>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="scanner_8hh_1ac54ae397901fe700628cafadea3c5208" prot="public" static="no">
+        <name>C</name>
+        <param><defname>x</defname></param>
+        <initializer>case TokenType::x: s &lt;&lt; #x; break</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/scanner.hh" line="32" column="9"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/scanner.hh"/>
+  </compounddef>
+</doxygen>

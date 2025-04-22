@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1node_1_1Group" kind="struct" language="C++" prot="public">
+    <compoundname>forma::node::Group</compoundname>
+    <basecompoundref refid="structforma_1_1Node" prot="public" virt="non-virtual">forma::Node</basecompoundref>
+    <includes refid="parser_8hh" local="no">parser.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1node_1_1Group_1a40c407d1ead85096a2f022755b7fde2e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt; &gt;</type>
+        <definition>std::vector&lt;std::shared_ptr&lt;Node&gt; &gt; forma::node::Group::Nodes</definition>
+        <argsstring></argsstring>
+        <name>Nodes</name>
+        <qualifiedname>forma::node::Group::Nodes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="91" column="21" bodyfile="src/forma/parser.hh" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structforma_1_1node_1_1Group_1a75409ddb33f46fcad1711da6dc237a5c" prot="public" static="no" mutable="no">
+        <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+        <definition>forma::Location forma::node::Group::Location</definition>
+        <argsstring></argsstring>
+        <name>Location</name>
+        <qualifiedname>forma::node::Group::Location</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="92" column="17" bodyfile="src/forma/parser.hh" bodystart="92" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1node_1_1Group_1acd76a4a75f37a406bf986ff95f6ae37e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>forma::node::Group::Group</definition>
+        <argsstring>(std::vector&lt; std::shared_ptr&lt; Node &gt; &gt; n, forma::Location l)</argsstring>
+        <name>Group</name>
+        <qualifiedname>forma::node::Group::Group</qualifiedname>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt; &gt;</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1node_1_1Group_1a4208311047985a64985d6e736215f9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="structforma_1_1node_1_1Group" kindref="compound">Group</ref> *</type>
+        <definition>Group * forma::node::Group::AsGroup</definition>
+        <argsstring>() override</argsstring>
+        <name>AsGroup</name>
+        <qualifiedname>forma::node::Group::AsGroup</qualifiedname>
+        <reimplements refid="structforma_1_1Node_1aca8ec8efd8b5beb0514645db695b1569">AsGroup</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/parser.hh" line="94" column="7"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::Group</label>
+        <link refid="structforma_1_1node_1_1Group"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>forma::Location</label>
+        <link refid="structforma_1_1Location"/>
+      </node>
+      <node id="2">
+        <label>forma::Node</label>
+        <link refid="structforma_1_1Node"/>
+      </node>
+      <node id="1">
+        <label>forma::node::Group</label>
+        <link refid="structforma_1_1node_1_1Group"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>Location</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/forma/parser.hh" line="87" column="5" bodyfile="src/forma/parser.hh" bodystart="88" bodyend="95"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsAttribute</name></member>
+      <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsFunctionCall</name></member>
+      <member refid="structforma_1_1node_1_1Group_1a4208311047985a64985d6e736215f9de" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsGroup</name></member>
+      <member refid="structforma_1_1Node_1a280e6b118a7f8c2369fa2be92971021e" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsIf</name></member>
+      <member refid="structforma_1_1Node_1a010a432eebf39531b4cc57ea70e32860" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsIterate</name></member>
+      <member refid="structforma_1_1Node_1a26c26a0bf5196860bc4ebf00f0469403" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsText</name></member>
+      <member refid="structforma_1_1node_1_1Group_1acd76a4a75f37a406bf986ff95f6ae37e" prot="public" virt="non-virtual"><scope>forma::node::Group</scope><name>Group</name></member>
+      <member refid="structforma_1_1node_1_1Group_1a75409ddb33f46fcad1711da6dc237a5c" prot="public" virt="non-virtual"><scope>forma::node::Group</scope><name>Location</name></member>
+      <member refid="structforma_1_1node_1_1Group_1a40c407d1ead85096a2f022755b7fde2e" prot="public" virt="non-virtual"><scope>forma::node::Group</scope><name>Nodes</name></member>
+      <member refid="structforma_1_1Node_1ad4faf6d3c8bb7621d95f56d4e963ac85" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>~Node</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

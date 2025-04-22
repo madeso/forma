@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="core_8hh" kind="file" language="C++">
+    <compoundname>core.hh</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="parser_8hh" local="yes">src/forma/parser.hh</includedby>
+    <includedby refid="scanner_8hh" local="yes">src/forma/scanner.hh</includedby>
+    <includedby refid="template_8hh" local="yes">src/forma/template.hh</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/forma/core.hh</label>
+        <link refid="core_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>sstream</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>src/forma/core.hh</label>
+        <link refid="core_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/forma/parser.hh</label>
+        <link refid="parser_8hh"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>src/forma/scanner.hh</label>
+        <link refid="scanner_8hh"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/forma/template.hh</label>
+        <link refid="template_8hh"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structforma_1_1VfsRead" prot="public">forma::VfsRead</innerclass>
+    <innerclass refid="structforma_1_1DirectoryInfo" prot="public">forma::DirectoryInfo</innerclass>
+    <innerclass refid="structforma_1_1Fmt" prot="public">forma::Fmt</innerclass>
+    <innerclass refid="structforma_1_1Location" prot="public">forma::Location</innerclass>
+    <innerclass refid="structforma_1_1Error" prot="public">forma::Error</innerclass>
+    <innerclass refid="structforma_1_1FuncArgument" prot="public">forma::FuncArgument</innerclass>
+    <innernamespace refid="namespaceforma">forma</innernamespace>
+    <innernamespace refid="namespaceforma_1_1strings">forma::strings</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh"/>
+  </compounddef>
+</doxygen>

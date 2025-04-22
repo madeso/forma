@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="structforma_1_1Fmt" kind="struct" language="C++" prot="public">
+    <compoundname>forma::Fmt</compoundname>
+    <includes refid="core_8hh" local="no">core.hh</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structforma_1_1Fmt_1acde8b1c07387951880fdea44060d41ff" prot="public" static="no" mutable="no">
+        <type>std::ostringstream</type>
+        <definition>std::ostringstream forma::Fmt::ss</definition>
+        <argsstring></argsstring>
+        <name>ss</name>
+        <qualifiedname>forma::Fmt::ss</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="30" column="28" bodyfile="src/forma/core.hh" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structforma_1_1Fmt_1a4aa694514ccf39f5495762e9dec15d69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structforma_1_1Fmt" kindref="compound">Fmt</ref> &amp;</type>
+        <definition>Fmt &amp; forma::Fmt::operator&lt;&lt;</definition>
+        <argsstring>(const T &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>forma::Fmt::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>const T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="33" column="9" bodyfile="src/forma/core.hh" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="structforma_1_1Fmt_1a0b53572b7de3c651c8582779d2c7d21c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>forma::Fmt::operator std::string</definition>
+        <argsstring>() const</argsstring>
+        <name>operator std::string</name>
+        <qualifiedname>forma::Fmt::string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/forma/core.hh" line="39" column="9" bodyfile="src/forma/core.hh" bodystart="39" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/forma/core.hh" line="28" column="5" bodyfile="src/forma/core.hh" bodystart="29" bodyend="43"/>
+    <listofallmembers>
+      <member refid="structforma_1_1Fmt_1a0b53572b7de3c651c8582779d2c7d21c" prot="public" virt="non-virtual"><scope>forma::Fmt</scope><name>operator std::string</name></member>
+      <member refid="structforma_1_1Fmt_1a4aa694514ccf39f5495762e9dec15d69" prot="public" virt="non-virtual"><scope>forma::Fmt</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structforma_1_1Fmt_1acde8b1c07387951880fdea44060d41ff" prot="public" virt="non-virtual"><scope>forma::Fmt</scope><name>ss</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

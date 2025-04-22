@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="structforma_1_1node_1_1Attribute" kind="struct"><name>forma::node::Attribute</name>
+    <member refid="structforma_1_1node_1_1Attribute_1ac81846c61b580a82a422beba70e6e905" kind="variable"><name>Name</name></member>
+    <member refid="structforma_1_1node_1_1Attribute_1a3568e53d58454840f39624fd83a211be" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1Attribute_1adc319bda83ab3d881c925e6b09293998" kind="function"><name>Attribute</name></member>
+    <member refid="structforma_1_1node_1_1Attribute_1a392b518343afd3269848f25e55cd8591" kind="function"><name>AsAttribute</name></member>
+  </compound>
+  <compound refid="classforma_1_1Definition" kind="class"><name>forma::Definition</name>
+    <member refid="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" kind="typedef"><name>ChildrenRet</name></member>
+    <member refid="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" kind="typedef"><name>ChildMapFunction</name></member>
+    <member refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" kind="typedef"><name>GetterFunction</name></member>
+    <member refid="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" kind="typedef"><name>ValidationResult</name></member>
+    <member refid="classforma_1_1Definition_1a8e0bef690533ac188f5f18821779120c" kind="variable"><name>attributes</name></member>
+    <member refid="classforma_1_1Definition_1aee8467df1c6184b6b117992f01cd6f3f" kind="variable"><name>bools</name></member>
+    <member refid="classforma_1_1Definition_1a6ffa8b0da0ef69dfe54e2a0561e791ab" kind="variable"><name>children</name></member>
+    <member refid="classforma_1_1Definition_1a8ec8993746114077947bf9d8978ef240" kind="function"><name>SyntaxError</name></member>
+    <member refid="classforma_1_1Definition_1a78b6f923ef40d2ee3ce12187f5933dab" kind="function"><name>AddVar</name></member>
+    <member refid="classforma_1_1Definition_1a99fee94d49103c368b964253021b7fe4" kind="function"><name>AddBool</name></member>
+    <member refid="classforma_1_1Definition_1a5860e1e36254fc3f0aaefde2b109f6d4" kind="function"><name>AddList</name></member>
+    <member refid="classforma_1_1Definition_1a3abf87925ec5993bfff9ad713b049e63" kind="function"><name>Validate</name></member>
+  </compound>
+  <compound refid="structforma_1_1DirectoryInfo" kind="struct"><name>forma::DirectoryInfo</name>
+    <member refid="structforma_1_1DirectoryInfo_1aa966e95f674367fa099a7eb69d8cce3a" kind="function"><name>~DirectoryInfo</name></member>
+    <member refid="structforma_1_1DirectoryInfo_1a758c38f9999985064de0035dadc21b63" kind="function"><name>GetFile</name></member>
+  </compound>
+  <compound refid="structforma_1_1Error" kind="struct"><name>forma::Error</name>
+    <member refid="structforma_1_1Error_1a6553db23c1571d97fffb5cde7a153976" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1Error_1a55e63a16f7f65bfe88eff4623fa00843" kind="variable"><name>Message</name></member>
+    <member refid="structforma_1_1Error_1a156defd0fccdfd23038072b3f6d849c4" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structforma_1_1Fmt" kind="struct"><name>forma::Fmt</name>
+    <member refid="structforma_1_1Fmt_1acde8b1c07387951880fdea44060d41ff" kind="variable"><name>ss</name></member>
+    <member refid="structforma_1_1Fmt_1a4aa694514ccf39f5495762e9dec15d69" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="structforma_1_1Fmt_1a0b53572b7de3c651c8582779d2c7d21c" kind="function"><name>operator std::string</name></member>
+  </compound>
+  <compound refid="structforma_1_1FuncArgument" kind="struct"><name>forma::FuncArgument</name>
+    <member refid="structforma_1_1FuncArgument_1a09e3ed1e732231a543078dadf95857c1" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1FuncArgument_1a1c61b6f5f8bb693e3a5be5ad00f4fdfd" kind="variable"><name>Argument</name></member>
+  </compound>
+  <compound refid="structforma_1_1node_1_1FunctionCall" kind="struct"><name>forma::node::FunctionCall</name>
+    <member refid="structforma_1_1node_1_1FunctionCall_1a0d55d1a8b207334514325544462cbf0d" kind="variable"><name>Name</name></member>
+    <member refid="structforma_1_1node_1_1FunctionCall_1a409cc0bda942c72ac5f5dcc7f6e35709" kind="variable"><name>Function</name></member>
+    <member refid="structforma_1_1node_1_1FunctionCall_1a6e58563fd89709f7e71dc71ed70ab0f7" kind="variable"><name>Arg</name></member>
+    <member refid="structforma_1_1node_1_1FunctionCall_1a8c663af8bb52669edde624acbdfa6193" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1FunctionCall_1a424b3ba7480ead5c6ffdffc2f8796d1c" kind="function"><name>FunctionCall</name></member>
+    <member refid="structforma_1_1node_1_1FunctionCall_1ab489703c36bb9ab6e620308425b0dd1d" kind="function"><name>AsFunctionCall</name></member>
+  </compound>
+  <compound refid="structforma_1_1node_1_1Group" kind="struct"><name>forma::node::Group</name>
+    <member refid="structforma_1_1node_1_1Group_1a40c407d1ead85096a2f022755b7fde2e" kind="variable"><name>Nodes</name></member>
+    <member refid="structforma_1_1node_1_1Group_1a75409ddb33f46fcad1711da6dc237a5c" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1Group_1acd76a4a75f37a406bf986ff95f6ae37e" kind="function"><name>Group</name></member>
+    <member refid="structforma_1_1node_1_1Group_1a4208311047985a64985d6e736215f9de" kind="function"><name>AsGroup</name></member>
+  </compound>
+  <compound refid="structforma_1_1node_1_1If" kind="struct"><name>forma::node::If</name>
+    <member refid="structforma_1_1node_1_1If_1a314608ffeddd57fc8611b5365338e23c" kind="variable"><name>Name</name></member>
+    <member refid="structforma_1_1node_1_1If_1ad56e722c6c445b84ac5efb006018f47b" kind="variable"><name>Body</name></member>
+    <member refid="structforma_1_1node_1_1If_1ada2214f9dd57256c9889151c2cc71c0c" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1If_1a915f5277d73d0e82a8f5ee5cff4b0afc" kind="function"><name>If</name></member>
+    <member refid="structforma_1_1node_1_1If_1a276915bfea5ee564fcac97593b7a010c" kind="function"><name>AsIf</name></member>
+  </compound>
+  <compound refid="structforma_1_1node_1_1Iterate" kind="struct"><name>forma::node::Iterate</name>
+    <member refid="structforma_1_1node_1_1Iterate_1a6792cb28ba614a28dac388400cc2208d" kind="variable"><name>Name</name></member>
+    <member refid="structforma_1_1node_1_1Iterate_1a228dde06d5bb8c852bbbc589e6bc776c" kind="variable"><name>Body</name></member>
+    <member refid="structforma_1_1node_1_1Iterate_1a2af4b435a978f1b6f64530c4723b8517" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1Iterate_1aae6a24a6f5103ff54704bba514c64866" kind="function"><name>Iterate</name></member>
+    <member refid="structforma_1_1node_1_1Iterate_1a9795c4708fc07df8fbf113ca5e74dd4c" kind="function"><name>AsIterate</name></member>
+  </compound>
+  <compound refid="structforma_1_1Location" kind="struct"><name>forma::Location</name>
+    <member refid="structforma_1_1Location_1a15d2604b1f04989767f094cc2079d7b9" kind="variable"><name>File</name></member>
+    <member refid="structforma_1_1Location_1aab2a4a94fde0e3739c9d444b5d1d8bc7" kind="variable"><name>Line</name></member>
+    <member refid="structforma_1_1Location_1a94e13cb39008a19c8e9692b5521ec016" kind="variable"><name>Offset</name></member>
+    <member refid="structforma_1_1Location_1a36565640aac8750e93aea6ef407c926b" kind="function"><name>operator&lt;=&gt;</name></member>
+  </compound>
+  <compound refid="structforma_1_1Node" kind="struct"><name>forma::Node</name>
+    <member refid="structforma_1_1Node_1ad4faf6d3c8bb7621d95f56d4e963ac85" kind="function"><name>~Node</name></member>
+    <member refid="structforma_1_1Node_1a26c26a0bf5196860bc4ebf00f0469403" kind="function"><name>AsText</name></member>
+    <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" kind="function"><name>AsAttribute</name></member>
+    <member refid="structforma_1_1Node_1a010a432eebf39531b4cc57ea70e32860" kind="function"><name>AsIterate</name></member>
+    <member refid="structforma_1_1Node_1a280e6b118a7f8c2369fa2be92971021e" kind="function"><name>AsIf</name></member>
+    <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" kind="function"><name>AsFunctionCall</name></member>
+    <member refid="structforma_1_1Node_1aca8ec8efd8b5beb0514645db695b1569" kind="function"><name>AsGroup</name></member>
+  </compound>
+  <compound refid="structforma_1_1ScannerLocation" kind="struct"><name>forma::ScannerLocation</name>
+    <member refid="structforma_1_1ScannerLocation_1ab6f4837552d12989ba7c016369ce939a" kind="variable"><name>Line</name></member>
+    <member refid="structforma_1_1ScannerLocation_1a9acd579fcb8e83b2e6b22bb81e2baf87" kind="variable"><name>Offset</name></member>
+    <member refid="structforma_1_1ScannerLocation_1af45314d071daa33a09fc89b13d390dd6" kind="variable"><name>Index</name></member>
+    <member refid="structforma_1_1ScannerLocation_1a37b7f72ac907f83dec6208f580cf8182" kind="function"><name>ScannerLocation</name></member>
+  </compound>
+  <compound refid="structforma_1_1node_1_1Text" kind="struct"><name>forma::node::Text</name>
+    <member refid="structforma_1_1node_1_1Text_1a79f6a747d14c3f56f9301d5cd89f1283" kind="variable"><name>Value</name></member>
+    <member refid="structforma_1_1node_1_1Text_1a850d5cfa97653457e3b0849229f523e3" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1node_1_1Text_1aae391a0545a06f75af614ee48343fd87" kind="function"><name>Text</name></member>
+    <member refid="structforma_1_1node_1_1Text_1a9ba4fa15a288c42b79725fd95bbb086b" kind="function"><name>AsText</name></member>
+  </compound>
+  <compound refid="structforma_1_1Token" kind="struct"><name>forma::Token</name>
+    <member refid="structforma_1_1Token_1a9bd5027584c8251afd5e20ce33998097" kind="variable"><name>Type</name></member>
+    <member refid="structforma_1_1Token_1a55f1837b41077c525d6651ba9f48b7a6" kind="variable"><name>Lexeme</name></member>
+    <member refid="structforma_1_1Token_1a562cf4dbc537468eb2a75d86e72d2c36" kind="variable"><name>Location</name></member>
+    <member refid="structforma_1_1Token_1ab5e79d2dcff56cac565282d6116c8fde" kind="variable"><name>Value</name></member>
+    <member refid="structforma_1_1Token_1ac71ab8fff14824e626dc27cea06d794b" kind="function"><name>Token</name></member>
+    <member refid="structforma_1_1Token_1a86300ea0bf6119db037d2d4fa93b1bd1" kind="function"><name>withType</name></member>
+    <member refid="structforma_1_1Token_1a471c45c67f7cb9afcbd522cf5b220e97" kind="function"><name>withValue</name></member>
+  </compound>
+  <compound refid="structforma_1_1VfsRead" kind="struct"><name>forma::VfsRead</name>
+    <member refid="structforma_1_1VfsRead_1a03ba402dee189aba07ff3521d0baa59c" kind="function"><name>~VfsRead</name></member>
+    <member refid="structforma_1_1VfsRead_1a38b77247f639bcfc335a8f25ffc6f129" kind="function"><name>ReadAllText</name></member>
+    <member refid="structforma_1_1VfsRead_1a2cd9f1e09284d9b9e56ea9e43291754e" kind="function"><name>Exists</name></member>
+    <member refid="structforma_1_1VfsRead_1a2d23f64302f72b47b8e4198188949579" kind="function"><name>GetExtension</name></member>
+  </compound>
+  <compound refid="namespaceforma" kind="namespace"><name>forma</name>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156" kind="enum"><name>TokenType</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a9dffbf69ffba8bc38bc4e01abf4b1675" kind="enumvalue"><name>Text</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a6c6c34caaf4a7579f6346a99b7fe9854" kind="enumvalue"><name>BeginCode</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a3466da7c3bd0572b5f06a602130d7109" kind="enumvalue"><name>EndCode</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156aeb7ca87543c176cef3095836535fe3d6" kind="enumvalue"><name>BeginCodeTrim</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156ad9a4ae5f4d2b273df1cf1960bf9a4cc6" kind="enumvalue"><name>EndCodeTrim</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a35cef9b551d46ecfd244f4694de9e228" kind="enumvalue"><name>Ident</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156aaf6c6cf7a454b4ef4a850ac4d960a2cc" kind="enumvalue"><name>Dot</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a58be47db9455679e6a44df2eff9c9fa6" kind="enumvalue"><name>Comma</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a2ab1f3f893823298751fdf60b4e0365a" kind="enumvalue"><name>Pipe</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156af02071a8b56c676adabcad98429fa14e" kind="enumvalue"><name>LeftParen</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a2d7e137ea20e2c01ce105573d47ce525" kind="enumvalue"><name>RightParen</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156afae8a9257e154175da4193dbf6552ef6" kind="enumvalue"><name>Hash</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a358cfe58715d680d9ab09f82e4010cbc" kind="enumvalue"><name>Slash</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a9d1c32ceff0c1951ef12e4bcfc1dab5c" kind="enumvalue"><name>QuestionMark</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a49650dcc55dc413da4032cbe44b15d37" kind="enumvalue"><name>Eof</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a71333e52fb8a68ab011a01e176039c29" kind="enumvalue"><name>KeywordIf</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156af3757ce1f763c68314994b6014cf4afc" kind="enumvalue"><name>KeywordRange</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156aa7e3ffb481925f61703a2b2c17269c1e" kind="enumvalue"><name>KeywordEnd</name></member>
+    <member refid="namespaceforma_1ade099699f7f5b414cce81b2879d49156a404a67ed069cbf9093a9a56a7b7b8e6e" kind="enumvalue"><name>KeywordInclude</name></member>
+    <member refid="namespaceforma_1acf8b53ff934932ace15d5d4fefd4ea78" kind="typedef"><name>Func</name></member>
+    <member refid="namespaceforma_1a69ef46cce0abb8ca722e23a31bd48be2" kind="typedef"><name>FuncGeneratorResult</name></member>
+    <member refid="namespaceforma_1ac9cd168417c1217460933c468a20f268" kind="typedef"><name>FuncGenerator</name></member>
+    <member refid="namespaceforma_1afac0ccc22870bb631526ca3398ce245d" kind="typedef"><name>ParseResult</name></member>
+    <member refid="namespaceforma_1a36b4ec29cf40ab8af4bcb668362fb70a" kind="typedef"><name>ScanResult</name></member>
+    <member refid="namespaceforma_1a0c8b99ec05df40c602985096f8c7336d" kind="typedef"><name>BuildResult</name></member>
+    <member refid="namespaceforma_1af131e04b207f59a41def4afd0aaddf05" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespaceforma_1a7bad90383f90f950f5ec6b3b9c7d366f" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespaceforma_1aa129cf4b72753271580a0563f71e7d90" kind="function"><name>NoErrors</name></member>
+    <member refid="namespaceforma_1abed9e89b6a5444889efa82d5052ca4cc" kind="function"><name>UnknownLocation</name></member>
+    <member refid="namespaceforma_1a482cbd3f6e5974a9e7c799c264af632c" kind="function"><name>KeysOf</name></member>
+    <member refid="namespaceforma_1aec645b5c35a2ec0e877396bc2c9b50dd" kind="function"><name>MatchStrings</name></member>
+    <member refid="namespaceforma_1ad94b3d47eb33c7750590b1ca8610deaf" kind="function"><name>Parse</name></member>
+    <member refid="namespaceforma_1ab099fd7aa07c8973d148d2edd93ed22f" kind="function"><name>operator&lt;&lt;</name></member>
+    <member refid="namespaceforma_1aecd9ece3bd135d3fa3b8e8e702e7858e" kind="function"><name>Scan</name></member>
+    <member refid="namespaceforma_1ad19c46ff501d9fd312af7d0f33c6a55f" kind="function"><name>Build</name></member>
+    <member refid="namespaceforma_1ad64eddef64ce93f74333510896fd7917" kind="function"><name>DefaultFunctions</name></member>
+  </compound>
+  <compound refid="namespaceforma_1_1node" kind="namespace"><name>forma::node</name>
+  </compound>
+  <compound refid="namespaceforma_1_1strings" kind="namespace"><name>forma::strings</name>
+    <member refid="namespaceforma_1_1strings_1ac212e4843b41dbb3564942aa2e6c29af" kind="function"><name>default_space</name></member>
+    <member refid="namespaceforma_1_1strings_1a4c5bbf28c7a6cc3495a7ea370c6472c6" kind="function"><name>TrimStart</name></member>
+    <member refid="namespaceforma_1_1strings_1a6edef1a9bbc961e2bd75d2e286234ca2" kind="function"><name>TrimEnd</name></member>
+    <member refid="namespaceforma_1_1strings_1aa653e16aa8638c1ea8b0149b11997194" kind="function"><name>Trim</name></member>
+    <member refid="namespaceforma_1_1strings_1a467ec78c77314438c26bbbaa409fe618" kind="function"><name>Capitalize</name></member>
+    <member refid="namespaceforma_1_1strings_1a88cf87209e5821fd0dbf789c317739d8" kind="function"><name>ToLower</name></member>
+    <member refid="namespaceforma_1_1strings_1ac1e6a100f7974afc540ae8957df9861c" kind="function"><name>ToUpper</name></member>
+    <member refid="namespaceforma_1_1strings_1ab53e5fd9bf50f4c2fc92201561823c2f" kind="function"><name>ToTitleCase</name></member>
+    <member refid="namespaceforma_1_1strings_1ad65b6b81a2ed5870b60ff4774e00e3da" kind="function"><name>PadLeft</name></member>
+    <member refid="namespaceforma_1_1strings_1a10c2e84f3814aa28ac2b168fa05144e6" kind="function"><name>Replace</name></member>
+    <member refid="namespaceforma_1_1strings_1a12d2a0d0c4948a70cf35cd219928a25e" kind="function"><name>Substring</name></member>
+  </compound>
+  <compound refid="readme_8md" kind="file"><name>readme.md</name>
+  </compound>
+  <compound refid="core_8hh" kind="file"><name>core.hh</name>
+  </compound>
+  <compound refid="parser_8hh" kind="file"><name>parser.hh</name>
+  </compound>
+  <compound refid="scanner_8hh" kind="file"><name>scanner.hh</name>
+    <member refid="scanner_8hh_1ac54ae397901fe700628cafadea3c5208" kind="define"><name>C</name></member>
+  </compound>
+  <compound refid="template_8hh" kind="file"><name>template.hh</name>
+  </compound>
+  <compound refid="dir_5f2809d7dbe77ba4294d85513e2f929d" kind="dir"><name>src/forma</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
