@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="23" column="17"/>
+        <location file="src/forma/parser.hh" line="23" column="9"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1a26c26a0bf5196860bc4ebf00f0469403" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Text" kindref="compound">node::Text</ref> *</type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="25" column="28" bodyfile="src/forma/parser.hh" bodystart="25" bodyend="25"/>
+        <location file="src/forma/parser.hh" line="25" column="20" bodyfile="src/forma/parser.hh" bodystart="25" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Attribute" kindref="compound">node::Attribute</ref> *</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="26" column="33" bodyfile="src/forma/parser.hh" bodystart="26" bodyend="26"/>
+        <location file="src/forma/parser.hh" line="30" column="25" bodyfile="src/forma/parser.hh" bodystart="30" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1a010a432eebf39531b4cc57ea70e32860" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Iterate" kindref="compound">node::Iterate</ref> *</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="27" column="31" bodyfile="src/forma/parser.hh" bodystart="27" bodyend="27"/>
+        <location file="src/forma/parser.hh" line="35" column="23" bodyfile="src/forma/parser.hh" bodystart="35" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1a280e6b118a7f8c2369fa2be92971021e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1If" kindref="compound">node::If</ref> *</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="28" column="26" bodyfile="src/forma/parser.hh" bodystart="28" bodyend="28"/>
+        <location file="src/forma/parser.hh" line="40" column="18" bodyfile="src/forma/parser.hh" bodystart="40" bodyend="43"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1FunctionCall" kindref="compound">node::FunctionCall</ref> *</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="29" column="36" bodyfile="src/forma/parser.hh" bodystart="29" bodyend="29"/>
+        <location file="src/forma/parser.hh" line="45" column="28" bodyfile="src/forma/parser.hh" bodystart="45" bodyend="48"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Node_1aca8ec8efd8b5beb0514645db695b1569" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Group" kindref="compound">node::Group</ref> *</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="30" column="29" bodyfile="src/forma/parser.hh" bodystart="30" bodyend="30"/>
+        <location file="src/forma/parser.hh" line="50" column="21" bodyfile="src/forma/parser.hh" bodystart="50" bodyend="53"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -161,7 +161,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="src/forma/parser.hh" line="21" column="5" bodyfile="src/forma/parser.hh" bodystart="22" bodyend="31"/>
+    <location file="src/forma/parser.hh" line="21" column="1" bodyfile="src/forma/parser.hh" bodystart="22" bodyend="54"/>
     <listofallmembers>
       <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::Node</scope><name>AsAttribute</name></member>
       <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::Node</scope><name>AsFunctionCall</name></member>

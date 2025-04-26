@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="81" column="25" bodyfile="src/forma/core.hh" bodystart="81" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="79" column="17" bodyfile="src/forma/core.hh" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structforma_1_1FuncArgument_1a1c61b6f5f8bb693e3a5be5ad00f4fdfd" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="82" column="21" bodyfile="src/forma/core.hh" bodystart="82" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="80" column="13" bodyfile="src/forma/core.hh" bodystart="80" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -50,7 +50,7 @@
         <link refid="structforma_1_1Location"/>
       </node>
     </collaborationgraph>
-    <location file="src/forma/core.hh" line="79" column="5" bodyfile="src/forma/core.hh" bodystart="80" bodyend="83"/>
+    <location file="src/forma/core.hh" line="77" column="1" bodyfile="src/forma/core.hh" bodystart="78" bodyend="81"/>
     <listofallmembers>
       <member refid="structforma_1_1FuncArgument_1a1c61b6f5f8bb693e3a5be5ad00f4fdfd" prot="public" virt="non-virtual"><scope>forma::FuncArgument</scope><name>Argument</name></member>
       <member refid="structforma_1_1FuncArgument_1a09e3ed1e732231a543078dadf95857c1" prot="public" virt="non-virtual"><scope>forma::FuncArgument</scope><name>Location</name></member>

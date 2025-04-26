@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="110" column="21" declfile="src/forma/core.hh" declline="110" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="109" column="13" declfile="src/forma/core.hh" declline="109" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a4c5bbf28c7a6cc3495a7ea370c6472c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="111" column="21" declfile="src/forma/core.hh" declline="111" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="110" column="13" declfile="src/forma/core.hh" declline="110" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a6edef1a9bbc961e2bd75d2e286234ca2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="112" column="21" declfile="src/forma/core.hh" declline="112" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="111" column="13" declfile="src/forma/core.hh" declline="111" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1aa653e16aa8638c1ea8b0149b11997194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="113" column="21" declfile="src/forma/core.hh" declline="113" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="112" column="13" declfile="src/forma/core.hh" declline="112" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a467ec78c77314438c26bbbaa409fe618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="115" column="21" declfile="src/forma/core.hh" declline="115" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="114" column="13" declfile="src/forma/core.hh" declline="114" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a88cf87209e5821fd0dbf789c317739d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="117" column="21" declfile="src/forma/core.hh" declline="117" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="116" column="13" declfile="src/forma/core.hh" declline="116" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1ac1e6a100f7974afc540ae8957df9861c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="118" column="21" declfile="src/forma/core.hh" declline="118" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="117" column="13" declfile="src/forma/core.hh" declline="117" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1ab53e5fd9bf50f4c2fc92201561823c2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="119" column="21" declfile="src/forma/core.hh" declline="119" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="118" column="13" declfile="src/forma/core.hh" declline="118" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1ad65b6b81a2ed5870b60ff4774e00e3da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="121" column="21" declfile="src/forma/core.hh" declline="121" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="120" column="13" declfile="src/forma/core.hh" declline="120" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a10c2e84f3814aa28ac2b168fa05144e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="122" column="21" declfile="src/forma/core.hh" declline="122" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="121" column="13" declfile="src/forma/core.hh" declline="121" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1_1strings_1a12d2a0d0c4948a70cf35cd219928a25e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -235,13 +235,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="123" column="21" declfile="src/forma/core.hh" declline="123" declcolumn="21"/>
+        <location file="src/forma/core.hh" line="122" column="13" declfile="src/forma/core.hh" declline="122" declcolumn="13"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/forma/core.hh" line="108" column="5"/>
+    <location file="src/forma/core.hh" line="107" column="1"/>
   </compounddef>
 </doxygen>

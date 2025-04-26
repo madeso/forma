@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/scanner.hh" line="11" column="1" bodyfile="src/forma/scanner.hh" bodystart="12" bodyend="26"/>
+        <location file="src/forma/scanner.hh" line="11" column="1" bodyfile="src/forma/scanner.hh" bodystart="12" bodyend="32"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="typedef">
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="86" column="5" bodyfile="src/forma/core.hh" bodystart="86" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="84" column="1" bodyfile="src/forma/core.hh" bodystart="84" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceforma_1a69ef46cce0abb8ca722e23a31bd48be2" prot="public" static="no">
         <type>std::pair&lt; <ref refid="namespaceforma_1acf8b53ff934932ace15d5d4fefd4ea78" kindref="member">Func</ref>, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="89" column="5" bodyfile="src/forma/core.hh" bodystart="89" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="87" column="1" bodyfile="src/forma/core.hh" bodystart="87" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceforma_1ac9cd168417c1217460933c468a20f268" prot="public" static="no">
         <type>std::function&lt; <ref refid="namespaceforma_1a69ef46cce0abb8ca722e23a31bd48be2" kindref="member">FuncGeneratorResult</ref>(<ref refid="structforma_1_1Location" kindref="compound">Location</ref> call, std::vector&lt; <ref refid="structforma_1_1FuncArgument" kindref="compound">FuncArgument</ref> &gt; arguments)&gt;</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="90" column="5" bodyfile="src/forma/core.hh" bodystart="90" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="88" column="1" bodyfile="src/forma/core.hh" bodystart="89" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceforma_1afac0ccc22870bb631526ca3398ce245d" prot="public" static="no">
         <type>std::pair&lt; std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="98" column="5" bodyfile="src/forma/parser.hh" bodystart="98" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="121" column="1" bodyfile="src/forma/parser.hh" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceforma_1a36b4ec29cf40ab8af4bcb668362fb70a" prot="public" static="no">
         <type>std::pair&lt; std::vector&lt; <ref refid="structforma_1_1Token" kindref="compound">Token</ref> &gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/scanner.hh" line="83" column="1" bodyfile="src/forma/scanner.hh" bodystart="83" bodyend="-1"/>
+        <location file="src/forma/scanner.hh" line="88" column="1" bodyfile="src/forma/scanner.hh" bodystart="88" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceforma_1a0c8b99ec05df40c602985096f8c7336d" prot="public" static="no">
         <templateparamlist>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="193" column="5" bodyfile="src/forma/template.hh" bodystart="193" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="231" column="1" bodyfile="src/forma/template.hh" bodystart="231" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="func">
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="59" column="5" bodyfile="src/forma/core.hh" bodystart="59" bodyend="62"/>
+        <location file="src/forma/core.hh" line="58" column="1" bodyfile="src/forma/core.hh" bodystart="58" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1a7bad90383f90f950f5ec6b3b9c7d366f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="73" column="5" bodyfile="src/forma/core.hh" bodystart="73" bodyend="76"/>
+        <location file="src/forma/core.hh" line="72" column="1" bodyfile="src/forma/core.hh" bodystart="72" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1aa129cf4b72753271580a0563f71e7d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt;</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="92" column="17" declfile="src/forma/core.hh" declline="92" declcolumn="17"/>
+        <location file="src/forma/core.hh" line="91" column="13" declfile="src/forma/core.hh" declline="91" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1abed9e89b6a5444889efa82d5052ca4cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structforma_1_1Location" kindref="compound">Location</ref></type>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="93" column="14" declfile="src/forma/core.hh" declline="93" declcolumn="14"/>
+        <location file="src/forma/core.hh" line="92" column="10" declfile="src/forma/core.hh" declline="92" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1a482cbd3f6e5974a9e7c799c264af632c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -359,7 +359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="96" column="17" bodyfile="src/forma/core.hh" bodystart="96" bodyend="104"/>
+        <location file="src/forma/core.hh" line="95" column="13" bodyfile="src/forma/core.hh" bodystart="95" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1aec645b5c35a2ec0e877396bc2c9b50dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -381,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="106" column="17" declfile="src/forma/core.hh" declline="106" declcolumn="17"/>
+        <location file="src/forma/core.hh" line="105" column="13" declfile="src/forma/core.hh" declline="105" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1ad94b3d47eb33c7750590b1ca8610deaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceforma_1afac0ccc22870bb631526ca3398ce245d" kindref="member">ParseResult</ref></type>
@@ -415,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="99" column="13" declfile="src/forma/parser.hh" declline="99" declcolumn="13"/>
+        <location file="src/forma/parser.hh" line="122" column="13" declfile="src/forma/parser.hh" declline="122" declcolumn="13"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1ab099fd7aa07c8973d148d2edd93ed22f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -442,7 +442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/scanner.hh" line="28" column="1" bodyfile="src/forma/scanner.hh" bodystart="28" bodyend="59"/>
+        <location file="src/forma/scanner.hh" line="35" column="1" bodyfile="src/forma/scanner.hh" bodystart="35" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1aecd9ece3bd135d3fa3b8e8e702e7858e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="namespaceforma_1a36b4ec29cf40ab8af4bcb668362fb70a" kindref="member">ScanResult</ref></type>
@@ -464,7 +464,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/scanner.hh" line="84" column="12" declfile="src/forma/scanner.hh" declline="84" declcolumn="12"/>
+        <location file="src/forma/scanner.hh" line="89" column="12" declfile="src/forma/scanner.hh" declline="89" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1ad19c46ff501d9fd312af7d0f33c6a55f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -503,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="196" column="17" bodyfile="src/forma/template.hh" bodystart="196" bodyend="212"/>
+        <location file="src/forma/template.hh" line="234" column="13" bodyfile="src/forma/template.hh" bodystart="234" bodyend="257"/>
       </memberdef>
       <memberdef kind="function" id="namespaceforma_1ad64eddef64ce93f74333510896fd7917" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::unordered_map&lt; std::string, <ref refid="namespaceforma_1ac9cd168417c1217460933c468a20f268" kindref="member">FuncGenerator</ref> &gt;</type>
@@ -517,7 +517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="214" column="24" declfile="src/forma/template.hh" declline="214" declcolumn="24"/>
+        <location file="src/forma/template.hh" line="259" column="20" declfile="src/forma/template.hh" declline="259" declcolumn="20"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -7,7 +7,7 @@
     <member refid="structforma_1_1node_1_1Attribute_1a392b518343afd3269848f25e55cd8591" kind="function"><name>AsAttribute</name></member>
   </compound>
   <compound refid="classforma_1_1Definition" kind="class"><name>forma::Definition</name>
-    <member refid="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" kind="typedef"><name>ChildrenRet</name></member>
+    <member refid="classforma_1_1Definition_1a704d6e8f47b9e7e7de7acf6934c865f2" kind="typedef"><name>ChildrenRet</name></member>
     <member refid="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" kind="typedef"><name>ChildMapFunction</name></member>
     <member refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" kind="typedef"><name>GetterFunction</name></member>
     <member refid="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" kind="typedef"><name>ValidationResult</name></member>

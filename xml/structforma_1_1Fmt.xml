@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="30" column="28" bodyfile="src/forma/core.hh" bodystart="30" bodyend="-1"/>
+        <location file="src/forma/core.hh" line="30" column="20" bodyfile="src/forma/core.hh" bodystart="30" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="33" column="9" bodyfile="src/forma/core.hh" bodystart="33" bodyend="37"/>
+        <location file="src/forma/core.hh" line="33" column="1" bodyfile="src/forma/core.hh" bodystart="33" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1Fmt_1a0b53572b7de3c651c8582779d2c7d21c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -55,14 +55,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="39" column="9" bodyfile="src/forma/core.hh" bodystart="39" bodyend="42"/>
+        <location file="src/forma/core.hh" line="39" column="1" bodyfile="src/forma/core.hh" bodystart="39" bodyend="42"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/forma/core.hh" line="28" column="5" bodyfile="src/forma/core.hh" bodystart="29" bodyend="43"/>
+    <location file="src/forma/core.hh" line="28" column="1" bodyfile="src/forma/core.hh" bodystart="29" bodyend="43"/>
     <listofallmembers>
       <member refid="structforma_1_1Fmt_1a0b53572b7de3c651c8582779d2c7d21c" prot="public" virt="non-virtual"><scope>forma::Fmt</scope><name>operator std::string</name></member>
       <member refid="structforma_1_1Fmt_1a4aa694514ccf39f5495762e9dec15d69" prot="public" virt="non-virtual"><scope>forma::Fmt</scope><name>operator&lt;&lt;</name></member>

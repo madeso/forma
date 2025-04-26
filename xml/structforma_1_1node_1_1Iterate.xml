@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="58" column="21" bodyfile="src/forma/parser.hh" bodystart="58" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="81" column="13" bodyfile="src/forma/parser.hh" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structforma_1_1node_1_1Iterate_1a228dde06d5bb8c852bbbc589e6bc776c" prot="public" static="no" mutable="no">
         <type>std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;</type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="59" column="25" bodyfile="src/forma/parser.hh" bodystart="59" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="82" column="17" bodyfile="src/forma/parser.hh" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structforma_1_1node_1_1Iterate_1a2af4b435a978f1b6f64530c4723b8517" prot="public" static="no" mutable="no">
         <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="60" column="17" bodyfile="src/forma/parser.hh" bodystart="60" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="83" column="17" bodyfile="src/forma/parser.hh" bodystart="83" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="56" column="1"/>
+        <location file="src/forma/parser.hh" line="79" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1node_1_1Iterate_1a9795c4708fc07df8fbf113ca5e74dd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Iterate" kindref="compound">Iterate</ref> *</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="62" column="9"/>
+        <location file="src/forma/parser.hh" line="85" column="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -126,7 +126,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/forma/parser.hh" line="54" column="5" bodyfile="src/forma/parser.hh" bodystart="55" bodyend="63"/>
+    <location file="src/forma/parser.hh" line="77" column="1" bodyfile="src/forma/parser.hh" bodystart="78" bodyend="86"/>
     <listofallmembers>
       <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsAttribute</name></member>
       <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::node::Iterate</scope><name>AsFunctionCall</name></member>

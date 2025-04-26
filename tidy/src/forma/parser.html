@@ -10,236 +10,200 @@
 <hr>
 <h3>warning: invalid case style for global function &#39;GetKeys&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 54 : 17</i></p>
+<p><i>src/forma/parser.cc 84 : 16</i></p>
 <pre>
-   54 |         std::vector&lt;K&gt; GetKeys(const std::unordered_map&lt;K, V&gt;&amp; m)
-      |                        ^~~~~~~
-      |                        get_keys
+   84 | std::vector&lt;K&gt; GetKeys(const std::unordered_map&lt;K, V&gt;&amp; m)
+      |                ^~~~~~~
+      |                get_keys
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;TrimTextTokens&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 64 : 21</i></p>
+<p><i>src/forma/parser.cc 94 : 20</i></p>
 <pre>
-   64 |         std::vector&lt;Token&gt; TrimTextTokens(const std::vector&lt;Token&gt;&amp; tokens)
-      |                            ^~~~~~~~~~~~~~
-      |                            trim_text_tokens
+   94 | std::vector&lt;Token&gt; TrimTextTokens(const std::vector&lt;Token&gt;&amp; tokens)
+      |                    ^~~~~~~~~~~~~~
+      |                    trim_text_tokens
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;lastToken&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 68 : 24</i></p>
+<p><i>src/forma/parser.cc 98 : 23</i></p>
 <pre>
-   68 |                 std::optional&lt;Token&gt; lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-   69 |                 for(const auto&amp; tok: tokens)
-   70 |                 {
-   71 |                         switch (tok.Type)
-   72 |                         {
-   73 |                         case TokenType::BeginCodeTrim:
-   74 |                                 if (lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::Text)
-      |                                     ~~~~~~~~~                ~~~~~~~~~
-      |                                     last_token               last_token
-   75 |                                 {
-   76 |                                         r.emplace_back(lastToken-&gt;withValue(strings::TrimEnd(lastToken-&gt;Value)));
-      |                                                        ~~~~~~~~~                             ~~~~~~~~~
-      |                                                        last_token                            last_token
-   77 |                                 }
-   78 | 
-   79 |                                 lastToken = tok.withType(TokenType::BeginCode);
-      |                                 ~~~~~~~~~
-      |                                 last_token
-   80 |                                 break;
-   81 |                         case TokenType::Text:
-   82 |                                 if(lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::EndCodeTrim)
-      |                                    ~~~~~~~~~                ~~~~~~~~~
-      |                                    last_token               last_token
+   98 |         std::optional&lt;Token&gt; lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+   99 |         for (const auto&amp; tok: tokens)
+  100 |         {
+  101 |                 switch (tok.Type)
+  102 |                 {
+  103 |                 case TokenType::BeginCodeTrim:
+  104 |                         if (lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::Text)
+      |                             ~~~~~~~~~                ~~~~~~~~~
+      |                             last_token               last_token
+  105 |                         {
+  106 |                                 r.emplace_back(lastToken-&gt;withValue(strings::TrimEnd(lastToken-&gt;Value)));
+      |                                                ~~~~~~~~~                             ~~~~~~~~~
+      |                                                last_token                            last_token
+  107 |                         }
+  108 | 
+  109 |                         lastToken = tok.withType(TokenType::BeginCode);
+      |                         ~~~~~~~~~
+      |                         last_token
+  110 |                         break;
+  111 |                 case TokenType::Text:
+  112 |                         if (lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::EndCodeTrim)
+      |                             ~~~~~~~~~                ~~~~~~~~~
+      |                             last_token               last_token
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;TrimEmptyStartEnd&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 107 : 21</i></p>
+<p><i>src/forma/parser.cc 137 : 20</i></p>
 <pre>
-  107 |         std::vector&lt;Token&gt; TrimEmptyStartEnd(const std::vector&lt;Token&gt;&amp; tokens)
-      |                            ^~~~~~~~~~~~~~~~~
-      |                            trim_empty_start_end
+  137 | std::vector&lt;Token&gt; TrimEmptyStartEnd(const std::vector&lt;Token&gt;&amp; tokens)
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    trim_empty_start_end
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;lastToken&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 110 : 24</i></p>
+<p><i>src/forma/parser.cc 140 : 23</i></p>
 <pre>
-  110 |                 std::optional&lt;Token&gt; lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-  111 |                 for(const auto&amp; tok: tokens)
-  112 |                 {
-  113 |                         if (lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode &amp;&amp; tok.Type == TokenType::EndCode)
-      |                             ~~~~~~~~~                ~~~~~~~~~
-      |                             last_token               last_token
-  114 |                         {
-  115 |                                 lastToken = std::nullopt;
-      |                                 ~~~~~~~~~
-      |                                 last_token
-  116 |                                 continue;
-  117 |                         }
-  118 | 
-  119 |                         if (lastToken.has_value())
-      |                             ~~~~~~~~~
-      |                             last_token
-  120 |                         {
-  121 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
-  122 |                         }
-  123 | 
-  124 |                         lastToken = tok;
+  140 |         std::optional&lt;Token&gt; lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+  141 |         for (const auto&amp; tok: tokens)
+  142 |         {
+  143 |                 if (lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode
+      |                     ~~~~~~~~~                ~~~~~~~~~
+      |                     last_token               last_token
+  144 |                         &amp;&amp; tok.Type == TokenType::EndCode)
+  145 |                 {
+  146 |                         lastToken = std::nullopt;
       |                         ~~~~~~~~~
       |                         last_token
+  147 |                         continue;
+  148 |                 }
+  149 | 
+  150 |                 if (lastToken.has_value())
+      |                     ~~~~~~~~~
+      |                     last_token
+  151 |                 {
+  152 |                         r.emplace_back(*lastToken);
+      |                                         ~~~~~~~~~
+      |                                         last_token
+  153 |                 }
+  154 | 
+  155 |                 lastToken = tok;
+      |                 ~~~~~~~~~
+      |                 last_token
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;TransformSingleCharsToKeywords&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 135 : 21</i></p>
+<p><i>src/forma/parser.cc 166 : 20</i></p>
 <pre>
-  135 |         std::vector&lt;Token&gt; TransformSingleCharsToKeywords(const std::vector&lt;Token&gt;&amp; tokens)
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                            transform_single_chars_to_keywords
+  166 | std::vector&lt;Token&gt; TransformSingleCharsToKeywords(const std::vector&lt;Token&gt;&amp; tokens)
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    transform_single_chars_to_keywords
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;eatIdent&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 137 : 8</i></p>
+<p><i>src/forma/parser.cc 168 : 7</i></p>
 <pre>
-  137 |                 auto eatIdent = false;
-      |                      ^~~~~~~~
-      |                      eat_ident
-  138 |                 std::vector&lt;Token&gt; r;
-  139 |                 std::optional&lt;Token&gt; lastToken = std::nullopt;
-  140 |                 for(const auto&amp; tok: tokens)
-  141 |                 {
-  142 |                         if (tok.Type == TokenType::Ident &amp;&amp; eatIdent)
-      |                                                             ~~~~~~~~
-      |                                                             eat_ident
-  143 |                         {
-  144 |                                 eatIdent = false;
-      |                                 ~~~~~~~~
-      |                                 eat_ident
-  145 |                                 continue;
-  146 |                         }
-  147 | 
-  148 |                         if(tok.Type == TokenType::Slash &amp;&amp; lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode) {
-  149 |                                 r.emplace_back(*lastToken);
-  150 |                                 lastToken = tok.withType(TokenType::KeywordEnd);
-  151 |                                 eatIdent = true;
-      |                                 ~~~~~~~~
-      |                                 eat_ident
+  168 |         auto eatIdent = false;
+      |              ^~~~~~~~
+      |              eat_ident
+  169 |         std::vector&lt;Token&gt; r;
+  170 |         std::optional&lt;Token&gt; lastToken = std::nullopt;
+  171 |         for (const auto&amp; tok: tokens)
+  172 |         {
+  173 |                 if (tok.Type == TokenType::Ident &amp;&amp; eatIdent)
+      |                                                     ~~~~~~~~
+      |                                                     eat_ident
+  174 |                 {
+  175 |                         eatIdent = false;
+      |                         ~~~~~~~~
+      |                         eat_ident
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;lastToken&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 139 : 24</i></p>
+<p><i>src/forma/parser.cc 170 : 23</i></p>
 <pre>
-  139 |                 std::optional&lt;Token&gt; lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-  140 |                 for(const auto&amp; tok: tokens)
-  141 |                 {
-  142 |                         if (tok.Type == TokenType::Ident &amp;&amp; eatIdent)
-  143 |                         {
-  144 |                                 eatIdent = false;
-  145 |                                 continue;
-  146 |                         }
-  147 | 
-  148 |                         if(tok.Type == TokenType::Slash &amp;&amp; lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode) {
-      |                                                            ~~~~~~~~~                ~~~~~~~~~
-      |                                                            last_token               last_token
-  149 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
-  150 |                                 lastToken = tok.withType(TokenType::KeywordEnd);
-      |                                 ~~~~~~~~~
-      |                                 last_token
-  151 |                                 eatIdent = true;
-  152 |                         }
-  153 |                         else if(tok.Type == TokenType::Hash &amp;&amp; lastToken.has_value() &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode) {
-      |                                                                ~~~~~~~~~                ~~~~~~~~~
-      |                                                                last_token               last_token
-  154 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
+  170 |         std::optional&lt;Token&gt; lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+  171 |         for (const auto&amp; tok: tokens)
+  172 |         {
+  173 |                 if (tok.Type == TokenType::Ident &amp;&amp; eatIdent)
+  174 |                 {
+  175 |                         eatIdent = false;
+  176 |                         continue;
+  177 |                 }
+  178 | 
+  179 |                 if (tok.Type == TokenType::Slash &amp;&amp; lastToken.has_value()
+      |                                                     ~~~~~~~~~
+      |                                                     last_token
+  180 |                         &amp;&amp; lastToken-&gt;Type == TokenType::BeginCode)
+      |                            ~~~~~~~~~
+      |                            last_token
+  181 |                 {
+  182 |                         r.emplace_back(*lastToken);
+      |                                         ~~~~~~~~~
+      |                                         last_token
+  183 |                         lastToken = tok.withType(TokenType::KeywordEnd);
+      |                         ~~~~~~~~~
+      |                         last_token
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;includeDir&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 191 : 18</i></p>
+<p><i>src/forma/parser.cc 231 : 17</i></p>
 <pre>
-  191 |                 DirectoryInfo* includeDir;
-      |                                ^~~~~~~~~~
-      |                                include_dir
-  192 |                 std::string defaultExtension;
-  193 |                 VfsRead* vfs;
-  194 | 
-  195 |                 int current = 0;
-  196 |                 std::vector&lt;Error&gt; errors;
-  197 | 
-  198 |                 Parser(std::vector&lt;Token&gt; itok, std::unordered_map&lt;std::string, FuncGenerator&gt; f, DirectoryInfo* i, std::string d, VfsRead* v)
-  199 |                         : tokens(TransformSingleCharsToKeywords(TrimEmptyStartEnd(TrimTextTokens(itok))))
-  200 |                         , functions(f)
-  201 |                         , includeDir(i)
-      |                           ~~~~~~~~~~
-      |                           include_dir
+  231 |         DirectoryInfo* includeDir;
+      |                        ^~~~~~~~~~
+      |                        include_dir
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;defaultExtension&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 192 : 15</i></p>
+<p><i>src/forma/parser.cc 232 : 14</i></p>
 <pre>
-  192 |                 std::string defaultExtension;
-      |                             ^~~~~~~~~~~~~~~~
-      |                             default_extension
-  193 |                 VfsRead* vfs;
-  194 | 
-  195 |                 int current = 0;
-  196 |                 std::vector&lt;Error&gt; errors;
-  197 | 
-  198 |                 Parser(std::vector&lt;Token&gt; itok, std::unordered_map&lt;std::string, FuncGenerator&gt; f, DirectoryInfo* i, std::string d, VfsRead* v)
-  199 |                         : tokens(TransformSingleCharsToKeywords(TrimEmptyStartEnd(TrimTextTokens(itok))))
-  200 |                         , functions(f)
-  201 |                         , includeDir(i)
-  202 |                         , defaultExtension(d)
-      |                           ~~~~~~~~~~~~~~~~
-      |                           default_extension
+  232 |         std::string defaultExtension;
+      |                     ^~~~~~~~~~~~~~~~
+      |                     default_extension
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;rootNode&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 209 : 9</i></p>
+<p><i>src/forma/parser.cc 255 : 8</i></p>
 <pre>
-  209 |                         auto rootNode = ParseGroup();
-      |                              ^~~~~~~~
-      |                              root_node
-  210 |                         if (!IsAtEnd())
-  211 |                         {
-  212 |                                 ReportError(Peek().Location, ExpectedMessage(&quot;EOF&quot;));
-  213 |                         }
-  214 | 
-  215 |                         if (errors.size() == 0)
-  216 |                         {
-  217 |                                 return { rootNode, errors };
-      |                                          ~~~~~~~~
-      |                                          root_node
+  255 |                 auto rootNode = ParseGroup();
+      |                      ^~~~~~~~
+      |                      root_node
+  256 |                 if (! IsAtEnd())
+  257 |                 {
+  258 |                         ReportError(Peek().Location, ExpectedMessage(&quot;EOF&quot;));
+  259 |                 }
+  260 | 
+  261 |                 if (errors.size() == 0)
+  262 |                 {
+  263 |                         return {rootNode, errors};
+      |                                 ~~~~~~~~
+      |                                 root_node
 </pre>
 <span id='readability-container-size-empty'>&nbsp;</span>
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;size&#39;</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/parser.cc 215 : 8</i></p>
+<p><i>src/forma/parser.cc 261 : 7</i></p>
 <pre>
-  215 |                         if (errors.size() == 0)
-      |                             ^~~~~~~~~~~~~~~~~~
-      |                             errors.empty()
+  261 |                 if (errors.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~~~
+      |                     errors.empty()
 </pre>
 <hr>
 <h3>note: method &#39;vector&#39;:: empty() defined here</h3>
@@ -251,427 +215,434 @@
 <hr>
 <h3>warning: invalid case style for public method &#39;ParseGroup&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 222 : 25</i></p>
+<p><i>src/forma/parser.cc 268 : 24</i></p>
 <pre>
-  209 |                         auto rootNode = ParseGroup();
-      |                                         ~~~~~~~~~~
-      |                                         parse_group
-  210 |                         if (!IsAtEnd())
-  211 |                         {
-  212 |                                 ReportError(Peek().Location, ExpectedMessage(&quot;EOF&quot;));
-  213 |                         }
-  214 | 
-  215 |                         if (errors.size() == 0)
-  216 |                         {
-  217 |                                 return { rootNode, errors };
-  218 |                         }
-  219 |                         return { std::make_shared&lt;node::Text&gt;(&quot;Parsing failed&quot;, UnknownLocation()), errors};
-  220 |                 }
-  221 | 
-  222 |                 std::shared_ptr&lt;Node&gt; ParseGroup()
-      |                                       ^~~~~~~~~~
-      |                                       parse_group
+  255 |                 auto rootNode = ParseGroup();
+      |                                 ~~~~~~~~~~
+      |                                 parse_group
+  256 |                 if (! IsAtEnd())
+  257 |                 {
+  258 |                         ReportError(Peek().Location, ExpectedMessage(&quot;EOF&quot;));
+  259 |                 }
+  260 | 
+  261 |                 if (errors.size() == 0)
+  262 |                 {
+  263 |                         return {rootNode, errors};
+  264 |                 }
+  265 |                 return {std::make_shared&lt;node::Text&gt;(&quot;Parsing failed&quot;, UnknownLocation()), errors};
+  266 |         }
+  267 | 
+  268 |         std::shared_ptr&lt;Node&gt; ParseGroup()
+      |                               ^~~~~~~~~~
+      |                               parse_group
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;ReportError&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 241 : 14</i></p>
+<p><i>src/forma/parser.cc 288 : 13</i></p>
 <pre>
-  212 |                 ParseError ReportError(Location loc, std::string message)
-      |                            ^~~~~~~~~~~
-      |                            report_error
+  258 |         ParseError ReportError(Location loc, std::string message)
+      |                    ^~~~~~~~~~~
+      |                    report_error
 </pre>
 <span id='modernize-return-braced-init-list'>&nbsp;</span>
 <hr>
 <h3>warning: avoid repeating the return type from the declaration; use a braced initializer list instead</h3>
 <code>[modernize-return-braced-init-list]</code>
-<p><i>src/forma/parser.cc 244 : 11</i></p>
+<p><i>src/forma/parser.cc 291 : 10</i></p>
 <pre>
-  244 |                         return ParseError();
-      |                                ^~~~~~~~~~~~
-      |                                {}
+  291 |                 return ParseError();
+      |                        ^~~~~~~~~~~~
+      |                        {}
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Match&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 247 : 8</i></p>
+<p><i>src/forma/parser.cc 294 : 7</i></p>
 <pre>
-  247 |                 bool Match(TokenType type)
-      |                      ^~~~~
-      |                      match
+  294 |         bool Match(TokenType type)
+      |              ^~~~~
+      |              match
 </pre>
 <hr>
 <h3>warning: invalid case style for value template parameter &#39;Size&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 251 : 24</i></p>
+<p><i>src/forma/parser.cc 299 : 23</i></p>
 <pre>
-  251 |                 template&lt;std::size_t Size&gt;
-      |                                      ^~~~
-      |                                      size
-  252 |                 bool MatchMany(std::array&lt;TokenType, Size&gt; types)
-      |                                                      ~~~~
-      |                                                      size
+  299 |         template&lt;std::size_t Size&gt;
+      |                              ^~~~
+      |                              size
+  300 |         bool MatchMany(std::array&lt;TokenType, Size&gt; types)
+      |                                              ~~~~
+      |                                              size
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;MatchMany&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 252 : 8</i></p>
+<p><i>src/forma/parser.cc 300 : 7</i></p>
 <pre>
-  249 |                         return MatchMany(std::array&lt;TokenType, 1&gt;{ type });
-      |                                ~~~~~~~~~
-      |                                match_many
-  250 |                 }
-  251 |                 template&lt;std::size_t Size&gt;
-  252 |                 bool MatchMany(std::array&lt;TokenType, Size&gt; types)
-      |                      ^~~~~~~~~
-      |                      match_many
+  296 |                 return MatchMany(std::array&lt;TokenType, 1&gt;{type});
+      |                        ~~~~~~~~~
+      |                        match_many
+  297 |         }
+  298 | 
+  299 |         template&lt;std::size_t Size&gt;
+  300 |         bool MatchMany(std::array&lt;TokenType, Size&gt; types)
+      |              ^~~~~~~~~
+      |              match_many
 </pre>
 <span id='readability-braces-around-statements'>&nbsp;</span>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 257 : 27</i></p>
+<p><i>src/forma/parser.cc 305 : 26</i></p>
 <pre>
-  257 |                                 if (Check(t) == false) return false;
-      |                                                       ^             
-      |                                                        {
+  305 |                         if (Check(t) == false) return false;
+      |                                               ^             
+      |                                                {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Check&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 264 : 8</i></p>
+<p><i>src/forma/parser.cc 312 : 7</i></p>
 <pre>
-  257 |                                 if (Check(t) == false) return false;
-      |                                     ~~~~~
-      |                                     check
-  258 |                         }
-  259 | 
-  260 |                         Advance();
-  261 |                         return true;
-  262 |                 }
-  263 | 
-  264 |                 bool Check(TokenType type)
-      |                      ^~~~~
-      |                      check
+  305 |                         if (Check(t) == false) return false;
+      |                             ~~~~~
+      |                             check
+  306 |                 }
+  307 | 
+  308 |                 Advance();
+  309 |                 return true;
+  310 |         }
+  311 | 
+  312 |         bool Check(TokenType type)
+      |              ^~~~~
+      |              check
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 266 : 18</i></p>
+<p><i>src/forma/parser.cc 314 : 17</i></p>
 <pre>
-  266 |                         if (IsAtEnd()) return false;
-      |                                       ^             
-      |                                        {
+  314 |                 if (IsAtEnd()) return false;
+      |                               ^             
+      |                                {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Advance&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 270 : 9</i></p>
+<p><i>src/forma/parser.cc 318 : 8</i></p>
 <pre>
-  260 |                         Advance();
-      |                         ~~~~~~~
-      |                         advance
-  261 |                         return true;
-  262 |                 }
-  263 | 
-  264 |                 bool Check(TokenType type)
-  265 |                 {
-  266 |                         if (IsAtEnd()) return false;
-  267 |                         return Peek().Type == type;
-  268 |                 }
-  269 | 
-  270 |                 Token Advance()
-      |                       ^~~~~~~
-      |                       advance
+  308 |                 Advance();
+      |                 ~~~~~~~
+      |                 advance
+  309 |                 return true;
+  310 |         }
+  311 | 
+  312 |         bool Check(TokenType type)
+  313 |         {
+  314 |                 if (IsAtEnd()) return false;
+  315 |                 return Peek().Type == type;
+  316 |         }
+  317 | 
+  318 |         Token Advance()
+      |               ^~~~~~~
+      |               advance
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 272 : 19</i></p>
+<p><i>src/forma/parser.cc 320 : 19</i></p>
 <pre>
-  272 |                         if (!IsAtEnd()) current++;
-      |                                        ^          
-      |                                         {
+  320 |                 if (! IsAtEnd()) current++;
+      |                                 ^          
+      |                                  {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;IsAtEnd&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 276 : 8</i></p>
+<p><i>src/forma/parser.cc 324 : 7</i></p>
 <pre>
-  210 |                         if (IsAtEnd()) return false;
-      |                             ~~~~~~~
-      |                             is_at_end
-  211 |                         return Peek().Type == type;
-  212 |                 }
-  213 | 
-  214 |                 Token Advance()
-  215 |                 {
-  216 |                         if (!IsAtEnd()) current++;
-      |                              ~~~~~~~
-      |                              is_at_end
-  217 |                         return Previous();
-  218 |                 }
-  219 | 
-  220 |                 bool IsAtEnd()
-      |                      ^~~~~~~
-      |                      is_at_end
+  256 |                 if (IsAtEnd()) return false;
+      |                     ~~~~~~~
+      |                     is_at_end
+  257 |                 return Peek().Type == type;
+  258 |         }
+  259 | 
+  260 |         Token Advance()
+  261 |         {
+  262 |                 if (! IsAtEnd()) current++;
+      |                       ~~~~~~~
+      |                       is_at_end
+  263 |                 return Previous();
+  264 |         }
+  265 | 
+  266 |         bool IsAtEnd()
+      |              ^~~~~~~
+      |              is_at_end
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Peek&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 281 : 9</i></p>
+<p><i>src/forma/parser.cc 329 : 8</i></p>
 <pre>
-  212 |                         return Peek().Type == type;
-      |                                ~~~~
-      |                                peek
-  213 |                 }
-  214 | 
-  215 |                 Token Advance()
-  216 |                 {
-  217 |                         if (!IsAtEnd()) current++;
-  218 |                         return Previous();
-  219 |                 }
-  220 | 
-  221 |                 bool IsAtEnd()
-  222 |                 {
-  223 |                         return Peek().Type == TokenType::Eof;
-      |                                ~~~~
-      |                                peek
-  224 |                 }
-  225 | 
-  226 |                 Token Peek()
-      |                       ^~~~
-      |                       peek
+  258 |                 return Peek().Type == type;
+      |                        ~~~~
+      |                        peek
+  259 |         }
+  260 | 
+  261 |         Token Advance()
+  262 |         {
+  263 |                 if (! IsAtEnd()) current++;
+  264 |                 return Previous();
+  265 |         }
+  266 | 
+  267 |         bool IsAtEnd()
+  268 |         {
+  269 |                 return Peek().Type == TokenType::Eof;
+      |                        ~~~~
+      |                        peek
+  270 |         }
+  271 | 
+  272 |         Token Peek()
+      |               ^~~~
+      |               peek
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;PeekNext&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 286 : 13</i></p>
+<p><i>src/forma/parser.cc 334 : 12</i></p>
 <pre>
-  226 |                 TokenType PeekNext()
-      |                           ^~~~~~~~
-      |                           peek_next
+  273 |         TokenType PeekNext()
+      |                   ^~~~~~~~
+      |                   peek_next
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 288 : 37</i></p>
+<p><i>src/forma/parser.cc 336 : 36</i></p>
 <pre>
-  288 |                         if (current + 1 &gt;= tokens.size()) return TokenType::Eof;
-      |                                                          ^                      
-      |                                                           {
+  336 |                 if (current + 1 &gt;= tokens.size()) return TokenType::Eof;
+      |                                                  ^                      
+      |                                                   {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Previous&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 292 : 9</i></p>
+<p><i>src/forma/parser.cc 340 : 8</i></p>
 <pre>
-  273 |                 Token Previous()
-      |                       ^~~~~~~~
-      |                       previous
-  274 |                 {
-  275 |                         return tokens[current - 1];
-  276 |                 }
-  277 | 
-  278 |                 void Synchronize()
-  279 |                 {
-  280 |                         Advance();
-  281 | 
-  282 |                         while (!IsAtEnd())
-  283 |                         {
-  284 |                                 if (Previous().Type == TokenType::EndCode) return;
-      |                                     ~~~~~~~~
-      |                                     previous
+  321 |         Token Previous()
+      |               ^~~~~~~~
+      |               previous
+  322 |         {
+  323 |                 return tokens[current - 1];
+  324 |         }
+  325 | 
+  326 |         void Synchronize()
+  327 |         {
+  328 |                 Advance();
+  329 | 
+  330 |                 while (! IsAtEnd())
+  331 |                 {
+  332 |                         if (Previous().Type == TokenType::EndCode) return;
+      |                             ~~~~~~~~
+      |                             previous
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Synchronize&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 297 : 8</i></p>
+<p><i>src/forma/parser.cc 345 : 7</i></p>
 <pre>
-  234 |                 void Synchronize()
-      |                      ^~~~~~~~~~~
-      |                      synchronize
+  281 |         void Synchronize()
+      |              ^~~~~~~~~~~
+      |              synchronize
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 303 : 47</i></p>
+<p><i>src/forma/parser.cc 351 : 46</i></p>
 <pre>
-  303 |                                 if (Previous().Type == TokenType::EndCode) return;
-      |                                                                           ^       
-      |                                                                            {
+  351 |                         if (Previous().Type == TokenType::EndCode) return;
+      |                                                                   ^       
+      |                                                                    {
 </pre>
 <hr>
 <h3>warning: invalid case style for class method &#39;TokenToMessage&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 317 : 22</i></p>
+<p><i>src/forma/parser.cc 363 : 21</i></p>
 <pre>
-  317 |                 static std::string TokenToMessage(Token token)
-      |                                    ^~~~~~~~~~~~~~
-      |                                    token_to_message
+  363 |         static std::string TokenToMessage(Token token)
+      |                            ^~~~~~~~~~~~~~
+      |                            token_to_message
 </pre>
 <span id='misc-const-correctness'>&nbsp;</span>
 <hr>
 <h3>warning: variable &#39;value&#39; of type &#39;std:: string&#39; (aka &#39;basic_string&lt;char&gt;&#39;) can be declared &#39;const&#39;</h3>
 <code>[misc-const-correctness]</code>
-<p><i>src/forma/parser.cc 319 : 4</i></p>
+<p><i>src/forma/parser.cc 365 : 3</i></p>
 <pre>
-  319 |                         std::string value = token.Type == TokenType::Text ? std::string{ &quot;&quot; } : Fmt{} &lt;&lt; &quot;: &quot; &lt;&lt; token.Lexeme;
-      |                         ^
-      |                                     const 
+  365 |                 std::string value
+      |                 ^
+      |                             const 
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;Consume&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 323 : 9</i></p>
+<p><i>src/forma/parser.cc 370 : 8</i></p>
 <pre>
-  323 |                 Token Consume(TokenType type, std::string message)
-      |                       ^~~~~~~
-      |                       consume
+  370 |         Token Consume(TokenType type, std::string message)
+      |               ^~~~~~~
+      |               consume
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/parser.cc 325 : 20</i></p>
+<p><i>src/forma/parser.cc 372 : 19</i></p>
 <pre>
-  325 |                         if (Check(type)) return Advance();
-      |                                         ^                 
-      |                                          {
+  372 |                 if (Check(type)) return Advance();
+      |                                 ^                 
+      |                                  {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;ParseFunctionArg&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 330 : 16</i></p>
+<p><i>src/forma/parser.cc 377 : 15</i></p>
 <pre>
-  330 |                 FuncArgument ParseFunctionArg()
-      |                              ^~~~~~~~~~~~~~~~
-      |                              parse_function_arg
+  377 |         FuncArgument ParseFunctionArg()
+      |                      ^~~~~~~~~~~~~~~~
+      |                      parse_function_arg
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;ExtractAttributeName&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 341 : 15</i></p>
+<p><i>src/forma/parser.cc 388 : 14</i></p>
 <pre>
-  341 |                 std::string ExtractAttributeName()
-      |                             ^~~~~~~~~~~~~~~~~~~~
-      |                             extract_attribute_name
+  388 |         std::string ExtractAttributeName()
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     extract_attribute_name
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;ExpectedMessage&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 347 : 15</i></p>
+<p><i>src/forma/parser.cc 394 : 14</i></p>
 <pre>
-  212 |                                 throw ReportError(Peek().Location, ExpectedMessage(&quot;identifier&quot;));
-      |                                                                    ~~~~~~~~~~~~~~~
-      |                                                                    expected_message
-  213 |                         }
-  214 | 
-  215 |                         auto arg = Advance();
-  216 |                         return FuncArgument(arg.Location, arg.Value);
-  217 |                 }
-  218 | 
-  219 |                 std::string ExtractAttributeName()
-  220 |                 {
-  221 |                         auto ident = Consume(TokenType::Ident, ExpectedMessage(&quot;IDENT&quot;));
-      |                                                                ~~~~~~~~~~~~~~~
-      |                                                                expected_message
-  222 |                         return ident.Value;
-  223 |                 }
-  224 | 
-  225 |                 std::string ExpectedMessage(std::string what)
-      |                             ^~~~~~~~~~~~~~~
-      |                             expected_message
+  258 |                         throw ReportError(Peek().Location, ExpectedMessage(&quot;identifier&quot;));
+      |                                                            ~~~~~~~~~~~~~~~
+      |                                                            expected_message
+  259 |                 }
+  260 | 
+  261 |                 auto arg = Advance();
+  262 |                 return FuncArgument(arg.Location, arg.Value);
+  263 |         }
+  264 | 
+  265 |         std::string ExtractAttributeName()
+  266 |         {
+  267 |                 auto ident = Consume(TokenType::Ident, ExpectedMessage(&quot;IDENT&quot;));
+      |                                                        ~~~~~~~~~~~~~~~
+      |                                                        expected_message
+  268 |                 return ident.Value;
+  269 |         }
+  270 | 
+  271 |         std::string ExpectedMessage(std::string what)
+      |                     ^~~~~~~~~~~~~~~
+      |                     expected_message
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;ParseNode&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 352 : 8</i></p>
+<p><i>src/forma/parser.cc 399 : 7</i></p>
 <pre>
-  230 |                 void ParseNode(std::vector&lt;std::shared_ptr&lt;Node&gt;&gt;&amp; nodes)
-      |                      ^~~~~~~~~
-      |                      parse_node
+  277 |         void ParseNode(std::vector&lt;std::shared_ptr&lt;Node&gt;&gt;&amp; nodes)
+      |              ^~~~~~~~~
+      |              parse_node
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;includeLocation&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 388 : 11</i></p>
+<p><i>src/forma/parser.cc 435 : 11</i></p>
 <pre>
-  388 |                                         auto includeLocation = Peek().Location;
+  435 |                                         auto includeLocation = Peek().Location;
       |                                              ^~~~~~~~~~~~~~~
       |                                              include_location
-  389 |                                         Consume(TokenType::EndCode, ExpectedMessage(&quot;}}&quot;));
-  390 | 
-  391 |                                         auto firstFile = includeDir-&gt;GetFile(name.Value);
-  392 |                                         auto file = firstFile;
-  393 |                                         auto secondFile = firstFile;
-  394 |                                         if (vfs-&gt;Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
-  397 |                                                 file = secondFile;
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs-&gt;Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} &lt;&lt; &quot;Unable to open file: tried &quot; &lt;&lt; firstFile &lt;&lt; &quot; and &quot; &lt;&lt; secondFile);
-      |                                                             ~~~~~~~~~~~~~~~
-      |                                                             include_location
+  436 |                                         Consume(TokenType::EndCode, ExpectedMessage(&quot;}}&quot;));
+  437 | 
+  438 |                                         auto firstFile = includeDir-&gt;GetFile(name.Value);
+  439 |                                         auto file = firstFile;
+  440 |                                         auto secondFile = firstFile;
+  441 |                                         if (vfs-&gt;Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
+  444 |                                                 file = secondFile;
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs-&gt;Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+      |                                                         ~~~~~~~~~~~~~~~
+      |                                                         include_location
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;firstFile&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 391 : 11</i></p>
+<p><i>src/forma/parser.cc 438 : 11</i></p>
 <pre>
-  391 |                                         auto firstFile = includeDir-&gt;GetFile(name.Value);
+  438 |                                         auto firstFile = includeDir-&gt;GetFile(name.Value);
       |                                              ^~~~~~~~~
       |                                              first_file
-  392 |                                         auto file = firstFile;
+  439 |                                         auto file = firstFile;
       |                                                     ~~~~~~~~~
       |                                                     first_file
-  393 |                                         auto secondFile = firstFile;
+  440 |                                         auto secondFile = firstFile;
       |                                                           ~~~~~~~~~
       |                                                           first_file
-  394 |                                         if (vfs-&gt;Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
-  397 |                                                 file = secondFile;
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs-&gt;Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} &lt;&lt; &quot;Unable to open file: tried &quot; &lt;&lt; firstFile &lt;&lt; &quot; and &quot; &lt;&lt; secondFile);
-      |                                                                                                                        ~~~~~~~~~
-      |                                                                                                                        first_file
+  441 |                                         if (vfs-&gt;Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
+  444 |                                                 file = secondFile;
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs-&gt;Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+  451 |                                                         Fmt{} &lt;&lt; &quot;Unable to open file: tried &quot; &lt;&lt; firstFile &lt;&lt; &quot; and &quot;
+      |                                                                                                   ~~~~~~~~~
+      |                                                                                                   first_file
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;secondFile&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 393 : 11</i></p>
+<p><i>src/forma/parser.cc 440 : 11</i></p>
 <pre>
-  393 |                                         auto secondFile = firstFile;
+  440 |                                         auto secondFile = firstFile;
       |                                              ^~~~~~~~~~
       |                                              second_file
-  394 |                                         if (vfs-&gt;Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
+  441 |                                         if (vfs-&gt;Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir-&gt;GetFile(name.Value + defaultExtension);
       |                                                 ~~~~~~~~~~
       |                                                 second_file
-  397 |                                                 file = secondFile;
+  444 |                                                 file = secondFile;
       |                                                        ~~~~~~~~~~
       |                                                        second_file
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs-&gt;Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} &lt;&lt; &quot;Unable to open file: tried &quot; &lt;&lt; firstFile &lt;&lt; &quot; and &quot; &lt;&lt; secondFile);
-      |                                                                                                                                                ~~~~~~~~~~
-      |                                                                                                                                                second_file
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs-&gt;Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+  451 |                                                         Fmt{} &lt;&lt; &quot;Unable to open file: tried &quot; &lt;&lt; firstFile &lt;&lt; &quot; and &quot;
+  452 |                                                                   &lt;&lt; secondFile
+      |                                                                      ~~~~~~~~~~
+      |                                                                      second_file
 </pre>
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;size&#39;</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/parser.cc 408 : 11</i></p>
+<p><i>src/forma/parser.cc 459 : 11</i></p>
 <pre>
-  408 |                                                 if (lexerErrors.size() &gt; 0)
+  459 |                                                 if (lexerErrors.size() &gt; 0)
       |                                                     ^~~~~~~~~~~~~~~~~~~~~~
       |                                                     !lexerErrors.empty()
 </pre>
@@ -685,9 +656,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;size&#39;</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/parser.cc 419 : 11</i></p>
+<p><i>src/forma/parser.cc 471 : 11</i></p>
 <pre>
-  419 |                                                 if (parseErrors.size() &gt; 0)
+  471 |                                                 if (parseErrors.size() &gt; 0)
       |                                                     ^~~~~~~~~~~~~~~~~~~~~~
       |                                                     !parseErrors.empty()
 </pre>
@@ -701,574 +672,521 @@
 <hr>
 <h3>warning: invalid case style for public method &#39;ParseAttributeToEnd&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 450 : 8</i></p>
+<p><i>src/forma/parser.cc 504 : 7</i></p>
 <pre>
-  435 |                                         ParseAttributeToEnd(nodes);
-      |                                         ~~~~~~~~~~~~~~~~~~~
-      |                                         parse_attribute_to_end
-  436 |                                 }
-  437 |                         }
-  438 |                         break;
-  439 |                         case TokenType::Text:
-  440 |                         {
-  441 |                                 auto text = Advance();
-  442 |                                 nodes.emplace_back(std::make_shared &lt; node::Text&gt;(text.Value, text.Location));
-  443 |                         }
-  444 |                         break;
-  445 |                         default:
-  446 |                                 throw ReportError(Peek().Location, Fmt{} &lt;&lt; &quot;Unexpected token &quot; &lt;&lt; TokenToMessage(Peek()));
-  447 |                         }
-  448 |                 }
-  449 | 
-  450 |                 void ParseAttributeToEnd(std::vector&lt;std::shared_ptr&lt;Node&gt;&gt;&amp; nodes)
-      |                      ^~~~~~~~~~~~~~~~~~~
-      |                      parse_attribute_to_end
+  487 |         void ParseAttributeToEnd(std::vector&lt;std::shared_ptr&lt;Node&gt;&gt;&amp; nodes)
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              parse_attribute_to_end
 </pre>
 <hr>
 <h3>warning: invalid case style for local variable &#39;funcGenerator&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 476 : 14</i></p>
+<p><i>src/forma/parser.cc 534 : 13</i></p>
 <pre>
-  476 |                                 if (auto funcGenerator = functions.find(name.Value); funcGenerator != functions.end())
-      |                                          ^~~~~~~~~~~~~                               ~~~~~~~~~~~~~
-      |                                          func_generator                              func_generator
-  477 |                                 {
-  478 |                                         auto [func, funcParseErrors] = funcGenerator-&gt;second(name.Location, arguments);
-      |                                                                        ~~~~~~~~~~~~~
-      |                                                                        func_generator
+  534 |                         if (auto funcGenerator = functions.find(name.Value); funcGenerator != functions.end())
+      |                                  ^~~~~~~~~~~~~                               ~~~~~~~~~~~~~
+      |                                  func_generator                              func_generator
+  535 |                         {
+  536 |                                 auto [func, funcParseErrors] = funcGenerator-&gt;second(name.Location, arguments);
+      |                                                                ~~~~~~~~~~~~~
+      |                                                                func_generator
 </pre>
 <hr>
 <h3>warning: invalid case style for pointer parameter &#39;includeDir&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 500 : 118</i></p>
+<p><i>src/forma/parser.cc 564 : 17</i></p>
 <pre>
-  500 |         ParseResult Parse(std::vector&lt;Token&gt; itok, std::unordered_map&lt;std::string, FuncGenerator&gt; functions, DirectoryInfo* includeDir, std::string defaultExtension, VfsRead* vfs)
-      |                                                                                                                             ^~~~~~~~~~
-      |                                                                                                                             include_dir
-  501 |         {
-  502 |                 Parser parser{itok, functions, includeDir, defaultExtension, vfs};
-      |                                                ~~~~~~~~~~
-      |                                                include_dir
+  564 |         DirectoryInfo* includeDir,
+      |                        ^~~~~~~~~~
+      |                        include_dir
+  565 |         std::string defaultExtension,
+  566 |         VfsRead* vfs
+  567 | )
+  568 | {
+  569 |         Parser parser{itok, functions, includeDir, defaultExtension, vfs};
+      |                                        ~~~~~~~~~~
+      |                                        include_dir
 </pre>
 <hr>
 <h3>warning: invalid case style for parameter &#39;defaultExtension&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/parser.cc 500 : 142</i></p>
+<p><i>src/forma/parser.cc 565 : 14</i></p>
 <pre>
-  500 |         ParseResult Parse(std::vector&lt;Token&gt; itok, std::unordered_map&lt;std::string, FuncGenerator&gt; functions, DirectoryInfo* includeDir, std::string defaultExtension, VfsRead* vfs)
-      |                                                                                                                                                     ^~~~~~~~~~~~~~~~
-      |                                                                                                                                                     default_extension
-  501 |         {
-  502 |                 Parser parser{itok, functions, includeDir, defaultExtension, vfs};
-      |                                                            ~~~~~~~~~~~~~~~~
-      |                                                            default_extension
+  565 |         std::string defaultExtension,
+      |                     ^~~~~~~~~~~~~~~~
+      |                     default_extension
+  566 |         VfsRead* vfs
+  567 | )
+  568 | {
+  569 |         Parser parser{itok, functions, includeDir, defaultExtension, vfs};
+      |                                                    ~~~~~~~~~~~~~~~~
+      |                                                    default_extension
 </pre>
 <!--
-/home/runner/work/forma/forma/src/forma/parser.cc:54:17: warning: invalid case style for global function 'GetKeys' [readability-identifier-naming]
-   54 |         std::vector<K> GetKeys(const std::unordered_map<K, V>& m)
-      |                        ^~~~~~~
-      |                        get_keys
-/home/runner/work/forma/forma/src/forma/parser.cc:64:21: warning: invalid case style for global function 'TrimTextTokens' [readability-identifier-naming]
-   64 |         std::vector<Token> TrimTextTokens(const std::vector<Token>& tokens)
-      |                            ^~~~~~~~~~~~~~
-      |                            trim_text_tokens
-/home/runner/work/forma/forma/src/forma/parser.cc:68:24: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
-   68 |                 std::optional<Token> lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-   69 |                 for(const auto& tok: tokens)
-   70 |                 {
-   71 |                         switch (tok.Type)
-   72 |                         {
-   73 |                         case TokenType::BeginCodeTrim:
-   74 |                                 if (lastToken.has_value() && lastToken->Type == TokenType::Text)
-      |                                     ~~~~~~~~~                ~~~~~~~~~
-      |                                     last_token               last_token
-   75 |                                 {
-   76 |                                         r.emplace_back(lastToken->withValue(strings::TrimEnd(lastToken->Value)));
-      |                                                        ~~~~~~~~~                             ~~~~~~~~~
-      |                                                        last_token                            last_token
-   77 |                                 }
-   78 | 
-   79 |                                 lastToken = tok.withType(TokenType::BeginCode);
-      |                                 ~~~~~~~~~
-      |                                 last_token
-   80 |                                 break;
-   81 |                         case TokenType::Text:
-   82 |                                 if(lastToken.has_value() && lastToken->Type == TokenType::EndCodeTrim)
-      |                                    ~~~~~~~~~                ~~~~~~~~~
-      |                                    last_token               last_token
-/home/runner/work/forma/forma/src/forma/parser.cc:107:21: warning: invalid case style for global function 'TrimEmptyStartEnd' [readability-identifier-naming]
-  107 |         std::vector<Token> TrimEmptyStartEnd(const std::vector<Token>& tokens)
-      |                            ^~~~~~~~~~~~~~~~~
-      |                            trim_empty_start_end
-/home/runner/work/forma/forma/src/forma/parser.cc:110:24: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
-  110 |                 std::optional<Token> lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-  111 |                 for(const auto& tok: tokens)
-  112 |                 {
-  113 |                         if (lastToken.has_value() && lastToken->Type == TokenType::BeginCode && tok.Type == TokenType::EndCode)
+/home/runner/work/forma/forma/src/forma/parser.cc:84:16: warning: invalid case style for global function 'GetKeys' [readability-identifier-naming]
+   84 | std::vector<K> GetKeys(const std::unordered_map<K, V>& m)
+      |                ^~~~~~~
+      |                get_keys
+/home/runner/work/forma/forma/src/forma/parser.cc:94:20: warning: invalid case style for global function 'TrimTextTokens' [readability-identifier-naming]
+   94 | std::vector<Token> TrimTextTokens(const std::vector<Token>& tokens)
+      |                    ^~~~~~~~~~~~~~
+      |                    trim_text_tokens
+/home/runner/work/forma/forma/src/forma/parser.cc:98:23: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
+   98 |         std::optional<Token> lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+   99 |         for (const auto& tok: tokens)
+  100 |         {
+  101 |                 switch (tok.Type)
+  102 |                 {
+  103 |                 case TokenType::BeginCodeTrim:
+  104 |                         if (lastToken.has_value() && lastToken->Type == TokenType::Text)
       |                             ~~~~~~~~~                ~~~~~~~~~
       |                             last_token               last_token
-  114 |                         {
-  115 |                                 lastToken = std::nullopt;
-      |                                 ~~~~~~~~~
-      |                                 last_token
-  116 |                                 continue;
-  117 |                         }
-  118 | 
-  119 |                         if (lastToken.has_value())
-      |                             ~~~~~~~~~
-      |                             last_token
-  120 |                         {
-  121 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
-  122 |                         }
-  123 | 
-  124 |                         lastToken = tok;
+  105 |                         {
+  106 |                                 r.emplace_back(lastToken->withValue(strings::TrimEnd(lastToken->Value)));
+      |                                                ~~~~~~~~~                             ~~~~~~~~~
+      |                                                last_token                            last_token
+  107 |                         }
+  108 | 
+  109 |                         lastToken = tok.withType(TokenType::BeginCode);
       |                         ~~~~~~~~~
       |                         last_token
-/home/runner/work/forma/forma/src/forma/parser.cc:135:21: warning: invalid case style for global function 'TransformSingleCharsToKeywords' [readability-identifier-naming]
-  135 |         std::vector<Token> TransformSingleCharsToKeywords(const std::vector<Token>& tokens)
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      |                            transform_single_chars_to_keywords
-/home/runner/work/forma/forma/src/forma/parser.cc:137:8: warning: invalid case style for local variable 'eatIdent' [readability-identifier-naming]
-  137 |                 auto eatIdent = false;
+  110 |                         break;
+  111 |                 case TokenType::Text:
+  112 |                         if (lastToken.has_value() && lastToken->Type == TokenType::EndCodeTrim)
+      |                             ~~~~~~~~~                ~~~~~~~~~
+      |                             last_token               last_token
+/home/runner/work/forma/forma/src/forma/parser.cc:137:20: warning: invalid case style for global function 'TrimEmptyStartEnd' [readability-identifier-naming]
+  137 | std::vector<Token> TrimEmptyStartEnd(const std::vector<Token>& tokens)
+      |                    ^~~~~~~~~~~~~~~~~
+      |                    trim_empty_start_end
+/home/runner/work/forma/forma/src/forma/parser.cc:140:23: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
+  140 |         std::optional<Token> lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+  141 |         for (const auto& tok: tokens)
+  142 |         {
+  143 |                 if (lastToken.has_value() && lastToken->Type == TokenType::BeginCode
+      |                     ~~~~~~~~~                ~~~~~~~~~
+      |                     last_token               last_token
+  144 |                         && tok.Type == TokenType::EndCode)
+  145 |                 {
+  146 |                         lastToken = std::nullopt;
+      |                         ~~~~~~~~~
+      |                         last_token
+  147 |                         continue;
+  148 |                 }
+  149 | 
+  150 |                 if (lastToken.has_value())
+      |                     ~~~~~~~~~
+      |                     last_token
+  151 |                 {
+  152 |                         r.emplace_back(*lastToken);
+      |                                         ~~~~~~~~~
+      |                                         last_token
+  153 |                 }
+  154 | 
+  155 |                 lastToken = tok;
+      |                 ~~~~~~~~~
+      |                 last_token
+/home/runner/work/forma/forma/src/forma/parser.cc:166:20: warning: invalid case style for global function 'TransformSingleCharsToKeywords' [readability-identifier-naming]
+  166 | std::vector<Token> TransformSingleCharsToKeywords(const std::vector<Token>& tokens)
+      |                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                    transform_single_chars_to_keywords
+/home/runner/work/forma/forma/src/forma/parser.cc:168:7: warning: invalid case style for local variable 'eatIdent' [readability-identifier-naming]
+  168 |         auto eatIdent = false;
+      |              ^~~~~~~~
+      |              eat_ident
+  169 |         std::vector<Token> r;
+  170 |         std::optional<Token> lastToken = std::nullopt;
+  171 |         for (const auto& tok: tokens)
+  172 |         {
+  173 |                 if (tok.Type == TokenType::Ident && eatIdent)
+      |                                                     ~~~~~~~~
+      |                                                     eat_ident
+  174 |                 {
+  175 |                         eatIdent = false;
+      |                         ~~~~~~~~
+      |                         eat_ident
+/home/runner/work/forma/forma/src/forma/parser.cc:170:23: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
+  170 |         std::optional<Token> lastToken = std::nullopt;
+      |                              ^~~~~~~~~
+      |                              last_token
+  171 |         for (const auto& tok: tokens)
+  172 |         {
+  173 |                 if (tok.Type == TokenType::Ident && eatIdent)
+  174 |                 {
+  175 |                         eatIdent = false;
+  176 |                         continue;
+  177 |                 }
+  178 | 
+  179 |                 if (tok.Type == TokenType::Slash && lastToken.has_value()
+      |                                                     ~~~~~~~~~
+      |                                                     last_token
+  180 |                         && lastToken->Type == TokenType::BeginCode)
+      |                            ~~~~~~~~~
+      |                            last_token
+  181 |                 {
+  182 |                         r.emplace_back(*lastToken);
+      |                                         ~~~~~~~~~
+      |                                         last_token
+  183 |                         lastToken = tok.withType(TokenType::KeywordEnd);
+      |                         ~~~~~~~~~
+      |                         last_token
+/home/runner/work/forma/forma/src/forma/parser.cc:231:17: warning: invalid case style for public member 'includeDir' [readability-identifier-naming]
+  231 |         DirectoryInfo* includeDir;
+      |                        ^~~~~~~~~~
+      |                        include_dir
+/home/runner/work/forma/forma/src/forma/parser.cc:232:14: warning: invalid case style for public member 'defaultExtension' [readability-identifier-naming]
+  232 |         std::string defaultExtension;
+      |                     ^~~~~~~~~~~~~~~~
+      |                     default_extension
+/home/runner/work/forma/forma/src/forma/parser.cc:255:8: warning: invalid case style for local variable 'rootNode' [readability-identifier-naming]
+  255 |                 auto rootNode = ParseGroup();
       |                      ^~~~~~~~
-      |                      eat_ident
-  138 |                 std::vector<Token> r;
-  139 |                 std::optional<Token> lastToken = std::nullopt;
-  140 |                 for(const auto& tok: tokens)
-  141 |                 {
-  142 |                         if (tok.Type == TokenType::Ident && eatIdent)
-      |                                                             ~~~~~~~~
-      |                                                             eat_ident
-  143 |                         {
-  144 |                                 eatIdent = false;
+      |                      root_node
+  256 |                 if (! IsAtEnd())
+  257 |                 {
+  258 |                         ReportError(Peek().Location, ExpectedMessage("EOF"));
+  259 |                 }
+  260 | 
+  261 |                 if (errors.size() == 0)
+  262 |                 {
+  263 |                         return {rootNode, errors};
       |                                 ~~~~~~~~
-      |                                 eat_ident
-  145 |                                 continue;
-  146 |                         }
-  147 | 
-  148 |                         if(tok.Type == TokenType::Slash && lastToken.has_value() && lastToken->Type == TokenType::BeginCode) {
-  149 |                                 r.emplace_back(*lastToken);
-  150 |                                 lastToken = tok.withType(TokenType::KeywordEnd);
-  151 |                                 eatIdent = true;
-      |                                 ~~~~~~~~
-      |                                 eat_ident
-/home/runner/work/forma/forma/src/forma/parser.cc:139:24: warning: invalid case style for local variable 'lastToken' [readability-identifier-naming]
-  139 |                 std::optional<Token> lastToken = std::nullopt;
-      |                                      ^~~~~~~~~
-      |                                      last_token
-  140 |                 for(const auto& tok: tokens)
-  141 |                 {
-  142 |                         if (tok.Type == TokenType::Ident && eatIdent)
-  143 |                         {
-  144 |                                 eatIdent = false;
-  145 |                                 continue;
-  146 |                         }
-  147 | 
-  148 |                         if(tok.Type == TokenType::Slash && lastToken.has_value() && lastToken->Type == TokenType::BeginCode) {
-      |                                                            ~~~~~~~~~                ~~~~~~~~~
-      |                                                            last_token               last_token
-  149 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
-  150 |                                 lastToken = tok.withType(TokenType::KeywordEnd);
-      |                                 ~~~~~~~~~
-      |                                 last_token
-  151 |                                 eatIdent = true;
-  152 |                         }
-  153 |                         else if(tok.Type == TokenType::Hash && lastToken.has_value() && lastToken->Type == TokenType::BeginCode) {
-      |                                                                ~~~~~~~~~                ~~~~~~~~~
-      |                                                                last_token               last_token
-  154 |                                 r.emplace_back(*lastToken);
-      |                                                 ~~~~~~~~~
-      |                                                 last_token
-/home/runner/work/forma/forma/src/forma/parser.cc:191:18: warning: invalid case style for public member 'includeDir' [readability-identifier-naming]
-  191 |                 DirectoryInfo* includeDir;
-      |                                ^~~~~~~~~~
-      |                                include_dir
-  192 |                 std::string defaultExtension;
-  193 |                 VfsRead* vfs;
-  194 | 
-  195 |                 int current = 0;
-  196 |                 std::vector<Error> errors;
-  197 | 
-  198 |                 Parser(std::vector<Token> itok, std::unordered_map<std::string, FuncGenerator> f, DirectoryInfo* i, std::string d, VfsRead* v)
-  199 |                         : tokens(TransformSingleCharsToKeywords(TrimEmptyStartEnd(TrimTextTokens(itok))))
-  200 |                         , functions(f)
-  201 |                         , includeDir(i)
-      |                           ~~~~~~~~~~
-      |                           include_dir
-/home/runner/work/forma/forma/src/forma/parser.cc:192:15: warning: invalid case style for public member 'defaultExtension' [readability-identifier-naming]
-  192 |                 std::string defaultExtension;
-      |                             ^~~~~~~~~~~~~~~~
-      |                             default_extension
-  193 |                 VfsRead* vfs;
-  194 | 
-  195 |                 int current = 0;
-  196 |                 std::vector<Error> errors;
-  197 | 
-  198 |                 Parser(std::vector<Token> itok, std::unordered_map<std::string, FuncGenerator> f, DirectoryInfo* i, std::string d, VfsRead* v)
-  199 |                         : tokens(TransformSingleCharsToKeywords(TrimEmptyStartEnd(TrimTextTokens(itok))))
-  200 |                         , functions(f)
-  201 |                         , includeDir(i)
-  202 |                         , defaultExtension(d)
-      |                           ~~~~~~~~~~~~~~~~
-      |                           default_extension
-/home/runner/work/forma/forma/src/forma/parser.cc:209:9: warning: invalid case style for local variable 'rootNode' [readability-identifier-naming]
-  209 |                         auto rootNode = ParseGroup();
-      |                              ^~~~~~~~
-      |                              root_node
-  210 |                         if (!IsAtEnd())
-  211 |                         {
-  212 |                                 ReportError(Peek().Location, ExpectedMessage("EOF"));
-  213 |                         }
-  214 | 
-  215 |                         if (errors.size() == 0)
-  216 |                         {
-  217 |                                 return { rootNode, errors };
-      |                                          ~~~~~~~~
-      |                                          root_node
-/home/runner/work/forma/forma/src/forma/parser.cc:215:8: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
-  215 |                         if (errors.size() == 0)
-      |                             ^~~~~~~~~~~~~~~~~~
-      |                             errors.empty()
+      |                                 root_node
+/home/runner/work/forma/forma/src/forma/parser.cc:261:7: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  261 |                 if (errors.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~~~
+      |                     errors.empty()
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_vector.h:1090:7: note: method 'vector'::empty() defined here
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/parser.cc:222:25: warning: invalid case style for public method 'ParseGroup' [readability-identifier-naming]
-  209 |                         auto rootNode = ParseGroup();
-      |                                         ~~~~~~~~~~
-      |                                         parse_group
-  210 |                         if (!IsAtEnd())
-  211 |                         {
-  212 |                                 ReportError(Peek().Location, ExpectedMessage("EOF"));
-  213 |                         }
-  214 | 
-  215 |                         if (errors.size() == 0)
-  216 |                         {
-  217 |                                 return { rootNode, errors };
-  218 |                         }
-  219 |                         return { std::make_shared<node::Text>("Parsing failed", UnknownLocation()), errors};
-  220 |                 }
-  221 | 
-  222 |                 std::shared_ptr<Node> ParseGroup()
-      |                                       ^~~~~~~~~~
-      |                                       parse_group
-/home/runner/work/forma/forma/src/forma/parser.cc:241:14: warning: invalid case style for public method 'ReportError' [readability-identifier-naming]
-  212 |                 ParseError ReportError(Location loc, std::string message)
-      |                            ^~~~~~~~~~~
-      |                            report_error
-/home/runner/work/forma/forma/src/forma/parser.cc:244:11: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
-  244 |                         return ParseError();
-      |                                ^~~~~~~~~~~~
-      |                                {}
-/home/runner/work/forma/forma/src/forma/parser.cc:247:8: warning: invalid case style for public method 'Match' [readability-identifier-naming]
-  247 |                 bool Match(TokenType type)
-      |                      ^~~~~
-      |                      match
-/home/runner/work/forma/forma/src/forma/parser.cc:251:24: warning: invalid case style for value template parameter 'Size' [readability-identifier-naming]
-  251 |                 template<std::size_t Size>
-      |                                      ^~~~
-      |                                      size
-  252 |                 bool MatchMany(std::array<TokenType, Size> types)
-      |                                                      ~~~~
-      |                                                      size
-/home/runner/work/forma/forma/src/forma/parser.cc:252:8: warning: invalid case style for public method 'MatchMany' [readability-identifier-naming]
-  249 |                         return MatchMany(std::array<TokenType, 1>{ type });
-      |                                ~~~~~~~~~
-      |                                match_many
-  250 |                 }
-  251 |                 template<std::size_t Size>
-  252 |                 bool MatchMany(std::array<TokenType, Size> types)
-      |                      ^~~~~~~~~
-      |                      match_many
-/home/runner/work/forma/forma/src/forma/parser.cc:257:27: warning: statement should be inside braces [readability-braces-around-statements]
-  257 |                                 if (Check(t) == false) return false;
-      |                                                       ^             
-      |                                                        {
-/home/runner/work/forma/forma/src/forma/parser.cc:264:8: warning: invalid case style for public method 'Check' [readability-identifier-naming]
-  257 |                                 if (Check(t) == false) return false;
-      |                                     ~~~~~
-      |                                     check
-  258 |                         }
+/home/runner/work/forma/forma/src/forma/parser.cc:268:24: warning: invalid case style for public method 'ParseGroup' [readability-identifier-naming]
+  255 |                 auto rootNode = ParseGroup();
+      |                                 ~~~~~~~~~~
+      |                                 parse_group
+  256 |                 if (! IsAtEnd())
+  257 |                 {
+  258 |                         ReportError(Peek().Location, ExpectedMessage("EOF"));
+  259 |                 }
+  260 | 
+  261 |                 if (errors.size() == 0)
+  262 |                 {
+  263 |                         return {rootNode, errors};
+  264 |                 }
+  265 |                 return {std::make_shared<node::Text>("Parsing failed", UnknownLocation()), errors};
+  266 |         }
+  267 | 
+  268 |         std::shared_ptr<Node> ParseGroup()
+      |                               ^~~~~~~~~~
+      |                               parse_group
+/home/runner/work/forma/forma/src/forma/parser.cc:288:13: warning: invalid case style for public method 'ReportError' [readability-identifier-naming]
+  258 |         ParseError ReportError(Location loc, std::string message)
+      |                    ^~~~~~~~~~~
+      |                    report_error
+/home/runner/work/forma/forma/src/forma/parser.cc:291:10: warning: avoid repeating the return type from the declaration; use a braced initializer list instead [modernize-return-braced-init-list]
+  291 |                 return ParseError();
+      |                        ^~~~~~~~~~~~
+      |                        {}
+/home/runner/work/forma/forma/src/forma/parser.cc:294:7: warning: invalid case style for public method 'Match' [readability-identifier-naming]
+  294 |         bool Match(TokenType type)
+      |              ^~~~~
+      |              match
+/home/runner/work/forma/forma/src/forma/parser.cc:299:23: warning: invalid case style for value template parameter 'Size' [readability-identifier-naming]
+  299 |         template<std::size_t Size>
+      |                              ^~~~
+      |                              size
+  300 |         bool MatchMany(std::array<TokenType, Size> types)
+      |                                              ~~~~
+      |                                              size
+/home/runner/work/forma/forma/src/forma/parser.cc:300:7: warning: invalid case style for public method 'MatchMany' [readability-identifier-naming]
+  296 |                 return MatchMany(std::array<TokenType, 1>{type});
+      |                        ~~~~~~~~~
+      |                        match_many
+  297 |         }
+  298 | 
+  299 |         template<std::size_t Size>
+  300 |         bool MatchMany(std::array<TokenType, Size> types)
+      |              ^~~~~~~~~
+      |              match_many
+/home/runner/work/forma/forma/src/forma/parser.cc:305:26: warning: statement should be inside braces [readability-braces-around-statements]
+  305 |                         if (Check(t) == false) return false;
+      |                                               ^             
+      |                                                {
+/home/runner/work/forma/forma/src/forma/parser.cc:312:7: warning: invalid case style for public method 'Check' [readability-identifier-naming]
+  305 |                         if (Check(t) == false) return false;
+      |                             ~~~~~
+      |                             check
+  306 |                 }
+  307 | 
+  308 |                 Advance();
+  309 |                 return true;
+  310 |         }
+  311 | 
+  312 |         bool Check(TokenType type)
+      |              ^~~~~
+      |              check
+/home/runner/work/forma/forma/src/forma/parser.cc:314:17: warning: statement should be inside braces [readability-braces-around-statements]
+  314 |                 if (IsAtEnd()) return false;
+      |                               ^             
+      |                                {
+/home/runner/work/forma/forma/src/forma/parser.cc:318:8: warning: invalid case style for public method 'Advance' [readability-identifier-naming]
+  308 |                 Advance();
+      |                 ~~~~~~~
+      |                 advance
+  309 |                 return true;
+  310 |         }
+  311 | 
+  312 |         bool Check(TokenType type)
+  313 |         {
+  314 |                 if (IsAtEnd()) return false;
+  315 |                 return Peek().Type == type;
+  316 |         }
+  317 | 
+  318 |         Token Advance()
+      |               ^~~~~~~
+      |               advance
+/home/runner/work/forma/forma/src/forma/parser.cc:320:19: warning: statement should be inside braces [readability-braces-around-statements]
+  320 |                 if (! IsAtEnd()) current++;
+      |                                 ^          
+      |                                  {
+/home/runner/work/forma/forma/src/forma/parser.cc:324:7: warning: invalid case style for public method 'IsAtEnd' [readability-identifier-naming]
+  256 |                 if (IsAtEnd()) return false;
+      |                     ~~~~~~~
+      |                     is_at_end
+  257 |                 return Peek().Type == type;
+  258 |         }
   259 | 
-  260 |                         Advance();
-  261 |                         return true;
-  262 |                 }
-  263 | 
-  264 |                 bool Check(TokenType type)
-      |                      ^~~~~
-      |                      check
-/home/runner/work/forma/forma/src/forma/parser.cc:266:18: warning: statement should be inside braces [readability-braces-around-statements]
-  266 |                         if (IsAtEnd()) return false;
-      |                                       ^             
-      |                                        {
-/home/runner/work/forma/forma/src/forma/parser.cc:270:9: warning: invalid case style for public method 'Advance' [readability-identifier-naming]
-  260 |                         Advance();
-      |                         ~~~~~~~
-      |                         advance
-  261 |                         return true;
-  262 |                 }
-  263 | 
-  264 |                 bool Check(TokenType type)
-  265 |                 {
-  266 |                         if (IsAtEnd()) return false;
-  267 |                         return Peek().Type == type;
-  268 |                 }
-  269 | 
-  270 |                 Token Advance()
-      |                       ^~~~~~~
-      |                       advance
-/home/runner/work/forma/forma/src/forma/parser.cc:272:19: warning: statement should be inside braces [readability-braces-around-statements]
-  272 |                         if (!IsAtEnd()) current++;
-      |                                        ^          
-      |                                         {
-/home/runner/work/forma/forma/src/forma/parser.cc:276:8: warning: invalid case style for public method 'IsAtEnd' [readability-identifier-naming]
-  210 |                         if (IsAtEnd()) return false;
-      |                             ~~~~~~~
-      |                             is_at_end
-  211 |                         return Peek().Type == type;
-  212 |                 }
-  213 | 
-  214 |                 Token Advance()
-  215 |                 {
-  216 |                         if (!IsAtEnd()) current++;
-      |                              ~~~~~~~
-      |                              is_at_end
-  217 |                         return Previous();
-  218 |                 }
-  219 | 
-  220 |                 bool IsAtEnd()
-      |                      ^~~~~~~
-      |                      is_at_end
-/home/runner/work/forma/forma/src/forma/parser.cc:281:9: warning: invalid case style for public method 'Peek' [readability-identifier-naming]
-  212 |                         return Peek().Type == type;
-      |                                ~~~~
-      |                                peek
-  213 |                 }
-  214 | 
-  215 |                 Token Advance()
-  216 |                 {
-  217 |                         if (!IsAtEnd()) current++;
-  218 |                         return Previous();
-  219 |                 }
-  220 | 
-  221 |                 bool IsAtEnd()
-  222 |                 {
-  223 |                         return Peek().Type == TokenType::Eof;
-      |                                ~~~~
-      |                                peek
-  224 |                 }
-  225 | 
-  226 |                 Token Peek()
-      |                       ^~~~
-      |                       peek
-/home/runner/work/forma/forma/src/forma/parser.cc:286:13: warning: invalid case style for public method 'PeekNext' [readability-identifier-naming]
-  226 |                 TokenType PeekNext()
-      |                           ^~~~~~~~
-      |                           peek_next
-/home/runner/work/forma/forma/src/forma/parser.cc:288:37: warning: statement should be inside braces [readability-braces-around-statements]
-  288 |                         if (current + 1 >= tokens.size()) return TokenType::Eof;
-      |                                                          ^                      
-      |                                                           {
-/home/runner/work/forma/forma/src/forma/parser.cc:292:9: warning: invalid case style for public method 'Previous' [readability-identifier-naming]
-  273 |                 Token Previous()
-      |                       ^~~~~~~~
-      |                       previous
-  274 |                 {
-  275 |                         return tokens[current - 1];
-  276 |                 }
-  277 | 
-  278 |                 void Synchronize()
-  279 |                 {
-  280 |                         Advance();
-  281 | 
-  282 |                         while (!IsAtEnd())
-  283 |                         {
-  284 |                                 if (Previous().Type == TokenType::EndCode) return;
-      |                                     ~~~~~~~~
-      |                                     previous
-/home/runner/work/forma/forma/src/forma/parser.cc:297:8: warning: invalid case style for public method 'Synchronize' [readability-identifier-naming]
-  234 |                 void Synchronize()
-      |                      ^~~~~~~~~~~
-      |                      synchronize
-/home/runner/work/forma/forma/src/forma/parser.cc:303:47: warning: statement should be inside braces [readability-braces-around-statements]
-  303 |                                 if (Previous().Type == TokenType::EndCode) return;
-      |                                                                           ^       
-      |                                                                            {
-/home/runner/work/forma/forma/src/forma/parser.cc:317:22: warning: invalid case style for class method 'TokenToMessage' [readability-identifier-naming]
-  317 |                 static std::string TokenToMessage(Token token)
-      |                                    ^~~~~~~~~~~~~~
-      |                                    token_to_message
-/home/runner/work/forma/forma/src/forma/parser.cc:319:4: warning: variable 'value' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness]
-  319 |                         std::string value = token.Type == TokenType::Text ? std::string{ "" } : Fmt{} << ": " << token.Lexeme;
-      |                         ^
-      |                                     const 
-/home/runner/work/forma/forma/src/forma/parser.cc:323:9: warning: invalid case style for public method 'Consume' [readability-identifier-naming]
-  323 |                 Token Consume(TokenType type, std::string message)
-      |                       ^~~~~~~
-      |                       consume
-/home/runner/work/forma/forma/src/forma/parser.cc:325:20: warning: statement should be inside braces [readability-braces-around-statements]
-  325 |                         if (Check(type)) return Advance();
-      |                                         ^                 
-      |                                          {
-/home/runner/work/forma/forma/src/forma/parser.cc:330:16: warning: invalid case style for public method 'ParseFunctionArg' [readability-identifier-naming]
-  330 |                 FuncArgument ParseFunctionArg()
-      |                              ^~~~~~~~~~~~~~~~
-      |                              parse_function_arg
-/home/runner/work/forma/forma/src/forma/parser.cc:341:15: warning: invalid case style for public method 'ExtractAttributeName' [readability-identifier-naming]
-  341 |                 std::string ExtractAttributeName()
-      |                             ^~~~~~~~~~~~~~~~~~~~
-      |                             extract_attribute_name
-/home/runner/work/forma/forma/src/forma/parser.cc:347:15: warning: invalid case style for public method 'ExpectedMessage' [readability-identifier-naming]
-  212 |                                 throw ReportError(Peek().Location, ExpectedMessage("identifier"));
-      |                                                                    ~~~~~~~~~~~~~~~
-      |                                                                    expected_message
-  213 |                         }
-  214 | 
-  215 |                         auto arg = Advance();
-  216 |                         return FuncArgument(arg.Location, arg.Value);
-  217 |                 }
-  218 | 
-  219 |                 std::string ExtractAttributeName()
-  220 |                 {
-  221 |                         auto ident = Consume(TokenType::Ident, ExpectedMessage("IDENT"));
-      |                                                                ~~~~~~~~~~~~~~~
-      |                                                                expected_message
-  222 |                         return ident.Value;
-  223 |                 }
-  224 | 
-  225 |                 std::string ExpectedMessage(std::string what)
-      |                             ^~~~~~~~~~~~~~~
-      |                             expected_message
-/home/runner/work/forma/forma/src/forma/parser.cc:352:8: warning: invalid case style for public method 'ParseNode' [readability-identifier-naming]
-  230 |                 void ParseNode(std::vector<std::shared_ptr<Node>>& nodes)
-      |                      ^~~~~~~~~
-      |                      parse_node
-/home/runner/work/forma/forma/src/forma/parser.cc:388:11: warning: invalid case style for local variable 'includeLocation' [readability-identifier-naming]
-  388 |                                         auto includeLocation = Peek().Location;
+  260 |         Token Advance()
+  261 |         {
+  262 |                 if (! IsAtEnd()) current++;
+      |                       ~~~~~~~
+      |                       is_at_end
+  263 |                 return Previous();
+  264 |         }
+  265 | 
+  266 |         bool IsAtEnd()
+      |              ^~~~~~~
+      |              is_at_end
+/home/runner/work/forma/forma/src/forma/parser.cc:329:8: warning: invalid case style for public method 'Peek' [readability-identifier-naming]
+  258 |                 return Peek().Type == type;
+      |                        ~~~~
+      |                        peek
+  259 |         }
+  260 | 
+  261 |         Token Advance()
+  262 |         {
+  263 |                 if (! IsAtEnd()) current++;
+  264 |                 return Previous();
+  265 |         }
+  266 | 
+  267 |         bool IsAtEnd()
+  268 |         {
+  269 |                 return Peek().Type == TokenType::Eof;
+      |                        ~~~~
+      |                        peek
+  270 |         }
+  271 | 
+  272 |         Token Peek()
+      |               ^~~~
+      |               peek
+/home/runner/work/forma/forma/src/forma/parser.cc:334:12: warning: invalid case style for public method 'PeekNext' [readability-identifier-naming]
+  273 |         TokenType PeekNext()
+      |                   ^~~~~~~~
+      |                   peek_next
+/home/runner/work/forma/forma/src/forma/parser.cc:336:36: warning: statement should be inside braces [readability-braces-around-statements]
+  336 |                 if (current + 1 >= tokens.size()) return TokenType::Eof;
+      |                                                  ^                      
+      |                                                   {
+/home/runner/work/forma/forma/src/forma/parser.cc:340:8: warning: invalid case style for public method 'Previous' [readability-identifier-naming]
+  321 |         Token Previous()
+      |               ^~~~~~~~
+      |               previous
+  322 |         {
+  323 |                 return tokens[current - 1];
+  324 |         }
+  325 | 
+  326 |         void Synchronize()
+  327 |         {
+  328 |                 Advance();
+  329 | 
+  330 |                 while (! IsAtEnd())
+  331 |                 {
+  332 |                         if (Previous().Type == TokenType::EndCode) return;
+      |                             ~~~~~~~~
+      |                             previous
+/home/runner/work/forma/forma/src/forma/parser.cc:345:7: warning: invalid case style for public method 'Synchronize' [readability-identifier-naming]
+  281 |         void Synchronize()
+      |              ^~~~~~~~~~~
+      |              synchronize
+/home/runner/work/forma/forma/src/forma/parser.cc:351:46: warning: statement should be inside braces [readability-braces-around-statements]
+  351 |                         if (Previous().Type == TokenType::EndCode) return;
+      |                                                                   ^       
+      |                                                                    {
+/home/runner/work/forma/forma/src/forma/parser.cc:363:21: warning: invalid case style for class method 'TokenToMessage' [readability-identifier-naming]
+  363 |         static std::string TokenToMessage(Token token)
+      |                            ^~~~~~~~~~~~~~
+      |                            token_to_message
+/home/runner/work/forma/forma/src/forma/parser.cc:365:3: warning: variable 'value' of type 'std::string' (aka 'basic_string<char>') can be declared 'const' [misc-const-correctness]
+  365 |                 std::string value
+      |                 ^
+      |                             const 
+/home/runner/work/forma/forma/src/forma/parser.cc:370:8: warning: invalid case style for public method 'Consume' [readability-identifier-naming]
+  370 |         Token Consume(TokenType type, std::string message)
+      |               ^~~~~~~
+      |               consume
+/home/runner/work/forma/forma/src/forma/parser.cc:372:19: warning: statement should be inside braces [readability-braces-around-statements]
+  372 |                 if (Check(type)) return Advance();
+      |                                 ^                 
+      |                                  {
+/home/runner/work/forma/forma/src/forma/parser.cc:377:15: warning: invalid case style for public method 'ParseFunctionArg' [readability-identifier-naming]
+  377 |         FuncArgument ParseFunctionArg()
+      |                      ^~~~~~~~~~~~~~~~
+      |                      parse_function_arg
+/home/runner/work/forma/forma/src/forma/parser.cc:388:14: warning: invalid case style for public method 'ExtractAttributeName' [readability-identifier-naming]
+  388 |         std::string ExtractAttributeName()
+      |                     ^~~~~~~~~~~~~~~~~~~~
+      |                     extract_attribute_name
+/home/runner/work/forma/forma/src/forma/parser.cc:394:14: warning: invalid case style for public method 'ExpectedMessage' [readability-identifier-naming]
+  258 |                         throw ReportError(Peek().Location, ExpectedMessage("identifier"));
+      |                                                            ~~~~~~~~~~~~~~~
+      |                                                            expected_message
+  259 |                 }
+  260 | 
+  261 |                 auto arg = Advance();
+  262 |                 return FuncArgument(arg.Location, arg.Value);
+  263 |         }
+  264 | 
+  265 |         std::string ExtractAttributeName()
+  266 |         {
+  267 |                 auto ident = Consume(TokenType::Ident, ExpectedMessage("IDENT"));
+      |                                                        ~~~~~~~~~~~~~~~
+      |                                                        expected_message
+  268 |                 return ident.Value;
+  269 |         }
+  270 | 
+  271 |         std::string ExpectedMessage(std::string what)
+      |                     ^~~~~~~~~~~~~~~
+      |                     expected_message
+/home/runner/work/forma/forma/src/forma/parser.cc:399:7: warning: invalid case style for public method 'ParseNode' [readability-identifier-naming]
+  277 |         void ParseNode(std::vector<std::shared_ptr<Node>>& nodes)
+      |              ^~~~~~~~~
+      |              parse_node
+/home/runner/work/forma/forma/src/forma/parser.cc:435:11: warning: invalid case style for local variable 'includeLocation' [readability-identifier-naming]
+  435 |                                         auto includeLocation = Peek().Location;
       |                                              ^~~~~~~~~~~~~~~
       |                                              include_location
-  389 |                                         Consume(TokenType::EndCode, ExpectedMessage("}}"));
-  390 | 
-  391 |                                         auto firstFile = includeDir->GetFile(name.Value);
-  392 |                                         auto file = firstFile;
-  393 |                                         auto secondFile = firstFile;
-  394 |                                         if (vfs->Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
-  397 |                                                 file = secondFile;
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs->Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} << "Unable to open file: tried " << firstFile << " and " << secondFile);
-      |                                                             ~~~~~~~~~~~~~~~
-      |                                                             include_location
-/home/runner/work/forma/forma/src/forma/parser.cc:391:11: warning: invalid case style for local variable 'firstFile' [readability-identifier-naming]
-  391 |                                         auto firstFile = includeDir->GetFile(name.Value);
+  436 |                                         Consume(TokenType::EndCode, ExpectedMessage("}}"));
+  437 | 
+  438 |                                         auto firstFile = includeDir->GetFile(name.Value);
+  439 |                                         auto file = firstFile;
+  440 |                                         auto secondFile = firstFile;
+  441 |                                         if (vfs->Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
+  444 |                                                 file = secondFile;
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs->Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+      |                                                         ~~~~~~~~~~~~~~~
+      |                                                         include_location
+/home/runner/work/forma/forma/src/forma/parser.cc:438:11: warning: invalid case style for local variable 'firstFile' [readability-identifier-naming]
+  438 |                                         auto firstFile = includeDir->GetFile(name.Value);
       |                                              ^~~~~~~~~
       |                                              first_file
-  392 |                                         auto file = firstFile;
+  439 |                                         auto file = firstFile;
       |                                                     ~~~~~~~~~
       |                                                     first_file
-  393 |                                         auto secondFile = firstFile;
+  440 |                                         auto secondFile = firstFile;
       |                                                           ~~~~~~~~~
       |                                                           first_file
-  394 |                                         if (vfs->Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
-  397 |                                                 file = secondFile;
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs->Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} << "Unable to open file: tried " << firstFile << " and " << secondFile);
-      |                                                                                                                        ~~~~~~~~~
-      |                                                                                                                        first_file
-/home/runner/work/forma/forma/src/forma/parser.cc:393:11: warning: invalid case style for local variable 'secondFile' [readability-identifier-naming]
-  393 |                                         auto secondFile = firstFile;
+  441 |                                         if (vfs->Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
+  444 |                                                 file = secondFile;
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs->Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+  451 |                                                         Fmt{} << "Unable to open file: tried " << firstFile << " and "
+      |                                                                                                   ~~~~~~~~~
+      |                                                                                                   first_file
+/home/runner/work/forma/forma/src/forma/parser.cc:440:11: warning: invalid case style for local variable 'secondFile' [readability-identifier-naming]
+  440 |                                         auto secondFile = firstFile;
       |                                              ^~~~~~~~~~
       |                                              second_file
-  394 |                                         if (vfs->Exists(file) == false)
-  395 |                                         {
-  396 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
+  441 |                                         if (vfs->Exists(file) == false)
+  442 |                                         {
+  443 |                                                 secondFile = includeDir->GetFile(name.Value + defaultExtension);
       |                                                 ~~~~~~~~~~
       |                                                 second_file
-  397 |                                                 file = secondFile;
+  444 |                                                 file = secondFile;
       |                                                        ~~~~~~~~~~
       |                                                        second_file
-  398 |                                         }
-  399 | 
-  400 |                                         if (vfs->Exists(file) == false)
-  401 |                                         {
-  402 |                                                 ReportError(includeLocation, Fmt{} << "Unable to open file: tried " << firstFile << " and " << secondFile);
-      |                                                                                                                                                ~~~~~~~~~~
-      |                                                                                                                                                second_file
-/home/runner/work/forma/forma/src/forma/parser.cc:408:11: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
-  408 |                                                 if (lexerErrors.size() > 0)
+  445 |                                         }
+  446 | 
+  447 |                                         if (vfs->Exists(file) == false)
+  448 |                                         {
+  449 |                                                 ReportError(
+  450 |                                                         includeLocation,
+  451 |                                                         Fmt{} << "Unable to open file: tried " << firstFile << " and "
+  452 |                                                                   << secondFile
+      |                                                                      ~~~~~~~~~~
+      |                                                                      second_file
+/home/runner/work/forma/forma/src/forma/parser.cc:459:11: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  459 |                                                 if (lexerErrors.size() > 0)
       |                                                     ^~~~~~~~~~~~~~~~~~~~~~
       |                                                     !lexerErrors.empty()
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_vector.h:1090:7: note: method 'vector'::empty() defined here
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/parser.cc:419:11: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
-  419 |                                                 if (parseErrors.size() > 0)
+/home/runner/work/forma/forma/src/forma/parser.cc:471:11: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+  471 |                                                 if (parseErrors.size() > 0)
       |                                                     ^~~~~~~~~~~~~~~~~~~~~~
       |                                                     !parseErrors.empty()
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_vector.h:1090:7: note: method 'vector'::empty() defined here
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/parser.cc:450:8: warning: invalid case style for public method 'ParseAttributeToEnd' [readability-identifier-naming]
-  435 |                                         ParseAttributeToEnd(nodes);
-      |                                         ~~~~~~~~~~~~~~~~~~~
-      |                                         parse_attribute_to_end
-  436 |                                 }
-  437 |                         }
-  438 |                         break;
-  439 |                         case TokenType::Text:
-  440 |                         {
-  441 |                                 auto text = Advance();
-  442 |                                 nodes.emplace_back(std::make_shared < node::Text>(text.Value, text.Location));
-  443 |                         }
-  444 |                         break;
-  445 |                         default:
-  446 |                                 throw ReportError(Peek().Location, Fmt{} << "Unexpected token " << TokenToMessage(Peek()));
-  447 |                         }
-  448 |                 }
-  449 | 
-  450 |                 void ParseAttributeToEnd(std::vector<std::shared_ptr<Node>>& nodes)
-      |                      ^~~~~~~~~~~~~~~~~~~
-      |                      parse_attribute_to_end
-/home/runner/work/forma/forma/src/forma/parser.cc:476:14: warning: invalid case style for local variable 'funcGenerator' [readability-identifier-naming]
-  476 |                                 if (auto funcGenerator = functions.find(name.Value); funcGenerator != functions.end())
-      |                                          ^~~~~~~~~~~~~                               ~~~~~~~~~~~~~
-      |                                          func_generator                              func_generator
-  477 |                                 {
-  478 |                                         auto [func, funcParseErrors] = funcGenerator->second(name.Location, arguments);
-      |                                                                        ~~~~~~~~~~~~~
-      |                                                                        func_generator
-/home/runner/work/forma/forma/src/forma/parser.cc:500:118: warning: invalid case style for pointer parameter 'includeDir' [readability-identifier-naming]
-  500 |         ParseResult Parse(std::vector<Token> itok, std::unordered_map<std::string, FuncGenerator> functions, DirectoryInfo* includeDir, std::string defaultExtension, VfsRead* vfs)
-      |                                                                                                                             ^~~~~~~~~~
-      |                                                                                                                             include_dir
-  501 |         {
-  502 |                 Parser parser{itok, functions, includeDir, defaultExtension, vfs};
-      |                                                ~~~~~~~~~~
-      |                                                include_dir
-/home/runner/work/forma/forma/src/forma/parser.cc:500:142: warning: invalid case style for parameter 'defaultExtension' [readability-identifier-naming]
-  500 |         ParseResult Parse(std::vector<Token> itok, std::unordered_map<std::string, FuncGenerator> functions, DirectoryInfo* includeDir, std::string defaultExtension, VfsRead* vfs)
-      |                                                                                                                                                     ^~~~~~~~~~~~~~~~
-      |                                                                                                                                                     default_extension
-  501 |         {
-  502 |                 Parser parser{itok, functions, includeDir, defaultExtension, vfs};
-      |                                                            ~~~~~~~~~~~~~~~~
-      |                                                            default_extension
+/home/runner/work/forma/forma/src/forma/parser.cc:504:7: warning: invalid case style for public method 'ParseAttributeToEnd' [readability-identifier-naming]
+  487 |         void ParseAttributeToEnd(std::vector<std::shared_ptr<Node>>& nodes)
+      |              ^~~~~~~~~~~~~~~~~~~
+      |              parse_attribute_to_end
+/home/runner/work/forma/forma/src/forma/parser.cc:534:13: warning: invalid case style for local variable 'funcGenerator' [readability-identifier-naming]
+  534 |                         if (auto funcGenerator = functions.find(name.Value); funcGenerator != functions.end())
+      |                                  ^~~~~~~~~~~~~                               ~~~~~~~~~~~~~
+      |                                  func_generator                              func_generator
+  535 |                         {
+  536 |                                 auto [func, funcParseErrors] = funcGenerator->second(name.Location, arguments);
+      |                                                                ~~~~~~~~~~~~~
+      |                                                                func_generator
+/home/runner/work/forma/forma/src/forma/parser.cc:564:17: warning: invalid case style for pointer parameter 'includeDir' [readability-identifier-naming]
+  564 |         DirectoryInfo* includeDir,
+      |                        ^~~~~~~~~~
+      |                        include_dir
+  565 |         std::string defaultExtension,
+  566 |         VfsRead* vfs
+  567 | )
+  568 | {
+  569 |         Parser parser{itok, functions, includeDir, defaultExtension, vfs};
+      |                                        ~~~~~~~~~~
+      |                                        include_dir
+/home/runner/work/forma/forma/src/forma/parser.cc:565:14: warning: invalid case style for parameter 'defaultExtension' [readability-identifier-naming]
+  565 |         std::string defaultExtension,
+      |                     ^~~~~~~~~~~~~~~~
+      |                     default_extension
+  566 |         VfsRead* vfs
+  567 | )
+  568 | {
+  569 |         Parser parser{itok, functions, includeDir, defaultExtension, vfs};
+      |                                                    ~~~~~~~~~~~~~~~~
+      |                                                    default_extension
 -->
 </body>
 </html>

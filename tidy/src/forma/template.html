@@ -10,52 +10,52 @@
 <hr>
 <h3>warning: invalid case style for global function &#39;SyntaxError&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 9 : 25</i></p>
+<p><i>src/forma/template.cc 9 : 21</i></p>
 <pre>
-    9 |     FuncGeneratorResult SyntaxError(const std::vector&lt;Error&gt;&amp; errors)
-      |                         ^~~~~~~~~~~
-      |                         syntax_error
-   10 |     {
-   11 |         return { [](const std::string&amp;) { return &quot;syntax error&quot;; } , errors };
-   12 |     }
+    9 | FuncGeneratorResult SyntaxError(const std::vector&lt;Error&gt;&amp; errors)
+      |                     ^~~~~~~~~~~
+      |                     syntax_error
+   10 | {
+   11 |         return {[](const std::string&amp;) { return &quot;syntax error&quot;; }, errors};
+   12 | }
    13 | 
-   14 |     FuncGenerator NoArguments(std::function&lt;std::string(const std::string&amp;)&gt; f)
-   15 |     {
+   14 | FuncGenerator NoArguments(std::function&lt;std::string(const std::string&amp;)&gt; f)
+   15 | {
    16 |         return [f](const Location&amp; location, const std::vector&lt;FuncArgument&gt;&amp; args)
    17 |         {
-   18 |             if (args.empty() == false)
-   19 |             {
-   20 |                 return SyntaxError({
-      |                        ~~~~~~~~~~~
-      |                        syntax_error
+   18 |                 if (args.empty() == false)
+   19 |                 {
+   20 |                         return SyntaxError({Error(location, &quot;Expected zero arguments&quot;)});
+      |                                ~~~~~~~~~~~
+      |                                syntax_error
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;NoArguments&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 14 : 19</i></p>
+<p><i>src/forma/template.cc 14 : 15</i></p>
 <pre>
-   14 |     FuncGenerator NoArguments(std::function&lt;std::string(const std::string&amp;)&gt; f)
-      |                   ^~~~~~~~~~~
-      |                   no_arguments
+   14 | FuncGenerator NoArguments(std::function&lt;std::string(const std::string&amp;)&gt; f)
+      |               ^~~~~~~~~~~
+      |               no_arguments
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;OptionalStringArgument&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 44 : 19</i></p>
+<p><i>src/forma/template.cc 42 : 15</i></p>
 <pre>
-   44 |     FuncGenerator OptionalStringArgument(std::function&lt;std::string(const std::string&amp;, const std::string&amp;)&gt; f, std::string missing)
-      |                   ^~~~~~~~~~~~~~~~~~~~~~
-      |                   optional_string_argument
+   42 | FuncGenerator OptionalStringArgument(
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+      |               optional_string_argument
 </pre>
 <span id='readability-container-size-empty'>&nbsp;</span>
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;size&#39;</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.cc 48 : 17</i></p>
+<p><i>src/forma/template.cc 48 : 7</i></p>
 <pre>
-   48 |             if (args.size() == 0)
-      |                 ^~~~~~~~~~~~~~~~
-      |                 args.empty()
+   48 |                 if (args.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~
+      |                     args.empty()
 </pre>
 <hr>
 <h3>note: method &#39;vector&#39;:: empty() defined here</h3>
@@ -67,20 +67,20 @@
 <hr>
 <h3>warning: invalid case style for global function &#39;OptionalIntArgument&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 65 : 19</i></p>
+<p><i>src/forma/template.cc 68 : 15</i></p>
 <pre>
-   65 |     FuncGenerator OptionalIntArgument(std::function&lt;std::string (std::string, int)&gt; f, int missing)
-      |                   ^~~~~~~~~~~~~~~~~~~
-      |                   optional_int_argument
+   68 | FuncGenerator OptionalIntArgument(std::function&lt;std::string(std::string, int)&gt; f, int missing)
+      |               ^~~~~~~~~~~~~~~~~~~
+      |               optional_int_argument
 </pre>
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of &#39;size&#39;</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.cc 69 : 17</i></p>
+<p><i>src/forma/template.cc 72 : 7</i></p>
 <pre>
-   69 |             if (args.size() == 0) {
-      |                 ^~~~~~~~~~~~~~~~
-      |                 args.empty()
+   72 |                 if (args.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~
+      |                     args.empty()
 </pre>
 <hr>
 <h3>note: method &#39;vector&#39;:: empty() defined here</h3>
@@ -89,127 +89,133 @@
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
 </pre>
-<span id='readability-misleading-indentation'>&nbsp;</span>
-<hr>
-<h3>warning: different indentation for &#39;if&#39; and corresponding &#39;else&#39;</h3>
-<code>[readability-misleading-indentation]</code>
-<p><i>src/forma/template.cc 88 : 4</i></p>
-<pre>
-   88 |                         else {
-      |                         ^
-</pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;StringStringArgument&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 96 : 19</i></p>
+<p><i>src/forma/template.cc 104 : 15</i></p>
 <pre>
-   96 |     FuncGenerator StringStringArgument(std::function&lt;std::string (std::string, std::string, std::string)&gt; f)
-      |                   ^~~~~~~~~~~~~~~~~~~~
-      |                   string_string_argument
+  104 | FuncGenerator StringStringArgument(
+      |               ^~~~~~~~~~~~~~~~~~~~
+      |               string_string_argument
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;IntIntArgument&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 108 : 19</i></p>
+<p><i>src/forma/template.cc 122 : 15</i></p>
 <pre>
-  108 |     FuncGenerator IntIntArgument(std::function&lt;std::string (std::string, int, int)&gt; f)
-      |                   ^~~~~~~~~~~~~~
-      |                   int_int_argument
+  122 | FuncGenerator IntIntArgument(std::function&lt;std::string(std::string, int, int)&gt; f)
+      |               ^~~~~~~~~~~~~~
+      |               int_int_argument
 </pre>
 <hr>
 <h3>warning: invalid case style for parameter &#39;spaceChars&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 143 : 97</i></p>
+<p><i>src/forma/template.cc 170 : 51</i></p>
 <pre>
-  143 |         t.insert({&quot;rtrim&quot;, OptionalStringArgument([](const std::string&amp; str, const std::string&amp; spaceChars) { return strings::TrimEnd(str, spaceChars);}, strings::default_space())});
-      |                                                                                                 ^~~~~~~~~~                                 ~~~~~~~~~~
-      |                                                                                                 space_chars                                space_chars
+  170 |                          [](const std::string&amp; str, const std::string&amp; spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  171 |                          { return strings::TrimEnd(str, spaceChars); },
+      |                                                         ~~~~~~~~~~
+      |                                                         space_chars
 </pre>
 <hr>
 <h3>warning: invalid case style for parameter &#39;spaceChars&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 144 : 97</i></p>
+<p><i>src/forma/template.cc 178 : 51</i></p>
 <pre>
-  144 |         t.insert({&quot;ltrim&quot;, OptionalStringArgument([](const std::string&amp; str, const std::string&amp; spaceChars) { return strings::TrimStart(str, spaceChars);}, strings::default_space())});
-      |                                                                                                 ^~~~~~~~~~                                   ~~~~~~~~~~
-      |                                                                                                 space_chars                                  space_chars
+  178 |                          [](const std::string&amp; str, const std::string&amp; spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  179 |                          { return strings::TrimStart(str, spaceChars); },
+      |                                                           ~~~~~~~~~~
+      |                                                           space_chars
 </pre>
 <hr>
 <h3>warning: invalid case style for parameter &#39;spaceChars&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.cc 145 : 96</i></p>
+<p><i>src/forma/template.cc 186 : 51</i></p>
 <pre>
-  145 |         t.insert({&quot;trim&quot;, OptionalStringArgument([](const std::string&amp; str, const std::string&amp; spaceChars) { return strings::Trim(str, spaceChars);}, strings::default_space())});
-      |                                                                                                ^~~~~~~~~~                              ~~~~~~~~~~
-      |                                                                                                space_chars                             space_chars
+  186 |                          [](const std::string&amp; str, const std::string&amp; spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  187 |                          { return strings::Trim(str, spaceChars); },
+      |                                                      ~~~~~~~~~~
+      |                                                      space_chars
 </pre>
 <!--
-/home/runner/work/forma/forma/src/forma/template.cc:9:25: warning: invalid case style for global function 'SyntaxError' [readability-identifier-naming]
-    9 |     FuncGeneratorResult SyntaxError(const std::vector<Error>& errors)
-      |                         ^~~~~~~~~~~
-      |                         syntax_error
-   10 |     {
-   11 |         return { [](const std::string&) { return "syntax error"; } , errors };
-   12 |     }
+/home/runner/work/forma/forma/src/forma/template.cc:9:21: warning: invalid case style for global function 'SyntaxError' [readability-identifier-naming]
+    9 | FuncGeneratorResult SyntaxError(const std::vector<Error>& errors)
+      |                     ^~~~~~~~~~~
+      |                     syntax_error
+   10 | {
+   11 |         return {[](const std::string&) { return "syntax error"; }, errors};
+   12 | }
    13 | 
-   14 |     FuncGenerator NoArguments(std::function<std::string(const std::string&)> f)
-   15 |     {
+   14 | FuncGenerator NoArguments(std::function<std::string(const std::string&)> f)
+   15 | {
    16 |         return [f](const Location& location, const std::vector<FuncArgument>& args)
    17 |         {
-   18 |             if (args.empty() == false)
-   19 |             {
-   20 |                 return SyntaxError({
-      |                        ~~~~~~~~~~~
-      |                        syntax_error
-/home/runner/work/forma/forma/src/forma/template.cc:14:19: warning: invalid case style for global function 'NoArguments' [readability-identifier-naming]
-   14 |     FuncGenerator NoArguments(std::function<std::string(const std::string&)> f)
-      |                   ^~~~~~~~~~~
-      |                   no_arguments
-/home/runner/work/forma/forma/src/forma/template.cc:44:19: warning: invalid case style for global function 'OptionalStringArgument' [readability-identifier-naming]
-   44 |     FuncGenerator OptionalStringArgument(std::function<std::string(const std::string&, const std::string&)> f, std::string missing)
-      |                   ^~~~~~~~~~~~~~~~~~~~~~
-      |                   optional_string_argument
-/home/runner/work/forma/forma/src/forma/template.cc:48:17: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
-   48 |             if (args.size() == 0)
-      |                 ^~~~~~~~~~~~~~~~
-      |                 args.empty()
+   18 |                 if (args.empty() == false)
+   19 |                 {
+   20 |                         return SyntaxError({Error(location, "Expected zero arguments")});
+      |                                ~~~~~~~~~~~
+      |                                syntax_error
+/home/runner/work/forma/forma/src/forma/template.cc:14:15: warning: invalid case style for global function 'NoArguments' [readability-identifier-naming]
+   14 | FuncGenerator NoArguments(std::function<std::string(const std::string&)> f)
+      |               ^~~~~~~~~~~
+      |               no_arguments
+/home/runner/work/forma/forma/src/forma/template.cc:42:15: warning: invalid case style for global function 'OptionalStringArgument' [readability-identifier-naming]
+   42 | FuncGenerator OptionalStringArgument(
+      |               ^~~~~~~~~~~~~~~~~~~~~~
+      |               optional_string_argument
+/home/runner/work/forma/forma/src/forma/template.cc:48:7: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+   48 |                 if (args.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~
+      |                     args.empty()
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_vector.h:1090:7: note: method 'vector'::empty() defined here
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.cc:65:19: warning: invalid case style for global function 'OptionalIntArgument' [readability-identifier-naming]
-   65 |     FuncGenerator OptionalIntArgument(std::function<std::string (std::string, int)> f, int missing)
-      |                   ^~~~~~~~~~~~~~~~~~~
-      |                   optional_int_argument
-/home/runner/work/forma/forma/src/forma/template.cc:69:17: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
-   69 |             if (args.size() == 0) {
-      |                 ^~~~~~~~~~~~~~~~
-      |                 args.empty()
+/home/runner/work/forma/forma/src/forma/template.cc:68:15: warning: invalid case style for global function 'OptionalIntArgument' [readability-identifier-naming]
+   68 | FuncGenerator OptionalIntArgument(std::function<std::string(std::string, int)> f, int missing)
+      |               ^~~~~~~~~~~~~~~~~~~
+      |               optional_int_argument
+/home/runner/work/forma/forma/src/forma/template.cc:72:7: warning: the 'empty' method should be used to check for emptiness instead of 'size' [readability-container-size-empty]
+   72 |                 if (args.size() == 0)
+      |                     ^~~~~~~~~~~~~~~~
+      |                     args.empty()
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/stl_vector.h:1090:7: note: method 'vector'::empty() defined here
  1090 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.cc:88:4: warning: different indentation for 'if' and corresponding 'else' [readability-misleading-indentation]
-   88 |                         else {
-      |                         ^
-/home/runner/work/forma/forma/src/forma/template.cc:96:19: warning: invalid case style for global function 'StringStringArgument' [readability-identifier-naming]
-   96 |     FuncGenerator StringStringArgument(std::function<std::string (std::string, std::string, std::string)> f)
-      |                   ^~~~~~~~~~~~~~~~~~~~
-      |                   string_string_argument
-/home/runner/work/forma/forma/src/forma/template.cc:108:19: warning: invalid case style for global function 'IntIntArgument' [readability-identifier-naming]
-  108 |     FuncGenerator IntIntArgument(std::function<std::string (std::string, int, int)> f)
-      |                   ^~~~~~~~~~~~~~
-      |                   int_int_argument
-/home/runner/work/forma/forma/src/forma/template.cc:143:97: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
-  143 |         t.insert({"rtrim", OptionalStringArgument([](const std::string& str, const std::string& spaceChars) { return strings::TrimEnd(str, spaceChars);}, strings::default_space())});
-      |                                                                                                 ^~~~~~~~~~                                 ~~~~~~~~~~
-      |                                                                                                 space_chars                                space_chars
-/home/runner/work/forma/forma/src/forma/template.cc:144:97: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
-  144 |         t.insert({"ltrim", OptionalStringArgument([](const std::string& str, const std::string& spaceChars) { return strings::TrimStart(str, spaceChars);}, strings::default_space())});
-      |                                                                                                 ^~~~~~~~~~                                   ~~~~~~~~~~
-      |                                                                                                 space_chars                                  space_chars
-/home/runner/work/forma/forma/src/forma/template.cc:145:96: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
-  145 |         t.insert({"trim", OptionalStringArgument([](const std::string& str, const std::string& spaceChars) { return strings::Trim(str, spaceChars);}, strings::default_space())});
-      |                                                                                                ^~~~~~~~~~                              ~~~~~~~~~~
-      |                                                                                                space_chars                             space_chars
+/home/runner/work/forma/forma/src/forma/template.cc:104:15: warning: invalid case style for global function 'StringStringArgument' [readability-identifier-naming]
+  104 | FuncGenerator StringStringArgument(
+      |               ^~~~~~~~~~~~~~~~~~~~
+      |               string_string_argument
+/home/runner/work/forma/forma/src/forma/template.cc:122:15: warning: invalid case style for global function 'IntIntArgument' [readability-identifier-naming]
+  122 | FuncGenerator IntIntArgument(std::function<std::string(std::string, int, int)> f)
+      |               ^~~~~~~~~~~~~~
+      |               int_int_argument
+/home/runner/work/forma/forma/src/forma/template.cc:170:51: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
+  170 |                          [](const std::string& str, const std::string& spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  171 |                          { return strings::TrimEnd(str, spaceChars); },
+      |                                                         ~~~~~~~~~~
+      |                                                         space_chars
+/home/runner/work/forma/forma/src/forma/template.cc:178:51: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
+  178 |                          [](const std::string& str, const std::string& spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  179 |                          { return strings::TrimStart(str, spaceChars); },
+      |                                                           ~~~~~~~~~~
+      |                                                           space_chars
+/home/runner/work/forma/forma/src/forma/template.cc:186:51: warning: invalid case style for parameter 'spaceChars' [readability-identifier-naming]
+  186 |                          [](const std::string& str, const std::string& spaceChars)
+      |                                                                        ^~~~~~~~~~
+      |                                                                        space_chars
+  187 |                          { return strings::Trim(str, spaceChars); },
+      |                                                      ~~~~~~~~~~
+      |                                                      space_chars
 -->
 </body>
 </html>

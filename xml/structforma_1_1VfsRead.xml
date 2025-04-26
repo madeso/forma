@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="13" column="17"/>
+        <location file="src/forma/core.hh" line="13" column="9"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1VfsRead_1a38b77247f639bcfc335a8f25ffc6f129" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>std::string</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="14" column="29"/>
+        <location file="src/forma/core.hh" line="14" column="21"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1VfsRead_1a2cd9f1e09284d9b9e56ea9e43291754e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="15" column="22"/>
+        <location file="src/forma/core.hh" line="15" column="14"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1VfsRead_1a2d23f64302f72b47b8e4198188949579" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>std::string</type>
@@ -70,14 +70,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="16" column="29"/>
+        <location file="src/forma/core.hh" line="16" column="21"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/forma/core.hh" line="11" column="5" bodyfile="src/forma/core.hh" bodystart="12" bodyend="17"/>
+    <location file="src/forma/core.hh" line="11" column="1" bodyfile="src/forma/core.hh" bodystart="12" bodyend="17"/>
     <listofallmembers>
       <member refid="structforma_1_1VfsRead_1a2cd9f1e09284d9b9e56ea9e43291754e" prot="public" virt="pure-virtual"><scope>forma::VfsRead</scope><name>Exists</name></member>
       <member refid="structforma_1_1VfsRead_1a2d23f64302f72b47b8e4198188949579" prot="public" virt="pure-virtual"><scope>forma::VfsRead</scope><name>GetExtension</name></member>

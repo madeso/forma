@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="20" column="17"/>
+        <location file="src/forma/core.hh" line="21" column="9"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1DirectoryInfo_1a758c38f9999985064de0035dadc21b63" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>std::string</type>
@@ -34,14 +34,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/core.hh" line="21" column="29"/>
+        <location file="src/forma/core.hh" line="22" column="21"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/forma/core.hh" line="18" column="5" bodyfile="src/forma/core.hh" bodystart="19" bodyend="22"/>
+    <location file="src/forma/core.hh" line="19" column="1" bodyfile="src/forma/core.hh" bodystart="20" bodyend="23"/>
     <listofallmembers>
       <member refid="structforma_1_1DirectoryInfo_1a758c38f9999985064de0035dadc21b63" prot="public" virt="pure-virtual"><scope>forma::DirectoryInfo</scope><name>GetFile</name></member>
       <member refid="structforma_1_1DirectoryInfo_1aa966e95f674367fa099a7eb69d8cce3a" prot="public" virt="virtual"><scope>forma::DirectoryInfo</scope><name>~DirectoryInfo</name></member>

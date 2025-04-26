@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="91" column="21" bodyfile="src/forma/parser.hh" bodystart="91" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="114" column="13" bodyfile="src/forma/parser.hh" bodystart="114" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structforma_1_1node_1_1Group_1a75409ddb33f46fcad1711da6dc237a5c" prot="public" static="no" mutable="no">
         <type><ref refid="structforma_1_1Location" kindref="compound">forma::Location</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="92" column="17" bodyfile="src/forma/parser.hh" bodystart="92" bodyend="-1"/>
+        <location file="src/forma/parser.hh" line="115" column="17" bodyfile="src/forma/parser.hh" bodystart="115" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="89" column="1"/>
+        <location file="src/forma/parser.hh" line="112" column="1"/>
       </memberdef>
       <memberdef kind="function" id="structforma_1_1node_1_1Group_1a4208311047985a64985d6e736215f9de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="structforma_1_1node_1_1Group" kindref="compound">Group</ref> *</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/parser.hh" line="94" column="7"/>
+        <location file="src/forma/parser.hh" line="117" column="7"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -108,7 +108,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="src/forma/parser.hh" line="87" column="5" bodyfile="src/forma/parser.hh" bodystart="88" bodyend="95"/>
+    <location file="src/forma/parser.hh" line="110" column="1" bodyfile="src/forma/parser.hh" bodystart="111" bodyend="118"/>
     <listofallmembers>
       <member refid="structforma_1_1Node_1ab1a4cd297da0effc9026e69750bd94db" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsAttribute</name></member>
       <member refid="structforma_1_1Node_1acb8b6d0d770fa0b6d29965005b6b3b63" prot="public" virt="virtual"><scope>forma::node::Group</scope><name>AsFunctionCall</name></member>

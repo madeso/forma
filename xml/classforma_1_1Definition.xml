@@ -9,9 +9,9 @@
       </param>
     </templateparamlist>
     <sectiondef kind="private-type">
-      <memberdef kind="typedef" id="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" prot="private" static="no">
+      <memberdef kind="typedef" id="classforma_1_1Definition_1a704d6e8f47b9e7e7de7acf6934c865f2" prot="private" static="no">
         <type>std::pair&lt; std::function&lt; std::string(TParent)&gt;, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
-        <definition>using forma::Definition&lt; TParent &gt;::ChildrenRet =  std::pair&lt;std::function&lt;std::string (TParent)&gt;, std::vector&lt;Error&gt; &gt;</definition>
+        <definition>using forma::Definition&lt; TParent &gt;::ChildrenRet =  std::pair&lt;std::function&lt;std::string(TParent)&gt;, std::vector&lt;Error&gt; &gt;</definition>
         <argsstring></argsstring>
         <name>ChildrenRet</name>
         <qualifiedname>forma::Definition::ChildrenRet</qualifiedname>
@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="49" column="9" bodyfile="src/forma/template.hh" bodystart="49" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="49" column="1" bodyfile="src/forma/template.hh" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" prot="private" static="no">
         <type>std::function&lt; ChildrenRet(std::shared_ptr&lt; <ref refid="structforma_1_1Node" kindref="compound">Node</ref> &gt;)&gt;</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="50" column="9" bodyfile="src/forma/template.hh" bodystart="50" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="50" column="1" bodyfile="src/forma/template.hh" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-type">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="95" column="9" bodyfile="src/forma/template.hh" bodystart="95" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="108" column="1" bodyfile="src/forma/template.hh" bodystart="108" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" prot="public" static="no">
         <type>std::pair&lt; <ref refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" kindref="member">GetterFunction</ref>, std::vector&lt; <ref refid="structforma_1_1Error" kindref="compound">Error</ref> &gt; &gt;</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="96" column="9" bodyfile="src/forma/template.hh" bodystart="96" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="109" column="1" bodyfile="src/forma/template.hh" bodystart="109" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="47" column="28" bodyfile="src/forma/template.hh" bodystart="47" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="47" column="20" bodyfile="src/forma/template.hh" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classforma_1_1Definition_1aee8467df1c6184b6b117992f01cd6f3f" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, std::function&lt; bool(const TParent &amp;)&gt; &gt;</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="48" column="28" bodyfile="src/forma/template.hh" bodystart="48" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="48" column="20" bodyfile="src/forma/template.hh" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classforma_1_1Definition_1a6ffa8b0da0ef69dfe54e2a0561e791ab" prot="private" static="no" mutable="no">
         <type>std::unordered_map&lt; std::string, ChildMapFunction &gt;</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="51" column="28" bodyfile="src/forma/template.hh" bodystart="51" bodyend="-1"/>
+        <location file="src/forma/template.hh" line="51" column="20" bodyfile="src/forma/template.hh" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="53" column="28" bodyfile="src/forma/template.hh" bodystart="53" bodyend="56"/>
+        <location file="src/forma/template.hh" line="53" column="20" bodyfile="src/forma/template.hh" bodystart="53" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="59" column="20" bodyfile="src/forma/template.hh" bodystart="59" bodyend="63"/>
+        <location file="src/forma/template.hh" line="60" column="12" bodyfile="src/forma/template.hh" bodystart="60" bodyend="64"/>
       </memberdef>
       <memberdef kind="function" id="classforma_1_1Definition_1a99fee94d49103c368b964253021b7fe4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classforma_1_1Definition" kindref="compound">Definition</ref>&lt; TParent &gt; &amp;</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="65" column="20" bodyfile="src/forma/template.hh" bodystart="65" bodyend="69"/>
+        <location file="src/forma/template.hh" line="66" column="12" bodyfile="src/forma/template.hh" bodystart="66" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="classforma_1_1Definition_1a5860e1e36254fc3f0aaefde2b109f6d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="72" column="20" bodyfile="src/forma/template.hh" bodystart="72" bodyend="93"/>
+        <location file="src/forma/template.hh" line="73" column="12" bodyfile="src/forma/template.hh" bodystart="73" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="classforma_1_1Definition_1a3abf87925ec5993bfff9ad713b049e63" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classforma_1_1Definition_1a52dbbd15625b6dac26ad96d4db7d4a92" kindref="member">ValidationResult</ref></type>
@@ -223,14 +223,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/template.hh" line="98" column="26" bodyfile="src/forma/template.hh" bodystart="98" bodyend="189"/>
+        <location file="src/forma/template.hh" line="111" column="18" bodyfile="src/forma/template.hh" bodystart="111" bodyend="227"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/forma/template.hh" line="45" column="5" bodyfile="src/forma/template.hh" bodystart="46" bodyend="190"/>
+    <location file="src/forma/template.hh" line="45" column="1" bodyfile="src/forma/template.hh" bodystart="46" bodyend="228"/>
     <listofallmembers>
       <member refid="classforma_1_1Definition_1a99fee94d49103c368b964253021b7fe4" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>AddBool</name></member>
       <member refid="classforma_1_1Definition_1a5860e1e36254fc3f0aaefde2b109f6d4" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>AddList</name></member>
@@ -239,7 +239,7 @@
       <member refid="classforma_1_1Definition_1aee8467df1c6184b6b117992f01cd6f3f" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>bools</name></member>
       <member refid="classforma_1_1Definition_1a94c24297f0377a44e563d4534ec2b4ef" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>ChildMapFunction</name></member>
       <member refid="classforma_1_1Definition_1a6ffa8b0da0ef69dfe54e2a0561e791ab" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>children</name></member>
-      <member refid="classforma_1_1Definition_1a39a5dcbf89ae8f6ba52af15d1c35ecf5" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>ChildrenRet</name></member>
+      <member refid="classforma_1_1Definition_1a704d6e8f47b9e7e7de7acf6934c865f2" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>ChildrenRet</name></member>
       <member refid="classforma_1_1Definition_1a093d440a2a41284212a4c94c396af2e7" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>GetterFunction</name></member>
       <member refid="classforma_1_1Definition_1a8ec8993746114077947bf9d8978ef240" prot="private" virt="non-virtual"><scope>forma::Definition</scope><name>SyntaxError</name></member>
       <member refid="classforma_1_1Definition_1a3abf87925ec5993bfff9ad713b049e63" prot="public" virt="non-virtual"><scope>forma::Definition</scope><name>Validate</name></member>

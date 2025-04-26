@@ -68,14 +68,14 @@
       <memberdef kind="define" id="scanner_8hh_1ac54ae397901fe700628cafadea3c5208" prot="public" static="no">
         <name>C</name>
         <param><defname>x</defname></param>
-        <initializer>case TokenType::x: s &lt;&lt; #x; break</initializer>
+        <initializer>	case TokenType::x: s &lt;&lt; #x; break</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/forma/scanner.hh" line="32" column="9"/>
+        <location file="src/forma/scanner.hh" line="39" column="9"/>
       </memberdef>
     </sectiondef>
     <briefdescription>

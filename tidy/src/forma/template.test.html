@@ -10,108 +10,108 @@
 <hr>
 <h3>warning: invalid case style for public member &#39;Artist&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 16 : 14</i></p>
+<p><i>src/forma/template.test.cc 15 : 14</i></p>
 <pre>
-   16 |         std::string Artist;
+   15 |         std::string Artist;
       |                     ^~~~~~
       |                     artist
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Title&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 17 : 14</i></p>
+<p><i>src/forma/template.test.cc 16 : 14</i></p>
 <pre>
-   17 |         std::string Title;
+   16 |         std::string Title;
       |                     ^~~~~
       |                     title
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Album&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 18 : 14</i></p>
+<p><i>src/forma/template.test.cc 17 : 14</i></p>
 <pre>
-   18 |         std::string Album;
+   17 |         std::string Album;
       |                     ^~~~~
       |                     album
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Track&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 19 : 6</i></p>
+<p><i>src/forma/template.test.cc 18 : 6</i></p>
 <pre>
-   19 |         int Track;
+   18 |         int Track;
       |             ^~~~~
       |             track
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Artist&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 24 : 14</i></p>
+<p><i>src/forma/template.test.cc 23 : 14</i></p>
 <pre>
-   24 |         std::string Artist;
+   23 |         std::string Artist;
       |                     ^~~~~~
       |                     artist
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Title&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 25 : 14</i></p>
+<p><i>src/forma/template.test.cc 24 : 14</i></p>
 <pre>
-   25 |         std::string Title;
+   24 |         std::string Title;
       |                     ^~~~~
       |                     title
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;HasStar&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 26 : 7</i></p>
+<p><i>src/forma/template.test.cc 25 : 7</i></p>
 <pre>
-   26 |         bool HasStar;
+   25 |         bool HasStar;
       |              ^~~~~~~
       |              has_star
 </pre>
 <hr>
 <h3>warning: invalid case style for public member &#39;Songs&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 32 : 32</i></p>
+<p><i>src/forma/template.test.cc 30 : 32</i></p>
 <pre>
-   32 |         std::vector&lt;SongWithoutAlbum&gt; Songs;
+   30 |         std::vector&lt;SongWithoutAlbum&gt; Songs;
       |                                       ^~~~~
       |                                       songs
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;AbbaSong&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 38 : 6</i></p>
+<p><i>src/forma/template.test.cc 36 : 6</i></p>
 <pre>
-   38 | Song AbbaSong()
+   36 | Song AbbaSong()
       |      ^~~~~~~~
       |      abba_song
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;AwesomeMix&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 43 : 9</i></p>
+<p><i>src/forma/template.test.cc 41 : 9</i></p>
 <pre>
-   43 | MixTape AwesomeMix() {
+   41 | MixTape AwesomeMix()
       |         ^~~~~~~~~~
       |         awesome_mix
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;MakeSongDef&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 55 : 25</i></p>
+<p><i>src/forma/template.test.cc 52 : 25</i></p>
 <pre>
-   55 | forma::Definition&lt;Song&gt; MakeSongDef()
+   52 | forma::Definition&lt;Song&gt; MakeSongDef()
       |                         ^~~~~~~~~~~
       |                         make_song_def
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;MakeSongWithoutAlbumDef&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 65 : 37</i></p>
+<p><i>src/forma/template.test.cc 61 : 37</i></p>
 <pre>
-   65 | forma::Definition&lt;SongWithoutAlbum&gt; MakeSongWithoutAlbumDef() {
+   61 | forma::Definition&lt;SongWithoutAlbum&gt; MakeSongWithoutAlbumDef()
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
       |                                     make_song_without_album_def
 </pre>
@@ -119,77 +119,80 @@
 <hr>
 <h3>warning: parameter &#39;s&#39; is unused</h3>
 <code>[misc-unused-parameters]</code>
-<p><i>src/forma/template.test.cc 69 : 47</i></p>
+<p><i>src/forma/template.test.cc 68 : 31</i></p>
 <pre>
-   69 |                 .AddVar(&quot;album&quot;, [](const SongWithoutAlbum&amp; s) -&gt; std::string { throw &quot;Song doesn&#39;t have a album :(&quot;; }) // this shouldn&#39;t be called
-      |                                                             ^
-      |                                                              /*s*/
+   68 |                         [](const SongWithoutAlbum&amp; s) -&gt; std::string { throw &quot;Song doesn&#39;t have a album :(&quot;; }
+      |                                                    ^
+      |                                                     /*s*/
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;MakeSongDefWithSpaces&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 74 : 25</i></p>
+<p><i>src/forma/template.test.cc 73 : 25</i></p>
 <pre>
-   74 | forma::Definition&lt;Song&gt; MakeSongDefWithSpaces() {
+   73 | forma::Definition&lt;Song&gt; MakeSongDefWithSpaces()
       |                         ^~~~~~~~~~~~~~~~~~~~~
       |                         make_song_def_with_spaces
 </pre>
 <hr>
 <h3>warning: invalid case style for global function &#39;MakeMixTapeDef&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 82 : 28</i></p>
+<p><i>src/forma/template.test.cc 81 : 28</i></p>
 <pre>
-   82 | forma::Definition&lt;MixTape&gt; MakeMixTapeDef()
+   81 | forma::Definition&lt;MixTape&gt; MakeMixTapeDef()
       |                            ^~~~~~~~~~~~~~
       |                            make_mix_tape_def
 </pre>
+<span id='google-readability-braces-around-statements'>&nbsp;</span>
 <span id='readability-braces-around-statements'>&nbsp;</span>
 <hr>
 <h3>warning: statement should be inside braces</h3>
-<code>[readability-braces-around-statements]</code>
-<p><i>src/forma/template.test.cc 86 : 32</i></p>
+<code>[google-readability-braces-around-statements,readability-braces-around-statements]</code>
+<p><i>src/forma/template.test.cc 88 : 33</i></p>
 <pre>
-   86 |         for (const auto&amp; s : mt.Songs) r.emplace_back(&amp;s);
-      |                                       ^                   
-      |                                        {
+   88 |                         for (const auto&amp; s: mt.Songs)
+      |                                                      ^
+      |                                                       {
+   89 |                                 r.emplace_back(&amp;s);
+      |                                                    
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/template.test.cc 102 : 31</i></p>
+<p><i>src/forma/template.test.cc 107 : 31</i></p>
 <pre>
-  102 |                 if (found == contents.end()) return &quot;failed to find file&quot;;
+  107 |                 if (found == contents.end()) return &quot;failed to find file&quot;;
       |                                             ^                             
       |                                              {
 </pre>
 <hr>
 <h3>warning: invalid case style for public method &#39;AddContent&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 115 : 7</i></p>
+<p><i>src/forma/template.test.cc 120 : 7</i></p>
 <pre>
-  115 |         void AddContent(const std::string&amp; name, const std::string&amp; content)
+  120 |         void AddContent(const std::string&amp; name, const std::string&amp; content)
       |              ^~~~~~~~~~
       |              add_content
 </pre>
 <hr>
 <h3>warning: statement should be inside braces</h3>
 <code>[readability-braces-around-statements]</code>
-<p><i>src/forma/template.test.cc 123 : 32</i></p>
+<p><i>src/forma/template.test.cc 128 : 32</i></p>
 <pre>
-  123 |                 if (pos == std::string::npos) return &quot;&quot;; // No extension found
-      |                                              ^                                
+  128 |                 if (pos == std::string::npos) return &quot;&quot;;  // No extension found
+      |                                              ^                                 
       |                                               {
 </pre>
 <hr>
 <h3>warning: invalid case style for parameter &#39;nameAndExtension&#39;</h3>
 <code>[readability-identifier-naming]</code>
-<p><i>src/forma/template.test.cc 133 : 41</i></p>
+<p><i>src/forma/template.test.cc 142 : 41</i></p>
 <pre>
-  133 |         std::string GetFile(const std::string&amp; nameAndExtension) override
+  142 |         std::string GetFile(const std::string&amp; nameAndExtension) override
       |                                                ^~~~~~~~~~~~~~~~
       |                                                name_and_extension
-  134 |         {
-  135 |                 return dir + nameAndExtension;
+  143 |         {
+  144 |                 return dir + nameAndExtension;
       |                              ~~~~~~~~~~~~~~~~
       |                              name_and_extension
 </pre>
@@ -197,9 +200,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 293 : 9</i></p>
+<p><i>src/forma/template.test.cc 316 : 9</i></p>
 <pre>
-  293 |                 CHECK(forma::strings::TrimStart(&quot; &quot;) == &quot;&quot;);
+  316 |                 CHECK(forma::strings::TrimStart(&quot; &quot;) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::TrimStart(&quot; &quot;).empty()
 </pre>
@@ -231,9 +234,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 296 : 9</i></p>
+<p><i>src/forma/template.test.cc 319 : 9</i></p>
 <pre>
-  296 |                 CHECK(forma::strings::TrimEnd(&quot; &quot;) == &quot;&quot;);
+  319 |                 CHECK(forma::strings::TrimEnd(&quot; &quot;) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::TrimEnd(&quot; &quot;).empty()
 </pre>
@@ -265,9 +268,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 299 : 9</i></p>
+<p><i>src/forma/template.test.cc 322 : 9</i></p>
 <pre>
-  299 |                 CHECK(forma::strings::Trim(&quot; &quot;) == &quot;&quot;);
+  322 |                 CHECK(forma::strings::Trim(&quot; &quot;) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::Trim(&quot; &quot;).empty()
 </pre>
@@ -299,9 +302,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 311 : 9</i></p>
+<p><i>src/forma/template.test.cc 334 : 9</i></p>
 <pre>
-  311 |                 CHECK(forma::strings::ToLower(&quot;&quot;) == &quot;&quot;);
+  334 |                 CHECK(forma::strings::ToLower(&quot;&quot;) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::ToLower(&quot;&quot;).empty()
 </pre>
@@ -333,9 +336,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 312 : 9</i></p>
+<p><i>src/forma/template.test.cc 335 : 9</i></p>
 <pre>
-  312 |                 CHECK(forma::strings::ToUpper(&quot;&quot;) == &quot;&quot;);
+  335 |                 CHECK(forma::strings::ToUpper(&quot;&quot;) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::ToUpper(&quot;&quot;).empty()
 </pre>
@@ -367,9 +370,9 @@
 <hr>
 <h3>warning: the &#39;empty&#39; method should be used to check for emptiness instead of comparing to an empty object</h3>
 <code>[readability-container-size-empty]</code>
-<p><i>src/forma/template.test.cc 333 : 9</i></p>
+<p><i>src/forma/template.test.cc 356 : 9</i></p>
 <pre>
-  333 |                 CHECK(forma::strings::Substring(&quot;cat&quot;, 3, 2) == &quot;&quot;);
+  356 |                 CHECK(forma::strings::Substring(&quot;cat&quot;, 3, 2) == &quot;&quot;);
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::Substring(&quot;cat&quot;, 3, 2).empty()
 </pre>
@@ -399,92 +402,94 @@
       |       ^
 </pre>
 <!--
-/home/runner/work/forma/forma/src/forma/template.test.cc:16:14: warning: invalid case style for public member 'Artist' [readability-identifier-naming]
-   16 |         std::string Artist;
+/home/runner/work/forma/forma/src/forma/template.test.cc:15:14: warning: invalid case style for public member 'Artist' [readability-identifier-naming]
+   15 |         std::string Artist;
       |                     ^~~~~~
       |                     artist
-/home/runner/work/forma/forma/src/forma/template.test.cc:17:14: warning: invalid case style for public member 'Title' [readability-identifier-naming]
-   17 |         std::string Title;
+/home/runner/work/forma/forma/src/forma/template.test.cc:16:14: warning: invalid case style for public member 'Title' [readability-identifier-naming]
+   16 |         std::string Title;
       |                     ^~~~~
       |                     title
-/home/runner/work/forma/forma/src/forma/template.test.cc:18:14: warning: invalid case style for public member 'Album' [readability-identifier-naming]
-   18 |         std::string Album;
+/home/runner/work/forma/forma/src/forma/template.test.cc:17:14: warning: invalid case style for public member 'Album' [readability-identifier-naming]
+   17 |         std::string Album;
       |                     ^~~~~
       |                     album
-/home/runner/work/forma/forma/src/forma/template.test.cc:19:6: warning: invalid case style for public member 'Track' [readability-identifier-naming]
-   19 |         int Track;
+/home/runner/work/forma/forma/src/forma/template.test.cc:18:6: warning: invalid case style for public member 'Track' [readability-identifier-naming]
+   18 |         int Track;
       |             ^~~~~
       |             track
-/home/runner/work/forma/forma/src/forma/template.test.cc:24:14: warning: invalid case style for public member 'Artist' [readability-identifier-naming]
-   24 |         std::string Artist;
+/home/runner/work/forma/forma/src/forma/template.test.cc:23:14: warning: invalid case style for public member 'Artist' [readability-identifier-naming]
+   23 |         std::string Artist;
       |                     ^~~~~~
       |                     artist
-/home/runner/work/forma/forma/src/forma/template.test.cc:25:14: warning: invalid case style for public member 'Title' [readability-identifier-naming]
-   25 |         std::string Title;
+/home/runner/work/forma/forma/src/forma/template.test.cc:24:14: warning: invalid case style for public member 'Title' [readability-identifier-naming]
+   24 |         std::string Title;
       |                     ^~~~~
       |                     title
-/home/runner/work/forma/forma/src/forma/template.test.cc:26:7: warning: invalid case style for public member 'HasStar' [readability-identifier-naming]
-   26 |         bool HasStar;
+/home/runner/work/forma/forma/src/forma/template.test.cc:25:7: warning: invalid case style for public member 'HasStar' [readability-identifier-naming]
+   25 |         bool HasStar;
       |              ^~~~~~~
       |              has_star
-/home/runner/work/forma/forma/src/forma/template.test.cc:32:32: warning: invalid case style for public member 'Songs' [readability-identifier-naming]
-   32 |         std::vector<SongWithoutAlbum> Songs;
+/home/runner/work/forma/forma/src/forma/template.test.cc:30:32: warning: invalid case style for public member 'Songs' [readability-identifier-naming]
+   30 |         std::vector<SongWithoutAlbum> Songs;
       |                                       ^~~~~
       |                                       songs
-/home/runner/work/forma/forma/src/forma/template.test.cc:38:6: warning: invalid case style for global function 'AbbaSong' [readability-identifier-naming]
-   38 | Song AbbaSong()
+/home/runner/work/forma/forma/src/forma/template.test.cc:36:6: warning: invalid case style for global function 'AbbaSong' [readability-identifier-naming]
+   36 | Song AbbaSong()
       |      ^~~~~~~~
       |      abba_song
-/home/runner/work/forma/forma/src/forma/template.test.cc:43:9: warning: invalid case style for global function 'AwesomeMix' [readability-identifier-naming]
-   43 | MixTape AwesomeMix() {
+/home/runner/work/forma/forma/src/forma/template.test.cc:41:9: warning: invalid case style for global function 'AwesomeMix' [readability-identifier-naming]
+   41 | MixTape AwesomeMix()
       |         ^~~~~~~~~~
       |         awesome_mix
-/home/runner/work/forma/forma/src/forma/template.test.cc:55:25: warning: invalid case style for global function 'MakeSongDef' [readability-identifier-naming]
-   55 | forma::Definition<Song> MakeSongDef()
+/home/runner/work/forma/forma/src/forma/template.test.cc:52:25: warning: invalid case style for global function 'MakeSongDef' [readability-identifier-naming]
+   52 | forma::Definition<Song> MakeSongDef()
       |                         ^~~~~~~~~~~
       |                         make_song_def
-/home/runner/work/forma/forma/src/forma/template.test.cc:65:37: warning: invalid case style for global function 'MakeSongWithoutAlbumDef' [readability-identifier-naming]
-   65 | forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef() {
+/home/runner/work/forma/forma/src/forma/template.test.cc:61:37: warning: invalid case style for global function 'MakeSongWithoutAlbumDef' [readability-identifier-naming]
+   61 | forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef()
       |                                     ^~~~~~~~~~~~~~~~~~~~~~~
       |                                     make_song_without_album_def
-/home/runner/work/forma/forma/src/forma/template.test.cc:69:47: warning: parameter 's' is unused [misc-unused-parameters]
-   69 |                 .AddVar("album", [](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }) // this shouldn't be called
-      |                                                             ^
-      |                                                              /*s*/
-/home/runner/work/forma/forma/src/forma/template.test.cc:74:25: warning: invalid case style for global function 'MakeSongDefWithSpaces' [readability-identifier-naming]
-   74 | forma::Definition<Song> MakeSongDefWithSpaces() {
+/home/runner/work/forma/forma/src/forma/template.test.cc:68:31: warning: parameter 's' is unused [misc-unused-parameters]
+   68 |                         [](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }
+      |                                                    ^
+      |                                                     /*s*/
+/home/runner/work/forma/forma/src/forma/template.test.cc:73:25: warning: invalid case style for global function 'MakeSongDefWithSpaces' [readability-identifier-naming]
+   73 | forma::Definition<Song> MakeSongDefWithSpaces()
       |                         ^~~~~~~~~~~~~~~~~~~~~
       |                         make_song_def_with_spaces
-/home/runner/work/forma/forma/src/forma/template.test.cc:82:28: warning: invalid case style for global function 'MakeMixTapeDef' [readability-identifier-naming]
-   82 | forma::Definition<MixTape> MakeMixTapeDef()
+/home/runner/work/forma/forma/src/forma/template.test.cc:81:28: warning: invalid case style for global function 'MakeMixTapeDef' [readability-identifier-naming]
+   81 | forma::Definition<MixTape> MakeMixTapeDef()
       |                            ^~~~~~~~~~~~~~
       |                            make_mix_tape_def
-/home/runner/work/forma/forma/src/forma/template.test.cc:86:32: warning: statement should be inside braces [readability-braces-around-statements]
-   86 |         for (const auto& s : mt.Songs) r.emplace_back(&s);
-      |                                       ^                   
-      |                                        {
-/home/runner/work/forma/forma/src/forma/template.test.cc:102:31: warning: statement should be inside braces [readability-braces-around-statements]
-  102 |                 if (found == contents.end()) return "failed to find file";
+/home/runner/work/forma/forma/src/forma/template.test.cc:88:33: warning: statement should be inside braces [google-readability-braces-around-statements,readability-braces-around-statements]
+   88 |                         for (const auto& s: mt.Songs)
+      |                                                      ^
+      |                                                       {
+   89 |                                 r.emplace_back(&s);
+      |                                                    
+/home/runner/work/forma/forma/src/forma/template.test.cc:107:31: warning: statement should be inside braces [readability-braces-around-statements]
+  107 |                 if (found == contents.end()) return "failed to find file";
       |                                             ^                             
       |                                              {
-/home/runner/work/forma/forma/src/forma/template.test.cc:115:7: warning: invalid case style for public method 'AddContent' [readability-identifier-naming]
-  115 |         void AddContent(const std::string& name, const std::string& content)
+/home/runner/work/forma/forma/src/forma/template.test.cc:120:7: warning: invalid case style for public method 'AddContent' [readability-identifier-naming]
+  120 |         void AddContent(const std::string& name, const std::string& content)
       |              ^~~~~~~~~~
       |              add_content
-/home/runner/work/forma/forma/src/forma/template.test.cc:123:32: warning: statement should be inside braces [readability-braces-around-statements]
-  123 |                 if (pos == std::string::npos) return ""; // No extension found
-      |                                              ^                                
+/home/runner/work/forma/forma/src/forma/template.test.cc:128:32: warning: statement should be inside braces [readability-braces-around-statements]
+  128 |                 if (pos == std::string::npos) return "";  // No extension found
+      |                                              ^                                 
       |                                               {
-/home/runner/work/forma/forma/src/forma/template.test.cc:133:41: warning: invalid case style for parameter 'nameAndExtension' [readability-identifier-naming]
-  133 |         std::string GetFile(const std::string& nameAndExtension) override
+/home/runner/work/forma/forma/src/forma/template.test.cc:142:41: warning: invalid case style for parameter 'nameAndExtension' [readability-identifier-naming]
+  142 |         std::string GetFile(const std::string& nameAndExtension) override
       |                                                ^~~~~~~~~~~~~~~~
       |                                                name_and_extension
-  134 |         {
-  135 |                 return dir + nameAndExtension;
+  143 |         {
+  144 |                 return dir + nameAndExtension;
       |                              ~~~~~~~~~~~~~~~~
       |                              name_and_extension
-/home/runner/work/forma/forma/src/forma/template.test.cc:293:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  293 |                 CHECK(forma::strings::TrimStart(" ") == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:316:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  316 |                 CHECK(forma::strings::TrimStart(" ") == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::TrimStart(" ").empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
@@ -499,8 +504,8 @@
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
  1231 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.test.cc:296:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  296 |                 CHECK(forma::strings::TrimEnd(" ") == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:319:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  319 |                 CHECK(forma::strings::TrimEnd(" ") == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::TrimEnd(" ").empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
@@ -515,8 +520,8 @@
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
  1231 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.test.cc:299:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  299 |                 CHECK(forma::strings::Trim(" ") == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:322:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  322 |                 CHECK(forma::strings::Trim(" ") == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::Trim(" ").empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
@@ -531,8 +536,8 @@
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
  1231 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.test.cc:311:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  311 |                 CHECK(forma::strings::ToLower("") == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:334:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  334 |                 CHECK(forma::strings::ToLower("") == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::ToLower("").empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
@@ -547,8 +552,8 @@
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
  1231 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.test.cc:312:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  312 |                 CHECK(forma::strings::ToUpper("") == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:335:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  335 |                 CHECK(forma::strings::ToUpper("") == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::ToUpper("").empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
@@ -563,8 +568,8 @@
 /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:1231:7: note: method 'basic_string'::empty() defined here
  1231 |       empty() const _GLIBCXX_NOEXCEPT
       |       ^
-/home/runner/work/forma/forma/src/forma/template.test.cc:333:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
-  333 |                 CHECK(forma::strings::Substring("cat", 3, 2) == "");
+/home/runner/work/forma/forma/src/forma/template.test.cc:356:9: warning: the 'empty' method should be used to check for emptiness instead of comparing to an empty object [readability-container-size-empty]
+  356 |                 CHECK(forma::strings::Substring("cat", 3, 2) == "");
       |                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       |                       forma::strings::Substring("cat", 3, 2).empty()
 /home/runner/work/forma/forma/build/_deps/catch2-src/src/catch2/../catch2/catch_test_macros.hpp:132:99: note: expanded from macro 'CHECK'
