@@ -7,7 +7,6 @@
 #include <string>
 #include <unordered_map>
 
-
 // ====================================================================================================================
 // Test structures
 
@@ -26,7 +25,6 @@ struct SongWithoutAlbum
 	bool HasStar;
 };
 
-
 struct MixTape
 {
 	std::vector<SongWithoutAlbum> Songs;
@@ -37,15 +35,14 @@ struct MixTape
 
 Song AbbaSong()
 {
-	return { "ABBA", "dancing queen", "Arrival", 2 };
+	return {"ABBA", "dancing queen", "Arrival", 2};
 }
 
-MixTape AwesomeMix() {
+MixTape AwesomeMix()
+{
 	return {
-		{
-			SongWithoutAlbum{"Gloria Gaynor", "I Will Survive", true},
-			SongWithoutAlbum{"Nirvana", "Smells Like Teen Spirit", false}
-		}
+		{SongWithoutAlbum{"Gloria Gaynor", "I Will Survive", true},
+		 SongWithoutAlbum{"Nirvana", "Smells Like Teen Spirit", false}}
 	};
 }
 
@@ -58,34 +55,42 @@ forma::Definition<Song> MakeSongDef()
 		.AddVar("artist", [](const Song& s) { return s.Artist; })
 		.AddVar("title", [](const Song& s) { return s.Title; })
 		.AddVar("album", [](const Song& s) { return s.Album; })
-		.AddVar("track", [](const Song& s) { return std::to_string(s.Track); })
-		;
+		.AddVar("track", [](const Song& s) { return std::to_string(s.Track); });
 }
 
-forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef() {
+forma::Definition<SongWithoutAlbum> MakeSongWithoutAlbumDef()
+{
 	return forma::Definition<SongWithoutAlbum>()
 		.AddVar("artist", [](const SongWithoutAlbum& s) { return s.Artist; })
 		.AddVar("title", [](const SongWithoutAlbum& s) { return s.Title; })
-		.AddVar("album", [](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }) // this shouldn't be called
-		.AddBool("star", [](const SongWithoutAlbum& s) { return s.HasStar; })
-		;
+		.AddVar(
+			"album",
+			[](const SongWithoutAlbum& s) -> std::string { throw "Song doesn't have a album :("; }
+		)  // this shouldn't be called
+		.AddBool("star", [](const SongWithoutAlbum& s) { return s.HasStar; });
 }
 
-forma::Definition<Song> MakeSongDefWithSpaces() {
+forma::Definition<Song> MakeSongDefWithSpaces()
+{
 	return forma::Definition<Song>()
 		.AddVar("the artist", [](const Song& s) { return s.Artist; })
 		.AddVar("the title", [](const Song& s) { return s.Title; })
-		.AddVar("the album", [](const Song& s) { return s.Album; })
-		;
+		.AddVar("the album", [](const Song& s) { return s.Album; });
 }
 
 forma::Definition<MixTape> MakeMixTapeDef()
 {
-	return forma::Definition<MixTape>()
-		.AddList<SongWithoutAlbum>("songs", [](const MixTape& mt) { std::vector<const SongWithoutAlbum* > r;
-	for (const auto& s : mt.Songs) r.emplace_back(&s);
-	return r; }, MakeSongWithoutAlbumDef())
-		;
+	return forma::Definition<MixTape>().AddList<SongWithoutAlbum>(
+		"songs",
+		[](const MixTape& mt)
+		{
+			std::vector<const SongWithoutAlbum*> r;
+			for (const auto& s: mt.Songs)
+				r.emplace_back(&s);
+			return r;
+		},
+		MakeSongWithoutAlbumDef()
+	);
 }
 
 // ====================================================================================================================
@@ -114,13 +119,13 @@ struct VfsReadTest : forma::VfsRead
 
 	void AddContent(const std::string& name, const std::string& content)
 	{
-		contents.insert({ name, content });
+		contents.insert({name, content});
 	}
 
 	std::string GetExtension(const std::string& file_path) override
 	{
 		auto pos = file_path.find_last_of('.');
-		if (pos == std::string::npos) return ""; // No extension found
+		if (pos == std::string::npos) return "";  // No extension found
 		return file_path.substr(pos);
 	}
 };
@@ -128,7 +133,11 @@ struct VfsReadTest : forma::VfsRead
 struct DirectoryInfoTest : forma::DirectoryInfo
 {
 	std::string dir;
-	explicit DirectoryInfoTest(const std::string& d) : dir(d) {}
+
+	explicit DirectoryInfoTest(const std::string& d)
+		: dir(d)
+	{
+	}
 
 	std::string GetFile(const std::string& nameAndExtension) override
 	{
@@ -151,7 +160,8 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title}} ({{album}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -164,7 +174,8 @@ TEST_CASE("all")
 		// quoting attributes like strings should also work
 		read.AddContent(file, "{{\"artist\"}} - {{\"title\"}} ({{\"album\"}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -177,7 +188,8 @@ TEST_CASE("all")
 		// quoting attributes like strings should also work
 		read.AddContent(file, "{{\"the artist\"}} - {{\"the title\"}} ({{\"the album\"}})");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDefWithSpaces());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDefWithSpaces());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - dancing queen (Arrival)");
 		NO_ERRORS(errors);
@@ -189,7 +201,8 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{artist}} - {{title | title}} ( {{- album -}} )");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "ABBA - Dancing Queen (Arrival)");
 		NO_ERRORS(errors);
@@ -199,9 +212,12 @@ TEST_CASE("all")
 	SECTION("Test three")
 	{
 		auto file = cwd.GetFile("test.txt");
-		read.AddContent(file, "{{track | zfill(3)}} {{- /** a comment **/ -}}  . {{title | title}}");
+		read.AddContent(
+			file, "{{track | zfill(3)}} {{- /** a comment **/ -}}  . {{title | title}}"
+		);
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeSongDef());
 
 		CHECK(evaluator(AbbaSong()) == "002. Dancing Queen");
 		NO_ERRORS(errors);
@@ -213,7 +229,8 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{#songs}}[{{title}}]{{/songs}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -225,7 +242,8 @@ TEST_CASE("all")
 		auto file = cwd.GetFile("test.txt");
 		read.AddContent(file, "{{range songs}}[{{title}}]{{end}}");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -238,7 +256,8 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include \"include.txt\" -}} {{end}}");
 		read.AddContent(cwd.GetFile("include.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -252,7 +271,8 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include \"include\" -}} {{end}}");
 		read.AddContent(cwd.GetFile("include.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -265,7 +285,8 @@ TEST_CASE("all")
 		read.AddContent(file, "{{range songs}} {{- include file -}} {{end}}");
 		read.AddContent(cwd.GetFile("file.txt"), "[{{title}}]");
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][Smells Like Teen Spirit]");
 		NO_ERRORS(errors);
@@ -275,14 +296,16 @@ TEST_CASE("all")
 	SECTION("Test seven - if")
 	{
 		auto file = cwd.GetFile("test.txt");
-		read.AddContent(file, "{{range songs -}} [ {{- if star -}} {{- title -}} {{- end -}} ] {{- end}}");
+		read.AddContent(
+			file, "{{range songs -}} [ {{- if star -}} {{- title -}} {{- end -}} ] {{- end}}"
+		);
 
-		auto [evaluator, errors] = forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
+		auto [evaluator, errors]
+			= forma::Build(file, &read, &cwd, forma::DefaultFunctions(), MakeMixTapeDef());
 
 		CHECK(evaluator(AwesomeMix()) == "[I Will Survive][]");
 		NO_ERRORS(errors);
 	}
-
 }
 
 TEST_CASE("basics")

@@ -41,177 +41,221 @@
 
 namespace forma
 {
-	template<typename TParent>
-    class Definition
-    {
-        std::unordered_map<std::string, std::function<std::string(const TParent&)>> attributes;
-        std::unordered_map<std::string, std::function<bool(const TParent&)>> bools;
-        using ChildrenRet = std::pair<std::function<std::string (TParent)>, std::vector<Error>>;
-        using ChildMapFunction = std::function<ChildrenRet(std::shared_ptr<Node>)>;
-        std::unordered_map<std::string, ChildMapFunction> children;
+template<typename TParent>
+class Definition
+{
+	std::unordered_map<std::string, std::function<std::string(const TParent&)>> attributes;
+	std::unordered_map<std::string, std::function<bool(const TParent&)>> bools;
+	using ChildrenRet = std::pair<std::function<std::string(TParent)>, std::vector<Error>>;
+	using ChildMapFunction = std::function<ChildrenRet(std::shared_ptr<Node>)>;
+	std::unordered_map<std::string, ChildMapFunction> children;
 
-        static std::string SyntaxError(const TParent&)
-        {
-            return "Syntax error";
-        }
+	static std::string SyntaxError(const TParent&)
+	{
+		return "Syntax error";
+	}
 
-    public:
-        Definition<TParent>& AddVar(std::string name, std::function<std::string (const TParent&)> getter)
-        {
-            attributes.insert({ name, getter });
-            return *this;
-        }
+   public:
 
-        Definition<TParent>& AddBool(std::string name, std::function<bool (const TParent&)> getter)
-        {
-            bools.insert({ name, getter });
-            return *this;
-        }
+	Definition<TParent>& AddVar(std::string name, std::function<std::string(const TParent&)> getter)
+	{
+		attributes.insert({name, getter});
+		return *this;
+	}
 
-        template<typename TChild>
-        Definition<TParent>& AddList(std::string name, std::function<std::vector<const TChild*>(const TParent&)> childSelector, Definition<TChild> childDef)
-        {
-            children.insert({ name, [=](std::shared_ptr<Node> node) ->ChildrenRet
-            {
-                auto [getter, errors] = childDef.Validate(node);
-                if (errors.size() > 0) { return { SyntaxError, errors }; }
+	Definition<TParent>& AddBool(std::string name, std::function<bool(const TParent&)> getter)
+	{
+		bools.insert({name, getter});
+		return *this;
+	}
 
-                return { [=](const TParent& parent)
-                    {
-	                    const auto selected = childSelector(parent);
-	                    std::string ret;
-	                    for(const TChild* c: selected)
-	                    {
-                            const std::string& val = getter(*c);
-	                        ret += val;
-	                    }
-	                    return ret;
-                    }
-                	, NoErrors()};
-            }});
-            return *this;
-        }
+	template<typename TChild>
+	Definition<TParent>& AddList(
+		std::string name,
+		std::function<std::vector<const TChild*>(const TParent&)> childSelector,
+		Definition<TChild> childDef
+	)
+	{
+		children.insert(
+			{name,
+			 [=](std::shared_ptr<Node> node) -> ChildrenRet
+			 {
+				 auto [getter, errors] = childDef.Validate(node);
+				 if (errors.size() > 0)
+				 {
+					 return {SyntaxError, errors};
+				 }
 
-        using GetterFunction = std::function<std::string(const TParent&)>;
-        using ValidationResult = std::pair<GetterFunction, std::vector<Error>>;
+				 return {
+					 [=](const TParent& parent)
+					 {
+						 const auto selected = childSelector(parent);
+						 std::string ret;
+						 for (const TChild* c: selected)
+						 {
+							 const std::string& val = getter(*c);
+							 ret += val;
+						 }
+						 return ret;
+					 },
+					 NoErrors()
+				 };
+			 }}
+		);
+		return *this;
+	}
 
-        ValidationResult Validate(std::shared_ptr<Node> node) const
-        {
-            if(auto* text = node->AsText())
-            {
-                const auto value = text->Value;
-                return { [value](const TParent&) { return value; }, NoErrors()};
-            }
-            else if(auto* attribute = node->AsAttribute())
-            {
-                const auto getter = attributes.find(attribute->Name);
-                if (getter == attributes.end())
-                {
-                    return { SyntaxError, { Error {
-                        attribute->Location,
-                        Fmt{} << "Missing attribute " << attribute->Name << ": " << MatchStrings(attribute->Name, KeysOf(attributes))
-					}}};
-                }
-                const auto& getter_func = getter->second;
-                return {
-                    [getter_func](const TParent& parent) {return getter_func(parent); }
-                	, NoErrors()
-                };
-            }
-            else if(auto* check = node->AsIf())
-            {
-                const auto getter = bools.find(check->Name);
-                if (getter == bools.end())
-                {
-                    return { SyntaxError, { Error {
-                        check->Location,
-                        Fmt{} << "Missing bool " << check->Name << ": " << MatchStrings(check->Name, KeysOf(bools))
-                    }}};
-                }
+	using GetterFunction = std::function<std::string(const TParent&)>;
+	using ValidationResult = std::pair<GetterFunction, std::vector<Error>>;
 
-                const auto [body, errors] = Validate(check->Body);
-                if (errors.empty() == false) { return {SyntaxError, errors}; }
+	ValidationResult Validate(std::shared_ptr<Node> node) const
+	{
+		if (auto* text = node->AsText())
+		{
+			const auto value = text->Value;
+			return {[value](const TParent&) { return value; }, NoErrors()};
+		}
+		else if (auto* attribute = node->AsAttribute())
+		{
+			const auto getter = attributes.find(attribute->Name);
+			if (getter == attributes.end())
+			{
+				return {
+					SyntaxError,
+					{Error{
+						attribute->Location,
+						Fmt{} << "Missing attribute " << attribute->Name << ": "
+							  << MatchStrings(attribute->Name, KeysOf(attributes))
+					}}
+				};
+			}
+			const auto& getter_func = getter->second;
+			return {
+				[getter_func](const TParent& parent) { return getter_func(parent); }, NoErrors()
+			};
+		}
+		else if (auto* check = node->AsIf())
+		{
+			const auto getter = bools.find(check->Name);
+			if (getter == bools.end())
+			{
+				return {
+					SyntaxError,
+					{Error{
+						check->Location,
+						Fmt{} << "Missing bool " << check->Name << ": "
+							  << MatchStrings(check->Name, KeysOf(bools))
+					}}
+				};
+			}
 
-                const auto getter_func = getter->second;
-                return { [getter_func, body](const TParent& parent) -> std::string { return getter_func(parent) ? body(parent) : ""; }, NoErrors()};
-            }
-            else if(auto* iterate = node->AsIterate())
-            {
-                auto validator = children.find(iterate->Name);
-                if (validator == children.end())
-                {
-                    return { SyntaxError, { Error{
-                        iterate->Location,
-                        Fmt{} << "Missing array " << iterate->Name << ": " << MatchStrings(iterate->Name, KeysOf(children))
-                    }}};
-                }
-                return validator->second(iterate->Body);
-            }
-            else if (auto* fc = node->AsFunctionCall())
-            {
-                auto [getter, errors] = Validate(fc->Arg);
-                if (errors.empty() == false) { return { SyntaxError, errors }; }
+			const auto [body, errors] = Validate(check->Body);
+			if (errors.empty() == false)
+			{
+				return {SyntaxError, errors};
+			}
 
-                auto func = fc->Function;
-                return {[getter, func](const TParent& parent) { return func(getter(parent)); }, NoErrors()};
-            }
-            else if(auto* gr = node->AsGroup())
-            {
-                std::vector<GetterFunction> getters;
-                std::vector<Error> errors;
-                for(auto& n: gr->Nodes)
-                {
-                    auto [getter, local_errors] = Validate(n);
-                    getters.emplace_back(std::move(getter));
-                    errors.insert(errors.end(), local_errors.begin(), local_errors.end());
-                }
-                if (errors.empty() == false) { return { SyntaxError, errors }; }
-                return { [getters](const TParent& parent)
-                    {
-	                    std::ostringstream ss;
-	                    for(const auto& g: getters)
-	                    {
-	                        ss << g(parent);
-	                    }
-	                    return ss.str();
-                    }
-                , NoErrors()};
-            }
-            else
-            {
-                assert(false);
+			const auto getter_func = getter->second;
+			return {
+				[getter_func, body](const TParent& parent) -> std::string
+				{ return getter_func(parent) ? body(parent) : ""; },
+				NoErrors()
+			};
+		}
+		else if (auto* iterate = node->AsIterate())
+		{
+			auto validator = children.find(iterate->Name);
+			if (validator == children.end())
+			{
+				return {
+					SyntaxError,
+					{Error{
+						iterate->Location,
+						Fmt{} << "Missing array " << iterate->Name << ": "
+							  << MatchStrings(iterate->Name, KeysOf(children))
+					}}
+				};
+			}
+			return validator->second(iterate->Body);
+		}
+		else if (auto* fc = node->AsFunctionCall())
+		{
+			auto [getter, errors] = Validate(fc->Arg);
+			if (errors.empty() == false)
+			{
+				return {SyntaxError, errors};
+			}
 
-                return { SyntaxError, { Error{
-                        UnknownLocation(),
-                        "error: unknown type"
-                    }} };
-            }
-        }
-    };
+			auto func = fc->Function;
+			return {
+				[getter, func](const TParent& parent) { return func(getter(parent)); }, NoErrors()
+			};
+		}
+		else if (auto* gr = node->AsGroup())
+		{
+			std::vector<GetterFunction> getters;
+			std::vector<Error> errors;
+			for (auto& n: gr->Nodes)
+			{
+				auto [getter, local_errors] = Validate(n);
+				getters.emplace_back(std::move(getter));
+				errors.insert(errors.end(), local_errors.begin(), local_errors.end());
+			}
+			if (errors.empty() == false)
+			{
+				return {SyntaxError, errors};
+			}
+			return {
+				[getters](const TParent& parent)
+				{
+					std::ostringstream ss;
+					for (const auto& g: getters)
+					{
+						ss << g(parent);
+					}
+					return ss.str();
+				},
+				NoErrors()
+			};
+		}
+		else
+		{
+			assert(false);
 
-    template<typename T>
-    using BuildResult = std::pair<std::function<std::string(const T&)>, std::vector<Error>>;
+			return {SyntaxError, {Error{UnknownLocation(), "error: unknown type"}}};
+		}
+	}
+};
 
-    template<typename T>
-    BuildResult<T> Build(std::string path, VfsRead* vfs, DirectoryInfo* includeDir, std::unordered_map<std::string, FuncGenerator> functions, Definition<T> definition)
-    {
-        auto source = vfs->ReadAllText(path);
-        auto [tokens, lexerErrors] = Scan(path, source);
-        if (lexerErrors.size() > 0)
-        {
-            return BuildResult<T>{[](const T&) { return "Lexing failed"; }, lexerErrors};
-        }
+template<typename T>
+using BuildResult = std::pair<std::function<std::string(const T&)>, std::vector<Error>>;
 
-        auto [node, parseErrors] = forma::Parse(tokens, functions, includeDir, vfs->GetExtension(path), vfs);
-        if (parseErrors.size() > 0)
-        {
-            return BuildResult<T>{ [](const T&) { return "Parsing failed"; }, parseErrors };
-        }
+template<typename T>
+BuildResult<T> Build(
+	std::string path,
+	VfsRead* vfs,
+	DirectoryInfo* includeDir,
+	std::unordered_map<std::string, FuncGenerator> functions,
+	Definition<T> definition
+)
+{
+	auto source = vfs->ReadAllText(path);
+	auto [tokens, lexerErrors] = Scan(path, source);
+	if (lexerErrors.size() > 0)
+	{
+		return BuildResult<T>{[](const T&) { return "Lexing failed"; }, lexerErrors};
+	}
 
-        return definition.Validate(node);
-    }
+	auto [node, parseErrors]
+		= forma::Parse(tokens, functions, includeDir, vfs->GetExtension(path), vfs);
+	if (parseErrors.size() > 0)
+	{
+		return BuildResult<T>{[](const T&) { return "Parsing failed"; }, parseErrors};
+	}
 
-    std::unordered_map<std::string, FuncGenerator> DefaultFunctions();
-
+	return definition.Validate(node);
 }
 
+std::unordered_map<std::string, FuncGenerator> DefaultFunctions();
+
+}  //  namespace forma
